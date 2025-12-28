@@ -1,0 +1,1 @@
+# **[Microsoft Fabric Warehouse Tutorial for Beginners Lakehouse vs Warehouse | Microsoft Fabric Tutorial](https://www.youtube.com/watch?v=qtr6HIW4cpo&list=PLWf6TEjiiuIBTbeXe5huK9c0DCA1SnY-D&index=1)**

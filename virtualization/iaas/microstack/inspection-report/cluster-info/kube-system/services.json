@@ -1,0 +1,253 @@
+{
+    "kind": "ServiceList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "776121"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "ck-storage-rawfile-csi-controller",
+                "namespace": "kube-system",
+                "uid": "8cb5c454-99a8-4fcb-81e2-e2e494ac887c",
+                "resourceVersion": "271",
+                "creationTimestamp": "2025-05-16T23:33:27Z",
+                "labels": {
+                    "app.kubernetes.io/instance": "ck-storage",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "app.kubernetes.io/name": "rawfile-csi",
+                    "app.kubernetes.io/version": "0.8.0",
+                    "component": "controller",
+                    "helm.sh/chart": "rawfile-csi-0.9.0"
+                },
+                "annotations": {
+                    "meta.helm.sh/release-name": "ck-storage",
+                    "meta.helm.sh/release-namespace": "kube-system"
+                }
+            },
+            "spec": {
+                "selector": {
+                    "app.kubernetes.io/instance": "ck-storage",
+                    "app.kubernetes.io/name": "rawfile-csi",
+                    "component": "controller"
+                },
+                "clusterIP": "None",
+                "clusterIPs": [
+                    "None"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "internalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "ck-storage-rawfile-csi-node",
+                "namespace": "kube-system",
+                "uid": "7bd2c3ec-1f74-4a1a-b5c9-3046b3411e6f",
+                "resourceVersion": "275",
+                "creationTimestamp": "2025-05-16T23:33:27Z",
+                "labels": {
+                    "app.kubernetes.io/instance": "ck-storage",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "app.kubernetes.io/name": "rawfile-csi",
+                    "app.kubernetes.io/version": "0.8.0",
+                    "component": "node",
+                    "helm.sh/chart": "rawfile-csi-0.9.0"
+                },
+                "annotations": {
+                    "meta.helm.sh/release-name": "ck-storage",
+                    "meta.helm.sh/release-namespace": "kube-system"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "metrics",
+                        "protocol": "TCP",
+                        "port": 9100,
+                        "targetPort": "metrics"
+                    }
+                ],
+                "selector": {
+                    "app.kubernetes.io/instance": "ck-storage",
+                    "app.kubernetes.io/name": "rawfile-csi",
+                    "component": "node"
+                },
+                "clusterIP": "10.152.183.57",
+                "clusterIPs": [
+                    "10.152.183.57"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "internalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "coredns",
+                "namespace": "kube-system",
+                "uid": "1f2a6097-80fc-4fee-8c29-e1bb8b473f3c",
+                "resourceVersion": "219",
+                "creationTimestamp": "2025-05-16T23:33:24Z",
+                "labels": {
+                    "app.kubernetes.io/instance": "ck-dns",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "app.kubernetes.io/name": "coredns",
+                    "helm.sh/chart": "coredns-1.36.0",
+                    "k8s-app": "coredns",
+                    "kubernetes.io/cluster-service": "true",
+                    "kubernetes.io/name": "CoreDNS"
+                },
+                "annotations": {
+                    "meta.helm.sh/release-name": "ck-dns",
+                    "meta.helm.sh/release-namespace": "kube-system"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "udp-53",
+                        "protocol": "UDP",
+                        "port": 53,
+                        "targetPort": 53
+                    },
+                    {
+                        "name": "tcp-53",
+                        "protocol": "TCP",
+                        "port": 53,
+                        "targetPort": 53
+                    }
+                ],
+                "selector": {
+                    "app.kubernetes.io/instance": "ck-dns",
+                    "app.kubernetes.io/name": "coredns",
+                    "k8s-app": "coredns"
+                },
+                "clusterIP": "10.152.183.178",
+                "clusterIPs": [
+                    "10.152.183.178"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "internalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "hubble-peer",
+                "namespace": "kube-system",
+                "uid": "af8e2622-27a0-439a-9ac3-d89a84c3a074",
+                "resourceVersion": "365",
+                "creationTimestamp": "2025-05-16T23:33:29Z",
+                "labels": {
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "app.kubernetes.io/name": "hubble-peer",
+                    "app.kubernetes.io/part-of": "cilium",
+                    "k8s-app": "cilium"
+                },
+                "annotations": {
+                    "meta.helm.sh/release-name": "ck-network",
+                    "meta.helm.sh/release-namespace": "kube-system"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "peer-service",
+                        "protocol": "TCP",
+                        "port": 443,
+                        "targetPort": 4244
+                    }
+                ],
+                "selector": {
+                    "k8s-app": "cilium"
+                },
+                "clusterIP": "10.152.183.85",
+                "clusterIPs": [
+                    "10.152.183.85"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "internalTrafficPolicy": "Local"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        },
+        {
+            "metadata": {
+                "name": "metrics-server",
+                "namespace": "kube-system",
+                "uid": "5d666f38-ff7c-4634-9173-5b7ce2a1fafb",
+                "resourceVersion": "232",
+                "creationTimestamp": "2025-05-16T23:33:25Z",
+                "labels": {
+                    "app.kubernetes.io/instance": "metrics-server",
+                    "app.kubernetes.io/managed-by": "Helm",
+                    "app.kubernetes.io/name": "metrics-server",
+                    "app.kubernetes.io/version": "0.7.2",
+                    "helm.sh/chart": "metrics-server-3.12.2"
+                },
+                "annotations": {
+                    "meta.helm.sh/release-name": "metrics-server",
+                    "meta.helm.sh/release-namespace": "kube-system"
+                }
+            },
+            "spec": {
+                "ports": [
+                    {
+                        "name": "https",
+                        "protocol": "TCP",
+                        "appProtocol": "https",
+                        "port": 443,
+                        "targetPort": "https"
+                    }
+                ],
+                "selector": {
+                    "app.kubernetes.io/instance": "metrics-server",
+                    "app.kubernetes.io/name": "metrics-server"
+                },
+                "clusterIP": "10.152.183.156",
+                "clusterIPs": [
+                    "10.152.183.156"
+                ],
+                "type": "ClusterIP",
+                "sessionAffinity": "None",
+                "ipFamilies": [
+                    "IPv4"
+                ],
+                "ipFamilyPolicy": "SingleStack",
+                "internalTrafficPolicy": "Cluster"
+            },
+            "status": {
+                "loadBalancer": {}
+            }
+        }
+    ]
+}

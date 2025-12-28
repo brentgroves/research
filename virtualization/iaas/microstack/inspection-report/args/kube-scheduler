@@ -1,0 +1,7 @@
+--authentication-kubeconfig=/etc/kubernetes/scheduler.conf
+--authorization-kubeconfig=/etc/kubernetes/scheduler.conf
+--kubeconfig=/etc/kubernetes/scheduler.conf
+--leader-elect-lease-duration=30s
+--leader-elect-renew-deadline=15s
+--profiling=false
+--tls-min-version=VersionTLS12

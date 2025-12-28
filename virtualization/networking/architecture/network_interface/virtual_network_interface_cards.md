@@ -1,0 +1,15 @@
+# **[Virtual Network Interface Cards)(https://access.redhat.com/documentation/en-us/red_hat_enterprise_virtualization/3.6/html/technical_reference/virtual_network_interface_controller_vnic)**
+
+**[Back to Research List](../../../research_list.md)**\
+**[Back to Networking Menu](../networking_menu.md)**\
+**[Back to Current Status](../../../../development/status/weekly/current_status.md)**\
+**[Back to Main](../../../../README.md)**
+
+Virtual network interface cards are virtual network interfaces that are based on the physical network interface cards of a host. Each host can have multiple network interface cards, and each network interface card can be a base for multiple virtual network interface cards.
+
+When you attach a virtual network interface card to a virtual machine, the Red Hat Enterprise Virtualization Manager creates several associations between the virtual machine to which the virtual network interface card is being attached, the virtual network interface card itself, and the physical host network interface card on which the virtual network interface card is based. Specifically, when a virtual network interface card is attached to a virtual machine, a new virtual network interface card and MAC address are created on the physical host network interface card on which the virtual network interface card is based. Then, the first time the virtual machine starts after that virtual network interface card is attached, libvirt assigns the virtual network interface card a PCI address. The MAC address and PCI address are then used to obtain the name of the virtual network interface card (for example, eth0) in the virtual machine.
+
+The process for assigning MAC addresses and associating those MAC addresses with PCI addresses is slightly different when creating virtual machines based on templates or snapshots. When PCI addresses have already been created for a template or snapshot, the virtual network interface cards on virtual machines created based on that template or snapshot are ordered in accordance with those PCI addresses and MAC addresses allocated in that order. If PCI addresses have not already been created for a template, the virtual network interface cards on virtual machines created based on that template are allocated in the order of the naming of the virtual network interface cards. If PCI addresses have not already been created for a snapshot, the Red Hat Enterprise Virtualization Manager allocates new MAC addresses to the virtual network interface cards on virtual machines based on that snapshot.
+Once created, virtual network interface cards are added to a network bridge device. The network bridge devices are how virtual machines are connected to virtual machine logical networks.
+
+Running the ip addr show command on a Red Hat Enterprise Virtualization host shows all of the virtual network interface cards that are associated with virtual machines on that host. Also visible are any network bridges that have been created to back logical networks, and any network interface cards used by the host.

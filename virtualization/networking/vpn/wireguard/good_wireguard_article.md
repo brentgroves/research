@@ -1,0 +1,10 @@
+# **[](https://utcc.utoronto.ca/~cks/space/blog/linux/WireGuardWhyISwitched#:~:text=Given%20my%20IPSec+GRE%20problem%2C%20this%20was%20enough,implement%20my%20current%20tunnel%20setup%20with%20WireGuard.)**
+
+## Why I've switched from GRE-over-IPSec to using WireGuard
+
+November 4, 2017
+I have a long standing IPSec IKE and point to point GRE tunnel that gives my home machine an inside IP address at work. This has worked reasonably well for years, but recently I discovered that its bandwidth had collapsed. Some subsequent staring at network packet captures suggested that I was now seeing dropped or drastically delayed ACKs, and perhaps reordering and packet drops in general. This smelled a lot like the kind of bug that was not going to be fun to report and probably wasn't going to get fixed any time soon. I could work around it for the moment, but its presence was irritating and inconvenient, and I considered it a warning sign for IPSec plus GRE in general.
+
+(Anything that has catastrophically bad performance that persists for some time is clearly not being used by very many other people, or if it is it's clear that the kernel developers just don't care.)
+
+WireGuard is a new(ish) secure IP tunnel system, initially only on Linux. Its web pages talk about VPNs because that's what almost everyone uses secure tunnels for, but it's really a general secure transport for IP. I'd been hearing good things about it for a while, but I hadn't really checked it out. Yesterday I wound up reading some stuff that was both very positive on WireGuard and suggested that it was going to wind up an official part of Linux. Given my IPSec+GRE problem, this was enough to push me to actively reading its webpages, which were enough to sell me on its straightforward model of operation and convince me that I could easily implement my current tunnel setup with WireGuard. Because I'm sometimes a creature of sudden impulses, today I went ahead and switched over from my IPSec+GRE setup to a WireGuard-based one (and tweeted about it once I got the setup working).

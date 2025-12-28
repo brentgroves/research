@@ -1,0 +1,752 @@
+UID          PID    PPID  C STIME TTY          TIME CMD
+root           1       0  8 May16 ?        07:51:18 /sbin/init splash
+root           2       0  0 May16 ?        00:00:00 [kthreadd]
+root           3       2  0 May16 ?        00:00:00 [pool_workqueue_release]
+root           4       2  0 May16 ?        00:00:00 [kworker/R-rcu_gp]
+root           5       2  0 May16 ?        00:00:00 [kworker/R-sync_wq]
+root           6       2  0 May16 ?        00:00:00 [kworker/R-slub_flushwq]
+root           7       2  0 May16 ?        00:00:00 [kworker/R-netns]
+root          11       2  0 May16 ?        00:00:00 [kworker/R-mm_percpu_wq]
+root          12       2  0 May16 ?        00:00:00 [rcu_tasks_kthread]
+root          13       2  0 May16 ?        00:00:00 [rcu_tasks_rude_kthread]
+root          14       2  0 May16 ?        00:00:00 [rcu_tasks_trace_kthread]
+root          16       2  0 May16 ?        00:02:55 [ksoftirqd/0]
+root          17       2  0 May16 ?        00:15:07 [rcu_preempt]
+root          18       2  0 May16 ?        00:00:00 [rcu_exp_par_gp_kthread_worker/0]
+root          19       2  0 May16 ?        00:00:02 [rcu_exp_gp_kthread_worker]
+root          20       2  0 May16 ?        00:00:10 [migration/0]
+root          21       2  0 May16 ?        00:00:00 [idle_inject/0]
+root          22       2  0 May16 ?        00:00:00 [cpuhp/0]
+root          23       2  0 May16 ?        00:00:00 [cpuhp/1]
+root          24       2  0 May16 ?        00:00:00 [idle_inject/1]
+root          25       2  0 May16 ?        00:00:10 [migration/1]
+root          26       2  0 May16 ?        00:02:48 [ksoftirqd/1]
+root          29       2  0 May16 ?        00:00:00 [cpuhp/2]
+root          30       2  0 May16 ?        00:00:00 [idle_inject/2]
+root          31       2  0 May16 ?        00:00:10 [migration/2]
+root          32       2  0 May16 ?        00:04:35 [ksoftirqd/2]
+root          35       2  0 May16 ?        00:00:00 [cpuhp/3]
+root          36       2  0 May16 ?        00:00:00 [idle_inject/3]
+root          37       2  0 May16 ?        00:00:10 [migration/3]
+root          38       2  0 May16 ?        00:02:29 [ksoftirqd/3]
+root          41       2  0 May16 ?        00:00:00 [kdevtmpfs]
+root          42       2  0 May16 ?        00:00:00 [kworker/R-inet_frag_wq]
+root          44       2  0 May16 ?        00:00:00 [kauditd]
+root          45       2  0 May16 ?        00:00:01 [khungtaskd]
+root          46       2  0 May16 ?        00:00:00 [oom_reaper]
+root          48       2  0 May16 ?        00:00:00 [kworker/R-writeback]
+root          49       2  0 May16 ?        00:00:13 [kcompactd0]
+root          50       2  0 May16 ?        00:00:00 [ksmd]
+root          51       2  0 May16 ?        00:00:00 [khugepaged]
+root          52       2  0 May16 ?        00:00:00 [kworker/R-kintegrityd]
+root          53       2  0 May16 ?        00:00:00 [kworker/R-kblockd]
+root          54       2  0 May16 ?        00:00:00 [kworker/R-blkcg_punt_bio]
+root          55       2  0 May16 ?        00:00:00 [irq/9-acpi]
+root          59       2  0 May16 ?        00:00:00 [kworker/R-tpm_dev_wq]
+root          60       2  0 May16 ?        00:00:00 [kworker/R-ata_sff]
+root          61       2  0 May16 ?        00:00:00 [kworker/R-md]
+root          62       2  0 May16 ?        00:00:00 [kworker/R-md_bitmap]
+root          63       2  0 May16 ?        00:00:00 [kworker/R-edac-poller]
+root          64       2  0 May16 ?        00:00:00 [kworker/R-devfreq_wq]
+root          65       2  0 May16 ?        00:00:00 [watchdogd]
+root          67       2  0 May16 ?        00:00:11 [kswapd0]
+root          68       2  0 May16 ?        00:00:00 [ecryptfs-kthread]
+root          69       2  0 May16 ?        00:00:00 [kworker/R-kthrotld]
+root          70       2  0 May16 ?        00:00:00 [kworker/R-acpi_thermal_pm]
+root          72       2  0 May16 ?        00:00:00 [kworker/R-mld]
+root          74       2  0 May16 ?        00:00:00 [kworker/R-ipv6_addrconf]
+root          84       2  0 May16 ?        00:00:00 [kworker/R-kstrp]
+root         100       2  0 May16 ?        00:00:00 [kworker/R-charger_manager]
+root         185       2  0 May16 ?        00:00:00 [scsi_eh_0]
+root         186       2  0 May16 ?        00:00:00 [kworker/R-scsi_tmf_0]
+root         192       2  0 May16 ?        00:00:00 [scsi_eh_1]
+root         194       2  0 May16 ?        00:00:00 [kworker/R-scsi_tmf_1]
+root         195       2  0 May16 ?        00:00:00 [kworker/R-scsi_wq_0]
+root         207       2  0 May16 ?        00:00:00 [scsi_eh_2]
+root         208       2  0 May16 ?        00:00:00 [kworker/R-0000:03:00.0_event_q]
+root         209       2  0 May16 ?        00:00:00 [kworker/R-0000:03:00.0_disco_q]
+root         210       2  0 May16 ?        00:00:00 [scsi_eh_3]
+root         211       2  0 May16 ?        00:00:00 [kworker/R-scsi_tmf_2]
+root         212       2  0 May16 ?        00:00:00 [scsi_eh_4]
+root         213       2  0 May16 ?        00:00:00 [kworker/R-scsi_tmf_3]
+root         214       2  0 May16 ?        00:00:00 [kworker/R-scsi_tmf_4]
+root         215       2  0 May16 ?        00:00:00 [scsi_eh_5]
+root         216       2  0 May16 ?        00:00:00 [kworker/R-scsi_tmf_5]
+root         217       2  0 May16 ?        00:00:00 [scsi_eh_6]
+root         218       2  0 May16 ?        00:00:00 [kworker/R-scsi_tmf_6]
+root         219       2  0 May16 ?        00:00:00 [kworker/R-scsi_wq_3]
+root         220       2  0 May16 ?        00:00:00 [scsi_eh_7]
+root         221       2  0 May16 ?        00:00:00 [kworker/R-scsi_tmf_7]
+root         223       2  0 May16 ?        00:00:00 [kworker/R-0000:03:00.0_event_q]
+root         224       2  0 May16 ?        00:00:00 [kworker/R-0000:03:00.0_disco_q]
+root         270       2  0 May16 ?        00:11:19 [jbd2/sda2-8]
+root         271       2  0 May16 ?        00:00:00 [kworker/R-ext4-rsv-conversion]
+root         321       1  0 May16 ?        00:00:42 /usr/lib/systemd/systemd-journald
+root         358       1  0 May16 ?        00:00:03 /usr/lib/systemd/systemd-udevd
+root         414       2  0 May16 ?        00:00:00 [psimon]
+root         520       2  0 May16 ?        00:00:00 [irq/43-mei_me]
+systemd+     603       1  0 May16 ?        00:01:49 /usr/lib/systemd/systemd-oomd
+systemd+     612       1  0 May16 ?        00:00:22 /usr/lib/systemd/systemd-resolved
+systemd+     613       1  0 May16 ?        00:00:01 /usr/lib/systemd/systemd-timesyncd
+root         673       2  0 May16 ?        00:00:00 [kworker/R-cryptd]
+root         713       2  0 May16 ?        00:00:00 [kworker/R-ttm]
+root         718       2  0 May16 ?        00:00:00 [card1-crtc0]
+root         719       2  0 May16 ?        00:00:00 [card1-crtc1]
+avahi        806       1  0 May16 ?        00:00:11 avahi-daemon: running [research21.local]
+message+     807       1  0 May16 ?        00:00:45 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+gnome-r+     810       1  0 May16 ?        00:00:00 /usr/libexec/gnome-remote-desktop-daemon --system
+polkitd      814       1  0 May16 ?        00:00:08 /usr/lib/polkit-1/polkitd --no-debug
+root         816       1  0 May16 ?        00:00:00 /usr/libexec/power-profiles-daemon
+root         824       1  0 May16 ?        00:11:48 /usr/lib/snapd/snapd
+root         825       1  0 May16 ?        00:00:09 /usr/libexec/accounts-daemon
+root         828       1  0 May16 ?        00:00:00 /usr/sbin/cron -f -P
+root         829       1  0 May16 ?        00:00:00 /usr/libexec/switcheroo-control
+root         835       1  0 May16 ?        00:00:07 /usr/lib/systemd/systemd-logind
+root         837       1  0 May16 ?        00:15:28 /usr/libexec/udisks2/udisksd
+avahi        842     806  0 May16 ?        00:00:00 avahi-daemon: chroot helper
+root         849       1  0 May16 ?        00:06:02 /usr/sbin/NetworkManager --no-daemon
+root         850       1  0 May16 ?        00:00:01 /usr/sbin/wpa_supplicant -u -s -O DIR=/run/wpa_supplicant GROUP=netdev
+syslog       889       1  0 May16 ?        00:00:07 /usr/sbin/rsyslogd -n -iNONE
+root         953       1  0 May16 ?        00:00:00 /usr/sbin/ModemManager
+root        1372       1  0 May16 ?        00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root        1385       1  0 May16 ?        00:00:00 /usr/sbin/vsftpd /etc/vsftpd.conf
+root        1450       1  0 May16 ?        00:00:00 /usr/sbin/gdm3
+rtkit       1572       1  0 May16 ?        00:00:03 /usr/libexec/rtkit-daemon
+colord      1729       1  0 May16 ?        00:00:00 /usr/libexec/colord
+root        1865       1  0 May16 ?        00:00:00 /usr/libexec/upowerd
+kernoops    2555       1  0 May16 ?        00:00:00 /usr/sbin/kerneloops --test
+kernoops    2559       1  0 May16 ?        00:00:00 /usr/sbin/kerneloops
+root        2612    1450  0 May16 ?        00:00:00 gdm-session-worker [pam/gdm-password]
+root        2634       2  0 May16 ?        00:00:00 [kworker/R-dio/sda2]
+root        2649       2  0 May16 ?        00:00:00 [kworker/R-nvme-wq]
+root        2650       2  0 May16 ?        00:00:00 [kworker/R-nvme-reset-wq]
+root        2651       2  0 May16 ?        00:00:00 [kworker/R-nvme-delete-wq]
+root        2652       2  0 May16 ?        00:00:00 [kworker/R-nvme-auth-wq]
+root        2659       2  0 May16 ?        00:00:00 [kworker/R-nvme_tcp_wq]
+root        2663       2  0 May16 ?        00:00:00 [spl_system_task]
+root        2664       2  0 May16 ?        00:00:00 [spl_delay_taskq]
+root        2665       2  0 May16 ?        00:00:00 [spl_dynamic_tas]
+root        2666       2  0 May16 ?        00:00:00 [spl_kmem_cache]
+root        2669       2  0 May16 ?        00:00:00 [zvol_tq-0]
+root        2670       2  0 May16 ?        00:00:00 [arc_prune]
+root        2671       2  0 May16 ?        00:00:05 [arc_evict]
+root        2672       2  0 May16 ?        00:00:05 [arc_reap]
+root        2673       2  0 May16 ?        00:00:00 [dbu_evict]
+root        2674       2  0 May16 ?        00:00:04 [dbuf_evict]
+root        2675       2  0 May16 ?        00:00:00 [z_vdev_file]
+brent       2684       1  8 May16 ?        08:00:40 /usr/lib/systemd/systemd --user
+brent       2689    2684  0 May16 ?        00:00:00 (sd-pam)
+brent       2699    2684  0 May16 ?        00:00:00 /usr/bin/pipewire
+brent       2700    2684  0 May16 ?        00:00:00 /usr/bin/pipewire -c filter-chain.conf
+brent       2714    2684  0 May16 ?        00:00:00 /usr/bin/wireplumber
+brent       2718    2684  0 May16 ?        00:00:00 /usr/bin/pipewire-pulse
+brent       2722    2684  0 May16 ?        00:00:14 /usr/bin/dbus-daemon --session --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+brent       2723    2684  0 May16 ?        00:00:06 /usr/bin/gnome-keyring-daemon --foreground --components=pkcs11,secrets --control-directory=/run/user/1000/keyring
+brent       2765    2684  0 May16 ?        00:00:00 /usr/libexec/xdg-document-portal
+brent       2769    2684  0 May16 ?        00:00:00 /usr/libexec/xdg-permission-store
+root        2776    2765  0 May16 ?        00:00:00 fusermount3 -o rw,nosuid,nodev,fsname=portal,auto_unmount,subtype=portal -- /run/user/1000/doc
+brent       2804    2612  0 May16 tty2     00:00:00 /usr/libexec/gdm-wayland-session env GNOME_SHELL_SESSION_MODE=ubuntu /usr/bin/gnome-session --session=ubuntu
+brent       2818    2804  0 May16 tty2     00:00:00 /usr/libexec/gnome-session-binary --session=ubuntu
+brent       2847    2684  0 May16 ?        00:00:00 /usr/libexec/gcr-ssh-agent --base-dir /run/user/1000/gcr
+brent       2850    2684  0 May16 ?        00:00:00 /usr/libexec/gnome-remote-desktop-daemon
+brent       2851    2684  0 May16 ?        00:00:00 /usr/libexec/gnome-session-ctl --monitor
+brent       2870    2684  0 May16 ?        00:00:00 /usr/libexec/gvfsd
+brent       2879    2684  0 May16 ?        00:00:00 /usr/libexec/gvfsd-fuse /run/user/1000/gvfs -f
+brent       2881    2684  0 May16 ?        00:00:00 /usr/libexec/gnome-session-binary --systemd-service --session=ubuntu
+brent       2918    2684  0 May16 ?        00:31:27 /usr/bin/gnome-shell
+brent       2921    2881  0 May16 ?        00:00:00 /usr/libexec/at-spi-bus-launcher --launch-immediately
+brent       2939    2921  0 May16 ?        00:00:00 /usr/bin/dbus-daemon --config-file=/usr/share/defaults/at-spi2/accessibility.conf --nofork --print-address 11 --address=unix:path=/run/user/1000/at-spi/bus
+root        2942       2  0 May16 ?        00:00:03 [l2arc_feed]
+brent       3025    2684  0 May16 ?        00:00:00 /usr/libexec/at-spi2-registryd --use-gnome-session
+root        3147       2  0 May16 ?        00:00:00 [spl_system_task]
+brent       3184    2684  0 May16 ?        00:00:00 /usr/libexec/gnome-shell-calendar-server
+brent       3195    2684  0 May16 ?        00:00:00 /usr/libexec/evolution-source-registry
+brent       3300    2684  0 May16 ?        00:00:00 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.Shell.Notifications
+brent       3331    2684  0 May16 ?        00:01:06 /usr/bin/ibus-daemon --panel disable
+brent       3332    2684  0 May16 ?        00:00:00 /usr/libexec/gsd-a11y-settings
+brent       3334    2684  0 May16 ?        00:00:01 /usr/libexec/gsd-color
+brent       3340    2684  0 May16 ?        00:00:00 /usr/libexec/gsd-datetime
+root        3344       2  0 May16 ?        00:00:00 [spl_system_task]
+brent       3346    2684  1 May16 ?        01:15:27 /usr/libexec/gsd-housekeeping
+brent       3349    2684  0 May16 ?        00:00:00 /usr/libexec/gsd-keyboard
+brent       3353    2684  0 May16 ?        00:00:00 /usr/libexec/gsd-media-keys
+brent       3357    2684  0 May16 ?        00:00:00 /usr/libexec/gsd-power
+brent       3364    2684  0 May16 ?        00:00:00 /usr/libexec/gsd-print-notifications
+brent       3366    2684  0 May16 ?        00:00:00 /usr/libexec/gsd-rfkill
+brent       3368    2684  0 May16 ?        00:00:00 /usr/libexec/gsd-screensaver-proxy
+brent       3369    2684  0 May16 ?        00:00:00 /usr/libexec/gsd-sharing
+brent       3372    2684  0 May16 ?        00:00:00 /usr/libexec/gsd-smartcard
+brent       3373    2684  0 May16 ?        00:00:00 /usr/libexec/gsd-sound
+brent       3375    2684  0 May16 ?        00:00:00 /usr/libexec/gsd-wacom
+brent       3390    2684  0 May16 ?        00:00:00 /snap/snapd-desktop-integration/253/usr/bin/snapd-desktop-integration
+brent       3411    2684  0 May16 ?        00:00:00 /usr/libexec/goa-daemon
+brent       3425    2881  0 May16 ?        00:00:00 /usr/libexec/evolution-data-server/evolution-alarm-notify
+brent       3429    2881  0 May16 ?        00:00:02 /usr/libexec/gsd-disk-utility-notify
+brent       3517    2684  0 May16 ?        00:00:00 /usr/libexec/gsd-printer
+brent       3527    2684 81 May16 ?        3-04:41:40 /usr/libexec/gvfs-udisks2-volume-monitor
+brent       3547    2684  0 May16 ?        00:00:30 /usr/libexec/goa-identity-service
+brent       3579    2684  0 May16 ?        00:00:00 /usr/libexec/evolution-calendar-factory
+brent       3648    3331  0 May16 ?        00:00:00 /usr/libexec/ibus-memconf
+brent       3649    3331  0 May16 ?        00:00:20 /usr/libexec/ibus-extension-gtk3
+brent       3658    2684  0 May16 ?        00:00:00 /usr/libexec/ibus-portal
+brent       3676    2684  0 May16 ?        00:00:00 /usr/libexec/gvfs-gphoto2-volume-monitor
+brent       3678    3390  0 May16 ?        00:00:00 /snap/snapd-desktop-integration/253/usr/bin/snapd-desktop-integration
+brent       3709    2684  0 May16 ?        00:00:00 /usr/libexec/gvfs-mtp-volume-monitor
+brent       3715    2684  0 May16 ?        00:00:00 /usr/libexec/evolution-addressbook-factory
+brent       3738    2684  0 May16 ?        00:00:00 /usr/libexec/gvfs-goa-volume-monitor
+brent       3750    2684  0 May16 ?        00:00:09 /usr/libexec/gvfs-afc-volume-monitor
+brent       3776    3331  0 May16 ?        00:00:16 /usr/libexec/ibus-engine-simple
+brent       3800    2684  0 May16 ?        00:00:00 /usr/libexec/dconf-service
+brent       3828    2870  0 May16 ?        00:25:09 /usr/libexec/gvfsd-trash --spawner :1.20 /org/gtk/gvfs/exec_spaw/0
+brent       3927    2684  0 May16 ?        00:00:06 /usr/libexec/xdg-desktop-portal
+brent       3974    2684  0 May16 ?        00:55:24 /usr/libexec/tracker-miner-fs-3
+brent       3977    2684  0 May16 ?        00:00:02 /usr/libexec/xdg-desktop-portal-gnome
+brent       4006    2684  0 May16 ?        00:00:00 /usr/bin/gjs -m /usr/share/gnome-shell/org.gnome.ScreenSaver
+brent       4182    2684  0 May16 ?        00:00:00 /usr/libexec/xdg-desktop-portal-gtk
+brent       4312    2684  0 May16 ?        00:00:00 /usr/libexec/gvfsd-metadata
+root        4375       2  0 May16 ?        00:00:00 [kworker/R-cfg80211]
+brent       4621    2684  0 May16 ?        00:01:12 /usr/libexec/gnome-terminal-server
+brent       4671    4621  0 May16 pts/0    00:00:03 zsh
+brent       5486    2918  0 May16 ?        00:10:26 /usr/bin/Xwayland :0 -rootless -noreset -accessx -core -auth /run/user/1000/.mutter-Xwaylandauth.3WND62 -listenfd 4 -listenfd 5 -displayfd 6 -initfd 7 -byteswappedclients
+brent       5495    2684  0 May16 ?        00:00:00 /usr/libexec/gsd-xsettings
+brent       5522    2684  0 May16 ?        00:00:00 /usr/libexec/ibus-x11
+brent       5527    2918  0 May16 ?        00:00:21 /usr/libexec/mutter-x11-frames
+brent       7946    2723  0 May16 ?        00:00:38 /usr/bin/ssh-agent -D -a /run/user/1000/keyring/.ssh
+brent       8592    2881  0 May16 ?        00:00:06 /usr/bin/update-notifier
+root        8949       1  0 May16 ?        00:00:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root       13028       1  0 May16 ?        00:00:17 /usr/libexec/fwupd/fwupd
+root       16755       1  0 May16 ?        00:40:12 sunbeamd --state-dir /var/snap/openstack/common/state --socket-group snap_daemon --verbose
+root       24104       1  0 May16 ?        00:00:00 /bin/sh /snap/lxd/33110/commands/daemon.start
+root       24428       1  0 May16 ?        00:07:10 lxcfs /var/snap/lxd/common/var/lib/lxcfs -p /var/snap/lxd/common/lxcfs.pid
+root       24438   24104  0 May16 ?        00:03:39 lxd --logfile /var/snap/lxd/common/lxd/logs/lxd.log --group lxd
+lxd        24652   24438  0 May16 ?        00:00:00 dnsmasq --keep-in-foreground --strict-order --bind-interfaces --except-interface=lo --pid-file= --no-ping --interface=sunbeambr0 --dhcp-rapid-commit --no-negcache --quiet-dhcp --quiet-dhcp6 --quiet-ra --listen-address=10.159.97.1 --dhcp-no-override --dhcp-authoritative --dhcp-leasefile=/var/snap/lxd/common/lxd/networks/sunbeambr0/dnsmasq.leases --dhcp-hostsfile=/var/snap/lxd/common/lxd/networks/sunbeambr0/dnsmasq.hosts --dhcp-range 10.159.97.2,10.159.97.254,1h -s lxd --interface-name _gateway.lxd,sunbeambr0 -S /lxd/ --conf-file=/var/snap/lxd/common/lxd/networks/sunbeambr0/dnsmasq.raw -u lxd -g lxd
+root       25007       1  0 May16 ?        00:00:00 [lxc monitor] /var/snap/lxd/common/lxd/containers juju-abebe7-0
+1000000    25030   25007  0 May16 ?        00:00:17 /sbin/init
+1000000    25087   25030  0 May16 ?        00:00:03 /usr/lib/systemd/systemd-journald
+1000000    25157   25030  0 May16 ?        00:00:00 /usr/lib/systemd/systemd-udevd
+1000991    25234   25030  0 May16 ?        00:00:00 /usr/lib/systemd/systemd-resolved
+root       25276       2  0 May16 ?        00:00:00 [psimon]
+1000998    25499   25030  0 May16 ?        00:00:00 /usr/lib/systemd/systemd-networkd
+1000000    25533   25030  0 May16 ?        00:00:00 /usr/sbin/cron -f -P
+1000101    25534   25030  0 May16 ?        00:00:01 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+1000989    25537   25030  0 May16 ?        00:00:05 /usr/lib/polkit-1/polkitd --no-debug
+1000000    25542   25030  0 May16 ?        00:00:01 /usr/lib/systemd/systemd-logind
+1000000    25556   25030  0 May16 ?        00:00:04 /usr/libexec/udisks2/udisksd
+1000000    25572   25030  0 May16 pts/0    00:00:00 /sbin/agetty -o -p -- \u --noclear --keep-baud - 115200,38400,9600 linux
+1000102    25602   25030  0 May16 ?        00:00:00 /usr/sbin/rsyslogd -n -iNONE
+1000000    25625   25030  0 May16 ?        00:00:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+1000000    25752   25030  0 May16 ?        00:00:00 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+1000000    26960   25030  0 May16 ?        00:00:37 snapfuse /var/lib/snapd/snaps/snapd_24505.snap /snap/snapd/24505 -o ro,nodev,allow_other,suid
+1000000    27007   25030  0 May16 ?        00:00:25 /usr/lib/snapd/snapd
+1000000    27224   25030  0 May16 ?        00:01:26 snapfuse /var/lib/snapd/snaps/core20_2571.snap /snap/core20/2571 -o ro,nodev,allow_other,suid
+1000000    27456   25030  0 May16 ?        00:00:25 snapfuse /var/lib/snapd/snaps/juju-db_178.snap /snap/juju-db/178 -o ro,nodev,allow_other,suid
+1000000    27995   25030  1 May16 ?        01:07:26 /snap/juju-db/178/bin/mongod --config /var/snap/juju-db/common/juju-db.config
+root       28128       2  0 May16 ?        00:00:03 [z_null_iss]
+root       28129       2  0 May16 ?        00:00:00 [z_null_int]
+root       28130       2  0 May16 ?        00:00:00 [z_rd_iss]
+root       28131       2  0 May16 ?        00:00:00 [z_rd_int]
+root       28132       2  0 May16 ?        00:00:00 [z_wr_iss]
+root       28133       2  0 May16 ?        00:00:00 [z_wr_iss_h]
+root       28134       2  0 May16 ?        00:00:00 [z_wr_int]
+root       28135       2  0 May16 ?        00:00:00 [z_wr_int_h]
+root       28136       2  0 May16 ?        00:00:00 [z_fr_iss]
+root       28137       2  0 May16 ?        00:00:00 [z_fr_int]
+root       28138       2  0 May16 ?        00:00:00 [z_cl_iss]
+root       28139       2  0 May16 ?        00:00:00 [z_cl_int]
+root       28140       2  0 May16 ?        00:00:00 [z_ioctl_iss]
+root       28141       2  0 May16 ?        00:00:00 [z_ioctl_int]
+root       28142       2  0 May16 ?        00:00:00 [z_trim_iss]
+root       28143       2  0 May16 ?        00:00:00 [z_trim_int]
+root       28144       2  0 May16 ?        00:00:00 [z_zvol]
+root       28145       2  0 May16 ?        00:00:00 [z_metaslab]
+root       28146       2  0 May16 ?        00:00:00 [z_prefetch]
+root       28147       2  0 May16 ?        00:00:00 [z_upgrade]
+root       28149       2  0 May16 ?        00:00:00 [dp_sync_taskq]
+root       28150       2  0 May16 ?        00:00:00 [dp_sync_taskq]
+root       28151       2  0 May16 ?        00:00:00 [dp_sync_taskq]
+root       28152       2  0 May16 ?        00:00:00 [dp_zil_clean_ta]
+root       28153       2  0 May16 ?        00:00:00 [dp_zil_clean_ta]
+root       28154       2  0 May16 ?        00:00:00 [dp_zil_clean_ta]
+root       28155       2  0 May16 ?        00:00:00 [dp_zil_clean_ta]
+root       28156       2  0 May16 ?        00:00:00 [z_zrele]
+root       28157       2  0 May16 ?        00:00:00 [z_unlinked_drai]
+root       28158       2  0 May16 ?        00:00:01 [txg_quiesce]
+root       28159       2  0 May16 ?        00:00:12 [txg_sync]
+root       28160       2  0 May16 ?        00:00:05 [mmp]
+root       28165       2  0 May16 ?        00:00:00 [z_indirect_cond]
+root       28167       2  0 May16 ?        00:00:00 [z_livelist_dest]
+root       28168       2  0 May16 ?        00:00:00 [z_livelist_cond]
+root       28169       2  0 May16 ?        00:00:00 [z_checkpoint_di]
+root       28172       2  0 May16 ?        00:00:00 [vdev_autotrim]
+root       28271       2  0 May16 ?        00:00:00 [kworker/R-btrfs-worker]
+root       28272       2  0 May16 ?        00:00:00 [kworker/R-btrfs-delalloc]
+root       28273       2  0 May16 ?        00:00:00 [kworker/R-btrfs-flush_delalloc]
+root       28274       2  0 May16 ?        00:00:00 [kworker/R-btrfs-cache]
+root       28275       2  0 May16 ?        00:00:00 [kworker/R-btrfs-fixup]
+root       28276       2  0 May16 ?        00:00:00 [kworker/R-btrfs-endio]
+root       28277       2  0 May16 ?        00:00:00 [kworker/R-btrfs-endio-meta]
+root       28278       2  0 May16 ?        00:00:00 [kworker/R-btrfs-rmw]
+root       28279       2  0 May16 ?        00:00:00 [kworker/R-btrfs-endio-write]
+root       28280       2  0 May16 ?        00:00:00 [kworker/R-btrfs-compressed-write]
+root       28281       2  0 May16 ?        00:00:00 [kworker/R-btrfs-freespace-write]
+root       28282       2  0 May16 ?        00:00:00 [kworker/R-btrfs-delayed-meta]
+root       28283       2  0 May16 ?        00:00:00 [kworker/R-btrfs-qgroup-rescan]
+root       28284       2  0 May16 ?        00:00:00 [btrfs-cleaner]
+root       28285       2  0 May16 ?        00:00:00 [btrfs-transaction]
+1000000    28425   25030  0 May16 ?        00:00:00 bash /etc/systemd/system/jujud-machine-0-exec-start.sh
+1000000    28430   28425  0 May16 ?        00:40:50 /var/lib/juju/tools/machine-0/jujud machine --data-dir /var/lib/juju --machine-id 0 --debug
+root       29142       2  0 May16 ?        00:00:00 [psimon]
+root       32080       1  0 May16 ?        00:00:00 bash /etc/systemd/system/jujud-machine-0-exec-start.sh
+root       32085   32080  0 May16 ?        00:10:49 /var/lib/juju/tools/machine-0/jujud machine --data-dir /var/lib/juju --machine-id 0 --debug
+root       35160       1  1 May16 ?        00:57:22 /snap/k8s/2500/bin/k8sd --state-dir=/var/snap/k8s/common/var/lib/k8sd/state
+root       35913       1  6 May16 ?        05:55:53 /snap/k8s/2500/bin/k8s-dqlite --listen=unix:///var/snap/k8s/common/var/lib/k8s-dqlite/k8s-dqlite.sock --storage-dir=/var/snap/k8s/common/var/lib/k8s-dqlite
+root       36097       1  5 May16 ?        05:13:06 /snap/k8s/2500/bin/containerd --address=/run/containerd/containerd.sock --config=/etc/containerd/config.toml --root=/var/lib/containerd --state=/run/containerd
+root       36331       1  1 May16 ?        01:08:04 /snap/k8s/2500/bin/kube-controller-manager --authentication-kubeconfig=/etc/kubernetes/controller.conf --authorization-kubeconfig=/etc/kubernetes/controller.conf --cluster-signing-cert-file=/etc/kubernetes/pki/ca.crt --cluster-signing-key-file=/etc/kubernetes/pki/ca.key --kubeconfig=/etc/kubernetes/controller.conf --leader-elect-lease-duration=30s --leader-elect-renew-deadline=15s --profiling=false --root-ca-file=/etc/kubernetes/pki/ca.crt --service-account-private-key-file=/etc/kubernetes/pki/serviceaccount.key --terminated-pod-gc-threshold=12500 --tls-min-version=VersionTLS12 --use-service-account-credentials=true
+root       36626       1  0 May16 ?        00:01:13 /snap/k8s/2500/bin/kube-proxy --cluster-cidr=10.1.0.0/16 --healthz-bind-address=127.0.0.1:10256 --kubeconfig=/etc/kubernetes/proxy.conf --profiling=false
+root       36811       1  0 May16 ?        00:11:37 /snap/k8s/2500/bin/kube-scheduler --authentication-kubeconfig=/etc/kubernetes/scheduler.conf --authorization-kubeconfig=/etc/kubernetes/scheduler.conf --kubeconfig=/etc/kubernetes/scheduler.conf --leader-elect-lease-duration=30s --leader-elect-renew-deadline=15s --profiling=false --tls-min-version=VersionTLS12
+root       37236       1  7 May16 ?        07:27:02 /snap/k8s/2500/bin/kube-apiserver --advertise-address=172.24.188.57 --allow-privileged=true --anonymous-auth=false --authentication-token-webhook-config-file=/var/snap/k8s/common/args/conf.d/auth-token-webhook.conf --authorization-mode=Node,RBAC --client-ca-file=/etc/kubernetes/pki/client-ca.crt --enable-admission-plugins=NodeRestriction --etcd-servers=unix:///var/snap/k8s/common/var/lib/k8s-dqlite/k8s-dqlite.sock --feature-gates=WatchList=false --kubelet-certificate-authority=/etc/kubernetes/pki/ca.crt --kubelet-client-certificate=/etc/kubernetes/pki/apiserver-kubelet-client.crt --kubelet-client-key=/etc/kubernetes/pki/apiserver-kubelet-client.key --kubelet-preferred-address-types=InternalIP,Hostname,InternalDNS,ExternalDNS,ExternalIP --profiling=false --proxy-client-cert-file=/etc/kubernetes/pki/front-proxy-client.crt --proxy-client-key-file=/etc/kubernetes/pki/front-proxy-client.key --request-timeout=300s --requestheader-allowed-names=front-proxy-client --requestheader-client-ca-file=/etc/kubernetes/pki/front-proxy-ca.crt --requestheader-extra-headers-prefix=X-Remote-Extra- --requestheader-group-headers=X-Remote-Group --requestheader-username-headers=X-Remote-User --secure-port=6443 --service-account-issuer=https://kubernetes.default.svc --service-account-key-file=/etc/kubernetes/pki/serviceaccount.key --service-account-signing-key-file=/etc/kubernetes/pki/serviceaccount.key --service-cluster-ip-range=10.152.183.0/24 --tls-cert-file=/etc/kubernetes/pki/apiserver.crt --tls-cipher-suites=TLS_AES_128_GCM_SHA256,TLS_AES_256_GCM_SHA384,TLS_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_3DES_EDE_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_RSA_WITH_3DES_EDE_CBC_SHA,TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_CBC_SHA,TLS_RSA_WITH_AES_256_GCM_SHA384 --tls-min-version=VersionTLS12 --tls-private-key-file=/etc/kubernetes/pki/apiserver.key
+root       38157       1 10 May16 ?        09:55:23 /snap/k8s/2500/bin/kubelet --anonymous-auth=false --authentication-token-webhook=true --authorization-mode=Webhook --cgroup-driver=systemd --client-ca-file=/etc/kubernetes/pki/client-ca.crt --cluster-dns=10.152.183.178 --cluster-domain=cluster.local --container-runtime-endpoint=/run/containerd/containerd.sock --containerd=/run/containerd/containerd.sock --eviction-hard=memory.available<100Mi,nodefs.available<1Gi,imagefs.available<1Gi --fail-swap-on=false --kubeconfig=/etc/kubernetes/kubelet.conf --node-ip=172.24.188.57 --node-labels=node-role.kubernetes.io/control-plane=,node-role.kubernetes.io/worker=,k8sd.io/role=control-plane --read-only-port=0 --register-with-taints= --root-dir=/var/lib/kubelet --serialize-image-pulls=false --tls-cert-file=/etc/kubernetes/pki/kubelet.crt --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305,TLS_RSA_WITH_AES_128_GCM_SHA256,TLS_RSA_WITH_AES_256_GCM_SHA384 --tls-private-key-file=/etc/kubernetes/pki/kubelet.key
+root       43017       1  0 May16 ?        00:03:09 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 73340c8bc3e50231b4f9d68a3c434708c6b972da61ffbfa29b85fcf99670d8a0 -address /run/containerd/containerd.sock
+65535      43052   43017  0 May16 ?        00:00:00 /pause
+root       43097   43017  0 May16 ?        00:18:15 cilium-operator-generic --config-dir=/tmp/cilium/config-map --debug=false
+root       43332       1  0 May16 ?        00:03:10 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id bf18b36c17196a56ea8b99c59caa22d9c6da77a10b2798f08c5e02e9c2200725 -address /run/containerd/containerd.sock
+65535      43353   43332  0 May16 ?        00:00:00 /pause
+root       43817   43332 15 May16 ?        14:01:04 cilium-agent --config-dir=/tmp/cilium/config-map
+root       44424       2  0 May16 ?        00:00:00 [kworker/R-tls-strp]
+root       44571   43817  0 May16 ?        00:00:08 cilium-health-responder --listen 4240 --pidfile /var/run/cilium/state/health-endpoint.pid
+root       44744       1  0 May16 ?        00:11:40 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 20800e54511449e46ddb138e4c334806383f3bee68592baf7b6bd48a2cb84a29 -address /run/containerd/containerd.sock
+65535      44765   44744  0 May16 ?        00:00:00 /pause
+root       44927   44744  0 May16 ?        00:00:00 /bin/pebble enter
+root       44960   44927  0 May16 ?        00:10:37 python3 /app/rawfile.py csi-driver
+root       45005   44744  0 May16 ?        00:01:55 /csi-node-driver-registrar --csi-address=/csi/csi.sock --kubelet-registration-path=/var/lib/kubelet/plugins/rawfile-csi/csi.sock --health-port=9809
+root       45031       1  0 May16 ?        00:03:02 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 3de76bcb280d4fddb6c67d49c42fea80fb510266541f9d2a45cfa9fa2496bc21 -address /run/containerd/containerd.sock
+root       45049       1  0 May16 ?        00:05:55 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 905036c25ead8fd8d8061ba4fc23ec4f9a0881578138739d9aa8683eeb24989a -address /run/containerd/containerd.sock
+root       45075       1  0 May16 ?        00:03:11 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id c734d8f2524c61ba6eeff3002e11618d5aff534ad9278919e6bec73eb3d3a5dd -address /run/containerd/containerd.sock
+65535      45118   45049  0 May16 ?        00:00:00 /pause
+65535      45133   45075  0 May16 ?        00:00:00 /pause
+root       45144       1  0 May16 ?        00:03:13 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 5d0a47da3f60314eb9d2d1554870f2fe8c4ec1d75deb1f246be3d3d56770a44a -address /run/containerd/containerd.sock
+65535      45151   45031  0 May16 ?        00:00:00 /pause
+nobody     45184   45144  0 May16 ?        00:00:00 /pause
+root       45293   45049  0 May16 ?        00:00:00 /bin/pebble enter --args rawfile csi-driver --disable-metrics
+root       45321   45293  0 May16 ?        00:07:03 python3 /app/rawfile.py csi-driver --disable-metrics
+root       45604   44744  0 May16 ?        00:04:45 /csi-provisioner --csi-address=/csi/csi.sock --feature-gates=Topology=true --strict-topology --immediate-topology=false --timeout=120s --enable-capacity=true --capacity-ownerref-level=1 --node-deployment=true
+root       45652   45031  0 May16 ?        00:00:00 /bin/pebble enter --args coredns -conf /etc/coredns/Corefile
+root       45689   45652  0 May16 ?        00:39:36 /coredns -conf /etc/coredns/Corefile
+brent      45696   45075  0 May16 ?        00:00:00 /bin/pebble enter --args metrics-server --secure-port=10250 --cert-dir=/tmp --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname --kubelet-use-node-status-port --metric-resolution=15s
+brent      45732   45696  0 May16 ?        00:19:02 /metrics-server --secure-port=10250 --cert-dir=/tmp --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname --kubelet-use-node-status-port --metric-resolution=15s
+root       45765   45049  0 May16 ?        00:00:37 /csi-resizer --csi-address=/csi/csi.sock --handle-volume-inuse-error=false
+nobody     45857   45144  0 May16 ?        00:06:41 /controller --port=7472 --log-level=info --tls-min-version=VersionTLS12
+root       45917   44744  0 May16 ?        00:09:20 /csi-snapshotter --csi-address=/csi/csi.sock --node-deployment=true --extra-create-metadata=true
+root       46171       1  0 May16 ?        00:03:14 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id d1776f21c952f005d49ca37728693f12f1f8def6bf5112eb5cbc944539e04c57 -address /run/containerd/containerd.sock
+65535      46202   46171  0 May16 ?        00:00:00 /pause
+root       46687   46171  0 May16 ?        00:24:45 /speaker --port=7472 --log-level=info
+root       47252       2  0 May16 ?        00:00:44 [jbd2/loop24-8]
+root       47253       2  0 May16 ?        00:00:00 [kworker/R-ext4-rsv-conversion]
+root       47308       1  0 May16 ?        00:20:40 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 20e51a04e4ac416bc753ee2d6deef3c818d1b32a99b94b5e164dbc52e1e4bd68 -address /run/containerd/containerd.sock
+65535      47331   47308  0 May16 ?        00:00:00 /pause
+170        47781   47308  0 May16 ?        00:01:35 /charm/bin/pebble run --http :38812 --verbose
+170        47805   47781  0 May16 ?        00:03:01 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0 --controller
+170        48027   47308  4 May16 ?        04:15:49 mongod --dbpath=/var/lib/juju/db --tlsCertificateKeyFile=/var/lib/juju/server.pem --tlsCertificateKeyFilePassword=xxxxxxx --tlsMode=requireTLS --port=37017 --journal --replSet=juju --quiet --oplogSize=1024 --auth --keyFile=/var/lib/juju/shared-secret --storageEngine=wiredTiger --bind_ip_all --ipv6
+170        48092   47308  0 May16 ?        00:03:04 /opt/pebble run --http :38811 --verbose
+root       48175       2  0 May16 ?        00:00:00 [kworker/R-dio/loop24]
+170        48482   48092  5 May16 ?        05:15:57 /var/lib/juju/tools/jujud machine --data-dir /var/lib/juju --controller-id 0 --log-to-stderr --show-log
+root       48583       1  0 May16 ?        00:03:05 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id cea70f5f5d6abbfbe394b4e30c7ec7421773743ac9604e7eaa6abf7b738bc329 -address /run/containerd/containerd.sock
+65535      48606   48583  0 May16 ?        00:00:00 /pause
+root       48655   48583  0 May16 ?        00:01:09 /var/lib/juju/tools/jujud model --model-uuid=2dc8d8b1-6125-4a55-8f69-7c022bfbc1fa
+root       52455       1  0 May16 ?        00:03:18 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 885f44c1f12932f073528be6f2305f569802647f8a148016bfb718c7fff4c954 -address /run/containerd/containerd.sock
+65535      52480   52455  0 May16 ?        00:00:00 /pause
+root       52539   52455  0 May16 ?        00:01:16 /var/lib/juju/tools/jujud model --model-uuid=c9e21a63-fd1f-498d-8998-2712e5fb4f77
+brent      52778    2870  0 May16 ?        00:00:00 /usr/libexec/gvfsd-network --spawner :1.20 /org/gtk/gvfs/exec_spaw/1
+brent      52788    2870  0 May16 ?        00:00:00 /usr/libexec/gvfsd-smb-browse --spawner :1.20 /org/gtk/gvfs/exec_spaw/2
+brent      52796    2870  0 May16 ?        00:00:00 /usr/libexec/gvfsd-dnssd --spawner :1.20 /org/gtk/gvfs/exec_spaw/3
+root       52881       1  0 May16 ?        00:06:12 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 2fd80b566f29cec21cd726eaab789529e78ad5d6add321bfd46e04a827926e02 -address /run/containerd/containerd.sock
+65535      52913   52881  0 May16 ?        00:00:00 /pause
+root       53062   52881  0 May16 ?        00:04:09 /charm/bin/pebble run --http :38812 --verbose
+root       53082   53062  0 May16 ?        00:04:28 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       53129       2  0 May16 ?        00:00:12 [jbd2/loop25-8]
+root       53130       2  0 May16 ?        00:00:00 [kworker/R-ext4-rsv-conversion]
+root       53193       1  0 May16 ?        00:06:20 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 01baab015394f063cbb4f5614d6b9a999c097aeadcd74146e296d6e3ab929bf8 -address /run/containerd/containerd.sock
+65535      53234   53193  0 May16 ?        00:00:00 /pause
+root       53408   53193  0 May16 ?        00:04:08 /charm/bin/pebble run --http :38812 --verbose
+root       53436   53408  0 May16 ?        00:04:23 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       53475       1  0 May16 ?        00:03:13 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 1f1219d99feb476db59bcd2fb3ff3a7d901ca1d9e8eaa450868a0662a454f40a -address /run/containerd/containerd.sock
+65535      53499   53475  0 May16 ?        00:00:00 /pause
+root       53651   53475  0 May16 ?        00:04:12 /charm/bin/pebble run --http :38812 --verbose
+root       53684   53651  0 May16 ?        00:02:48 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       53806   52881  0 May16 ?        00:03:39 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       53999   53193  0 May16 ?        00:03:01 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       54042       2  0 May16 ?        00:00:03 [jbd2/loop26-8]
+root       54043       2  0 May16 ?        00:00:00 [kworker/R-ext4-rsv-conversion]
+root       54115       1  0 May16 ?        00:06:17 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 147f9a110389e1baa444957ebc3aac74f2c022304c8ff54c8303792015342825 -address /run/containerd/containerd.sock
+65535      54141   54115  0 May16 ?        00:00:00 /pause
+root       54335       2  0 May16 ?        00:00:03 [jbd2/loop27-8]
+root       54336       2  0 May16 ?        00:00:00 [kworker/R-ext4-rsv-conversion]
+root       54383       1  0 May16 ?        00:06:17 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 4ee93c9afe20443c7c7a3f4e39802c14041532615de879c17e4c3140457cf53e -address /run/containerd/containerd.sock
+65535      54417   54383  0 May16 ?        00:00:00 /pause
+root       54721       2  0 May16 ?        00:01:41 [jbd2/loop28-8]
+root       54722       2  0 May16 ?        00:00:00 [kworker/R-ext4-rsv-conversion]
+root       54788       1  0 May16 ?        00:06:30 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 5f95dcf1eda955294c05e70845e9c92654d97069740f9bda05715910b222c08d -address /run/containerd/containerd.sock
+65535      54811   54788  0 May16 ?        00:00:00 /pause
+root       54893       2  0 May16 ?        00:00:00 [jbd2/loop29-8]
+root       54894       2  0 May16 ?        00:00:00 [kworker/R-ext4-rsv-conversion]
+root       55051       1  0 May16 ?        00:12:23 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id a32f3c38a1fe6e06ae8e47bb51eebbd437e3c9b9fc0e5fc541742eab5e96f573 -address /run/containerd/containerd.sock
+65535      55131   55051  0 May16 ?        00:00:00 /pause
+root       55803   55051  0 May16 ?        00:04:07 /charm/bin/pebble run --http :38812 --verbose
+root       55857   55803  0 May16 ?        00:05:38 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       56063   55051  0 May16 ?        00:03:50 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       56299   55051  0 May16 ?        00:03:25 /charm/bin/pebble run --create-dirs --hold --http :38814 --verbose
+root       56686   55051  0 May16 ?        00:03:48 /charm/bin/pebble run --create-dirs --hold --http :38815 --verbose
+dnsmasq    57059   53999  0 May16 ?        00:00:06 epmd -d
+dnsmasq    57208   53999  0 May16 ?        00:00:00 /bin/sh /usr/lib/rabbitmq/bin/rabbitmq-server
+dnsmasq    57214   57208  1 May16 ?        00:56:04 /usr/lib/erlang/erts-13.2.2.5/bin/beam.smp -W w -MBas ageffcbf -MHas ageffcbf -MBlmbcs 512 -MHlmbcs 512 -MMmcs 30 -pc unicode -P 1048576 -t 5000000 -stbt db -zdbbl 128000 -sbwt none -sbwtdcpu none -sbwtdio none -B i -- -root /usr/lib/erlang -bindir /usr/lib/erlang/erts-13.2.2.5/bin -progname erl -- -home /var/lib/rabbitmq -- -pa  -noshell -noinput -s rabbit boot -boot start_sasl -syslog logger [] -syslog syslog_error_logger false -kernel prevent_overlapping_partitions false -enable-feature maybe_expr
+dnsmasq    57234   57214  0 May16 ?        00:00:01 erl_child_setup 1048576
+root       57327   53999  0 May16 ?        00:00:00 /bin/bash /usr/bin/notifier
+root       57366   54383  0 May16 ?        00:04:07 /charm/bin/pebble run --http :38812 --verbose
+root       57390   54115  0 May16 ?        00:04:03 /charm/bin/pebble run --http :38812 --verbose
+root       57434   57366  0 May16 ?        00:07:49 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       57441   57390  0 May16 ?        00:07:45 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       57799   54788  0 May16 ?        00:04:03 /charm/bin/pebble run --http :38812 --verbose
+root       57869   57799  0 May16 ?        00:07:13 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       58462   54383  0 May16 ?        00:07:17 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       58464   54115  0 May16 ?        00:07:10 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+dnsmasq    58751   57234  0 May16 ?        00:00:01 /usr/lib/erlang/erts-13.2.2.5/bin/inet_gethost 4
+dnsmasq    58752   58751  0 May16 ?        00:00:01 /usr/lib/erlang/erts-13.2.2.5/bin/inet_gethost 4
+root       59787       1  0 May16 ?        00:06:11 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id a3400cfaf9db5145d6586531ed4b08dec08a70b2529629f27143d9f624fccce4 -address /run/containerd/containerd.sock
+65535      59812   59787  0 May16 ?        00:00:00 /pause
+root       60149       1  0 May16 ?        00:06:08 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id a4cf6c9b9a9935e3014ad3415f32dd5c83282296ad1576652a11018f7745e31e -address /run/containerd/containerd.sock
+65535      60198   60149  0 May16 ?        00:00:00 /pause
+root       60323   59787  0 May16 ?        00:04:06 /charm/bin/pebble run --http :38812 --verbose
+root       60451   60323  0 May16 ?        00:04:53 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       60765       1  0 May16 ?        00:06:09 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 2d7f0e01498193ae55c81fb52d8a7e64b550a2d61513a7247e76d6b474156d8b -address /run/containerd/containerd.sock
+65535      60849   60765  0 May16 ?        00:00:00 /pause
+root       60943   60149  0 May16 ?        00:04:03 /charm/bin/pebble run --http :38812 --verbose
+root       61046   60943  0 May16 ?        00:05:03 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       61208       1  0 May16 ?        00:06:10 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id c3ce9b7bba5dba8e23247d9bd2343813cd468c97434f7fd177d4a92203252591 -address /run/containerd/containerd.sock
+65535      61242   61208  0 May16 ?        00:00:00 /pause
+root       61636   60765  0 May16 ?        00:04:06 /charm/bin/pebble run --http :38812 --verbose
+root       61815   61636  0 May16 ?        00:05:03 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       61938   61208  0 May16 ?        00:04:08 /charm/bin/pebble run --http :38812 --verbose
+root       61987   61938  0 May16 ?        00:05:03 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       62155   60149  0 May16 ?        00:11:37 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       62159   54788 20 May16 ?        18:59:35 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       62204   61208  0 May16 ?        00:11:32 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       62205   60765  0 May16 ?        00:11:29 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       62644       1  0 May16 ?        00:08:58 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 5421430abdedf265fe0a7147b9464dd7d9126fcc017e85a532be14a21a139429 -address /run/containerd/containerd.sock
+65535      62686   62644  0 May16 ?        00:00:00 /pause
+root       63445   62644  0 May16 ?        00:04:03 /charm/bin/pebble run --http :38812 --verbose
+root       63473       2  0 May16 ?        00:00:00 [jbd2/loop30-8]
+root       63474       2  0 May16 ?        00:00:00 [kworker/R-ext4-rsv-conversion]
+root       63604   63445  0 May16 ?        00:05:34 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       63722       1  0 May16 ?        00:06:11 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 20a108e18861d6591906dfb50c9a837645face6ea7713c7804d5d538ad2be428 -address /run/containerd/containerd.sock
+root       63754       1  0 May16 ?        00:06:10 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id b3cd5efd2448999b13b0f8e3e28f7bf6815d2d8ae45f9016a58e5922e7d5f6cd -address /run/containerd/containerd.sock
+65535      63790   63754  0 May16 ?        00:00:00 /pause
+65535      63791   63722  0 May16 ?        00:00:00 /pause
+root       63879       1  0 May16 ?        00:06:08 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 08e70b136586805efcda98a1d224eb86727d68e46aa58666ea618cd3dda558ce -address /run/containerd/containerd.sock
+65535      63951   63879  0 May16 ?        00:00:00 /pause
+root       64558   63722  0 May16 ?        00:04:18 /charm/bin/pebble run --http :38812 --verbose
+root       64716       1  0 May16 ?        00:06:06 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id eb9aa39ecaf30399d71210f506aec137c64cda1a39615b2ed14ff7a22ae2cd7e -address /run/containerd/containerd.sock
+root       64719   64558  0 May16 ?        00:04:14 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+65535      65017   64716  0 May16 ?        00:00:00 /pause
+root       65019   63754  0 May16 ?        00:04:05 /charm/bin/pebble run --http :38812 --verbose
+root       65041   63879  0 May16 ?        00:04:04 /charm/bin/pebble run --http :38812 --verbose
+root       65222   65041  0 May16 ?        00:05:04 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       65362       1  0 May16 ?        00:06:04 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 6924f336fc1cddb2c11f29f23bd06258480c5b6aff6a86565ef5d09321862ad4 -address /run/containerd/containerd.sock
+root       65417   65019  0 May16 ?        00:05:05 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       65548   63879  0 May16 ?        00:11:37 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+65535      65555   65362  0 May16 ?        00:00:00 /pause
+root       65629   63754  0 May16 ?        00:11:38 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       65902       1  0 May16 ?        00:06:05 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id b3641f24e5bf41fbea358e4ba274a53907970a99ba1d140a6a18050b9a18a352 -address /run/containerd/containerd.sock
+65535      65965   65902  0 May16 ?        00:00:00 /pause
+root       66744       1  0 May16 ?        00:06:16 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 80325f6e83b40192e60116c67d7c9e833bc9a44789c40a5428cefb7f554096f8 -address /run/containerd/containerd.sock
+65535      66789   66744  0 May16 ?        00:00:00 /pause
+root       66792   64716  0 May16 ?        00:04:02 /charm/bin/pebble run --http :38812 --verbose
+root       66825       1  0 May16 ?        00:06:07 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 382325185a49f284e06152707b766e939198f81ee0f4df7b2d249dd602e57865 -address /run/containerd/containerd.sock
+65535      66863   66825  0 May16 ?        00:00:00 /pause
+root       66990   66792  0 May16 ?        00:05:03 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       67173   64716  0 May16 ?        00:11:37 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       67716       2  0 May16 ?        00:00:00 [jbd2/loop31-8]
+root       67717       2  0 May16 ?        00:00:00 [kworker/R-ext4-rsv-conversion]
+root       67772       2  0 May16 ?        00:00:00 [jbd2/loop32-8]
+root       67773       2  0 May16 ?        00:00:00 [kworker/R-ext4-rsv-conversion]
+root       67898   65362  0 May16 ?        00:04:04 /charm/bin/pebble run --http :38812 --verbose
+root       67969   65902  0 May16 ?        00:04:04 /charm/bin/pebble run --http :38812 --verbose
+dnsmasq    68109   57234  0 May16 ?        00:00:11 /bin/sh -s rabbit_disk_monitor
+root       68136   67969  0 May16 ?        00:03:40 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       68154   67898  0 May16 ?        00:05:06 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       68318       1  0 May16 ?        00:06:14 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id ac342f4b6832f02c2e15baa6d02104947a555fc2ba1d656d5d29717b8de1cf90 -address /run/containerd/containerd.sock
+root       68479   65902  0 May16 ?        00:04:00 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       68493   65362  0 May16 ?        00:11:17 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+65535      68497   68318  0 May16 ?        00:00:00 /pause
+root       68660   66744  0 May16 ?        00:04:03 /charm/bin/pebble run --http :38812 --verbose
+root       68670   66825  0 May16 ?        00:04:06 /charm/bin/pebble run --http :38812 --verbose
+root       68793       1  0 May16 ?        00:06:06 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id a2c1acae2482e31326012dd01ee609a9353fa623555d556e6afc2dbdc6464da9 -address /run/containerd/containerd.sock
+root       68833       2  0 May16 ?        00:00:43 [kworker/1:2H-kblockd]
+65535      68911   68793  0 May16 ?        00:00:00 /pause
+root       69003   68670  0 May16 ?        00:05:05 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       69008   68660  0 May16 ?        00:04:06 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       69398   66825  0 May16 ?        00:11:36 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       69468       1  0 May16 ?        00:14:50 /snap/k8s/2500/bin/containerd-shim-runc-v2 -namespace k8s.io -id 40aa67eec86cacd0d6ff89ad330b252037810698ca74194b0e1ace34a8b11d30 -address /run/containerd/containerd.sock
+65535      69546   69468  0 May16 ?        00:00:00 /pause
+root       70395   68318  0 May16 ?        00:04:07 /charm/bin/pebble run --http :38812 --verbose
+root       70401   68793  0 May16 ?        00:04:06 /charm/bin/pebble run --http :38812 --verbose
+root       70498   70395  0 May16 ?        00:04:26 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       70635   70401  0 May16 ?        00:03:57 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       70942   69468  0 May16 ?        00:04:08 /charm/bin/pebble run --http :38812 --verbose
+root       71046   70942  0 May16 ?        00:07:03 /charm/bin/containeragent unit --data-dir /var/lib/juju --append-env PATH=$PATH:/charm/bin --show-log --charm-modified-version 0
+root       83820   59787  0 May16 ?        00:04:15 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       84830   66744  0 May16 ?        00:05:04 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       86563   68318  0 May16 ?        00:05:16 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       90705   62644  0 May16 ?        00:03:47 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       91229   62644  0 May16 ?        00:02:45 /charm/bin/pebble run --create-dirs --hold --http :38814 --verbose
+root       92167   63722  0 May16 ?        00:03:01 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       92656   68793  0 May16 ?        00:04:13 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       92664   69468  0 May16 ?        00:04:52 /charm/bin/pebble run --create-dirs --hold --http :38813 --verbose
+root       93034   69468  0 May16 ?        00:02:43 /charm/bin/pebble run --create-dirs --hold --http :38814 --verbose
+root       93605   69468  0 May16 ?        00:02:42 /charm/bin/pebble run --create-dirs --hold --http :38815 --verbose
+root      113922   69468  0 May16 ?        00:02:50 /charm/bin/pebble run --create-dirs --hold --http :38816 --verbose
+root      117504       2  0 May17 ?        00:00:00 [kworker/R-dm_bufio_cache]
+root      117549       2  0 May17 ?        00:00:00 [kworker/R-iscsi_conn_cleanup]
+root      117560       2  0 May17 ?        00:00:00 [kworker/R-nbd0-recv]
+root      117561       2  0 May17 ?        00:00:00 [kworker/R-nbd1-recv]
+root      117562       2  0 May17 ?        00:00:00 [kworker/R-nbd2-recv]
+root      117563       2  0 May17 ?        00:00:00 [kworker/R-nbd3-recv]
+root      117564       2  0 May17 ?        00:00:00 [kworker/R-nbd4-recv]
+root      117565       2  0 May17 ?        00:00:00 [kworker/R-nbd5-recv]
+root      117566       2  0 May17 ?        00:00:00 [kworker/R-nbd6-recv]
+root      117567       2  0 May17 ?        00:00:00 [kworker/R-nbd7-recv]
+root      117569       2  0 May17 ?        00:00:00 [kworker/R-nbd8-recv]
+root      117570       2  0 May17 ?        00:00:00 [kworker/R-nbd9-recv]
+root      117571       2  0 May17 ?        00:00:00 [kworker/R-nbd10-recv]
+root      117572       2  0 May17 ?        00:00:00 [kworker/R-nbd11-recv]
+root      117573       2  0 May17 ?        00:00:00 [kworker/R-nbd12-recv]
+root      117575       2  0 May17 ?        00:00:00 [kworker/R-nbd13-recv]
+root      117576       2  0 May17 ?        00:00:00 [kworker/R-nbd14-recv]
+root      117577       2  0 May17 ?        00:00:00 [kworker/R-nbd15-recv]
+root      117610       2  0 May17 ?        00:00:00 [kworker/R-target_completion]
+root      117612       2  0 May17 ?        00:00:00 [kworker/R-target_submission]
+root      117613       2  0 May17 ?        00:00:00 [kworker/R-xcopy_wq]
+root      117626       2  0 May17 ?        00:00:00 [kworker/R-vfio-irqfd-cleanup]
+root      119609       1  0 May17 ?        00:00:23 ovsdb-server /var/snap/openstack-hypervisor/common/etc/openvswitch/conf.db -vconsole:emer -vsyslog:err -vfile:info --remote=punix:/var/snap/openstack-hypervisor/common/run/openvswitch/db.sock --private-key=db:Open_vSwitch,SSL,private_key --certificate=db:Open_vSwitch,SSL,certificate --bootstrap-ca-cert=db:Open_vSwitch,SSL,ca_cert --no-chdir --log-file=/var/snap/openstack-hypervisor/common/log/openvswitch/ovsdb-server.log --pidfile=/var/snap/openstack-hypervisor/common/run/openvswitch/ovsdb-server.pid --detach
+root      120227       1  0 May17 ?        00:06:59 ovs-vswitchd unix:/var/snap/openstack-hypervisor/common/run/openvswitch/db.sock -vconsole:emer -vsyslog:err -vfile:info --mlockall --no-chdir --log-file=/var/snap/openstack-hypervisor/common/log/openvswitch/ovs-vswitchd.log --pidfile=/var/snap/openstack-hypervisor/common/run/openvswitch/ovs-vswitchd.pid --detach
+root      120869       1  0 May17 ?        00:01:08 ovn-controller unix:/var/snap/openstack-hypervisor/common/run/openvswitch/db.sock -vconsole:emer -vsyslog:err -vfile:info --no-chdir --log-file=/var/snap/openstack-hypervisor/common/log/ovn/ovn-controller.log --pidfile=/var/snap/openstack-hypervisor/common/run/ovn/ovn-controller.pid --detach
+root      124833       1  0 May17 ?        00:00:01 /snap/openstack-hypervisor/244/usr/sbin/virtlogd --pid /var/snap/openstack-hypervisor/244/virtlogd.pid
+root      134544   53806  0 May17 ?        00:00:00 bash /root/ovn-relay-wrapper.sh
+root      134546  134544  0 May17 ?        00:01:26 ovsdb-server -vconsole:info -c /etc/ovn/cert_host -C /etc/ovn/ovn-central.crt -p /etc/ovn/key_host --no-chdir --pidfile=/var/run/ovn/ovn-relay.pid --unixctl=/var/run/ovn/ovn_relay.sock --remote=pssl:6642 relay:OVN_Southbound:ssl:10.1.0.203:6642
+root      145941       1  0 May17 ?        00:00:00 python3 /snap/openstack-hypervisor/244/bin/neutron-ovn-metadata-agent-service
+root      146018  145941  0 May17 ?        00:01:08 neutron-ovn-metadata-agent (python3 /snap/openstack-hypervisor/244/usr/bin/neutron-ovn-metadata-agent --config-file /var/snap/openstack-hypervisor/common/etc/neutron/neutron.conf --config-file /var/snap/openstack-hypervisor/common/etc/neutron/neutron_ovn_metadata_agent.ini --config-dir /var/snap/openstack-hypervisor/common/etc/neutron/neutron.conf.d)
+root      146462       1  0 May17 ?        00:26:51 /snap/openstack-hypervisor/244/usr/sbin/libvirtd --pid /var/snap/openstack-hypervisor/244/libvirt.pid --listen
+root      146669       2  0 May16 ?        00:00:00 [kworker/R-dio/overlay]
+root      147147       1  0 May17 ?        00:00:00 python3 /snap/openstack-hypervisor/244/bin/nova-api-metadata-service
+root      147199  147147  1 May17 ?        00:54:18 python3 /snap/openstack-hypervisor/244/usr/bin/nova-api-metadata --config-file /var/snap/openstack-hypervisor/common/etc/nova/nova.conf --config-dir /var/snap/openstack-hypervisor/common/etc/nova/nova.conf.d
+root      147617       1  0 May17 ?        00:00:00 python3 /snap/openstack-hypervisor/244/bin/nova-compute-service
+root      147993  147617  0 May17 ?        00:21:12 python3 /snap/openstack-hypervisor/244/usr/bin/nova-compute --config-file /var/snap/openstack-hypervisor/common/etc/nova/nova.conf --config-dir /var/snap/openstack-hypervisor/common/etc/nova/nova.conf.d
+root      149174       1  0 May17 ?        00:00:08 python3 /snap/openstack-hypervisor/244/usr/bin/privsep-helper --config-file /var/snap/openstack-hypervisor/common/etc/neutron/neutron.conf --config-file /var/snap/openstack-hypervisor/common/etc/neutron/neutron_ovn_metadata_agent.ini --config-dir /var/snap/openstack-hypervisor/common/etc/neutron/neutron.conf.d --privsep_context neutron.privileged.namespace_cmd --privsep_sock_path /tmp/tmp_9ss6g3t/privsep.sock
+root      149566  147199  0 May17 ?        00:00:27 python3 /snap/openstack-hypervisor/244/usr/bin/nova-api-metadata --config-file /var/snap/openstack-hypervisor/common/etc/nova/nova.conf --config-dir /var/snap/openstack-hypervisor/common/etc/nova/nova.conf.d
+root      149567  147199  0 May17 ?        00:00:28 python3 /snap/openstack-hypervisor/244/usr/bin/nova-api-metadata --config-file /var/snap/openstack-hypervisor/common/etc/nova/nova.conf --config-dir /var/snap/openstack-hypervisor/common/etc/nova/nova.conf.d
+root      149568  147199  0 May17 ?        00:00:27 python3 /snap/openstack-hypervisor/244/usr/bin/nova-api-metadata --config-file /var/snap/openstack-hypervisor/common/etc/nova/nova.conf --config-dir /var/snap/openstack-hypervisor/common/etc/nova/nova.conf.d
+root      149574  147199  0 May17 ?        00:00:27 python3 /snap/openstack-hypervisor/244/usr/bin/nova-api-metadata --config-file /var/snap/openstack-hypervisor/common/etc/nova/nova.conf --config-dir /var/snap/openstack-hypervisor/common/etc/nova/nova.conf.d
+root      175267   58464  0 May16 ?        00:00:00 /bin/sh -c /usr/bin/traefik | tee /var/log/traefik.log
+root      175268  175267  0 May16 ?        00:15:09 /usr/bin/traefik
+root      175269  175267  0 May16 ?        00:00:03 tee /var/log/traefik.log
+snap_da+  178777   62159  5 May16 ?        05:29:47 /usr/sbin/mysqld --basedir=/usr --datadir=/var/lib/mysql --plugin-dir=/usr/lib/mysql/plugin --log-error=/var/log/mysql/error.log --pid-file=mysql-0.pid
+root      184390   58462  0 May16 ?        00:00:00 /bin/sh -c /usr/bin/traefik | tee /var/log/traefik.log
+root      184418  184390  0 May16 ?        00:14:14 /usr/bin/traefik
+root      184429  184390  0 May16 ?        00:00:04 tee /var/log/traefik.log
+root      242329   56686  0 May16 ?        00:00:00 bash /root/ovn-sb-db-server-wrapper.sh
+root      242331  242329  0 May16 ?        00:00:00 /bin/sh /usr/share/ovn/scripts/ovn-ctl run_sb_ovsdb --db-sb-cluster-local-addr=ovn-central-0.ovn-central-endpoints.openstack.svc.cluster.local --db-sb-cluster-local-port=6644 --db-sb-cluster-local-proto=ssl --db-sb-cluster-remote-addr= --db-sb-cluster-remote-port=6644 --db-sb-cluster-remote-proto=ssl --ovn-sb-db-ssl-key=/etc/ovn/key_host --ovn-sb-db-ssl-cert=/etc/ovn/cert_host --ovn-sb-db-ssl-ca-cert=/etc/ovn/ovn-central.crt --ovn-sb-log=-vconsole:info
+root      242720   56063  0 May16 ?        00:00:00 bash /root/ovn-nb-db-server-wrapper.sh
+root      242754  242720  0 May16 ?        00:00:00 /bin/sh /usr/share/ovn/scripts/ovn-ctl run_nb_ovsdb --db-nb-cluster-local-addr=ovn-central-0.ovn-central-endpoints.openstack.svc.cluster.local --db-nb-cluster-local-port=6643 --db-nb-cluster-local-proto=ssl --db-nb-cluster-remote-addr= --db-nb-cluster-remote-port=6643 --db-nb-cluster-remote-proto=ssl --ovn-nb-db-ssl-key=/etc/ovn/key_host --ovn-nb-db-ssl-cert=/etc/ovn/cert_host --ovn-nb-db-ssl-ca-cert=/etc/ovn/ovn-central.crt --ovn-nb-log=-vconsole:info
+root      242771  242331  0 May16 ?        00:09:48 ovsdb-server -vconsole:info --log-file=/var/log/ovn/ovsdb-server-sb.log --remote=punix:/var/run/ovn/ovnsb_db.sock --pidfile=/var/run/ovn/ovnsb_db.pid --unixctl=/var/run/ovn/ovnsb_db.ctl --remote=db:OVN_Southbound,SB_Global,connections --private-key=/etc/ovn/key_host --certificate=/etc/ovn/cert_host --ca-cert=/etc/ovn/ovn-central.crt --ssl-protocols=db:OVN_Southbound,SSL,ssl_protocols --ssl-ciphers=db:OVN_Southbound,SSL,ssl_ciphers /var/lib/ovn/ovnsb_db.db
+root      243524  242754  0 May16 ?        00:08:32 ovsdb-server -vconsole:info --log-file=/var/log/ovn/ovsdb-server-nb.log --remote=punix:/var/run/ovn/ovnnb_db.sock --pidfile=/var/run/ovn/ovnnb_db.pid --unixctl=/var/run/ovn/ovnnb_db.ctl --remote=db:OVN_Northbound,NB_Global,connections --private-key=/etc/ovn/key_host --certificate=/etc/ovn/cert_host --ca-cert=/etc/ovn/ovn-central.crt --ssl-protocols=db:OVN_Northbound,SSL,ssl_protocols --ssl-ciphers=db:OVN_Northbound,SSL,ssl_ciphers /var/lib/ovn/ovnnb_db.db
+root      247581   56299  0 May16 ?        00:00:00 bash /root/ovn-northd-wrapper.sh
+root      247601  247581  0 May16 ?        00:00:58 ovn-northd -vconsole:info --ovnnb-db=ssl:ovn-central-0.ovn-central-endpoints.openstack.svc.cluster.local:6641 --ovnsb-db=ssl:ovn-central-0.ovn-central-endpoints.openstack.svc.cluster.local:16642 -c /etc/ovn/cert_host -C /etc/ovn/ovn-central.crt -p /etc/ovn/key_host --no-chdir --pidfile=/var/run/ovn/ovn-northd.pid
+snap_da+  261831   69398  0 May16 ?        00:35:50 mysqlrouter --config /etc/mysqlrouter/mysqlrouter.conf
+snap_da+  262338   69398  0 May16 ?        00:00:03 python3 /logrotate_executor.py
+snap_da+  277920   65629  1 May16 ?        01:23:13 mysqlrouter --config /etc/mysqlrouter/mysqlrouter.conf
+snap_da+  278237   65629  0 May16 ?        00:00:03 python3 /logrotate_executor.py
+snap_da+  295555   62205  1 May16 ?        01:17:56 mysqlrouter --config /etc/mysqlrouter/mysqlrouter.conf
+snap_da+  296020   62205  0 May16 ?        00:00:03 python3 /logrotate_executor.py
+snap_da+  314401   62204  0 May16 ?        00:53:37 mysqlrouter --config /etc/mysqlrouter/mysqlrouter.conf
+snap_da+  314787   62204  0 May16 ?        00:00:03 python3 /logrotate_executor.py
+snap_da+  325358   68493  1 May16 ?        01:24:22 mysqlrouter --config /etc/mysqlrouter/mysqlrouter.conf
+snap_da+  325694   68493  0 May16 ?        00:00:03 python3 /logrotate_executor.py
+snap_da+  340828   62155  1 May16 ?        01:25:52 mysqlrouter --config /etc/mysqlrouter/mysqlrouter.conf
+snap_da+  341165   62155  0 May16 ?        00:00:03 python3 /logrotate_executor.py
+dnsmasq   345168   58751  0 May17 ?        00:00:01 /usr/lib/erlang/erts-13.2.2.5/bin/inet_gethost 4
+snap_da+  357180   65548  1 May16 ?        01:25:05 mysqlrouter --config /etc/mysqlrouter/mysqlrouter.conf
+snap_da+  357432   65548  0 May16 ?        00:00:03 python3 /logrotate_executor.py
+snap_da+  375967   67173  1 May16 ?        01:11:59 mysqlrouter --config /etc/mysqlrouter/mysqlrouter.conf
+snap_da+  376177   67173  0 May16 ?        00:00:03 python3 /logrotate_executor.py
+snap_da+  412436   68479  1 May16 ?        01:03:27 mysqlrouter --config /etc/mysqlrouter/mysqlrouter.conf
+snap_da+  412610   68479  0 May16 ?        00:00:03 python3 /logrotate_executor.py
+root      437394   84830  0 May16 ?        00:00:12 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+42482     437407  437394  0 May16 ?        00:02:05 (wsgi:placement)  -DFOREGROUND -DNO_DETACH
+42482     437408  437394  0 May16 ?        00:02:08 (wsgi:placement)  -DFOREGROUND -DNO_DETACH
+42482     437409  437394  0 May16 ?        00:02:08 (wsgi:placement)  -DFOREGROUND -DNO_DETACH
+42482     437410  437394  0 May16 ?        00:02:06 (wsgi:placement)  -DFOREGROUND -DNO_DETACH
+www-data  437411  437394  0 May16 ?        00:00:36 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+www-data  437415  437394  0 May16 ?        00:00:27 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+root      439808   86563  0 May16 ?        00:00:12 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+42425     439876  439808  0 May16 ?        00:12:15 (wsgi:keystone-pu -DFOREGROUND -DNO_DETACH
+42425     439877  439808  0 May16 ?        00:11:59 (wsgi:keystone-pu -DFOREGROUND -DNO_DETACH
+42425     439879  439808  0 May16 ?        00:12:18 (wsgi:keystone-pu -DFOREGROUND -DNO_DETACH
+42425     439890  439808  0 May16 ?        00:12:02 (wsgi:keystone-pu -DFOREGROUND -DNO_DETACH
+www-data  439896  439808  0 May16 ?        00:00:40 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+www-data  439900  439808  0 May16 ?        00:00:29 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+42407     445359   91229  0 May16 ?        00:07:18 /usr/bin/python3 /usr/bin/cinder-scheduler --use-syslog
+root      455554   90705  0 May16 ?        00:00:12 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+42407     455567  455554  0 May16 ?        00:00:59 (wsgi:cinder)     -DFOREGROUND -DNO_DETACH
+42407     455568  455554  0 May16 ?        00:00:59 (wsgi:cinder)     -DFOREGROUND -DNO_DETACH
+42407     455570  455554  0 May16 ?        00:00:59 (wsgi:cinder)     -DFOREGROUND -DNO_DETACH
+42407     455571  455554  0 May16 ?        00:00:59 (wsgi:cinder)     -DFOREGROUND -DNO_DETACH
+www-data  455572  455554  0 May16 ?        00:00:12 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+www-data  455573  455554  0 May16 ?        00:00:15 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+root      467202   92167  0 May16 ?        00:00:11 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+www-data  467216  467202  0 May16 ?        00:00:13 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+www-data  467217  467202  0 May16 ?        00:00:10 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+42415     467567   92167  1 May16 ?        01:03:41 /usr/bin/python3 /usr/bin/glance-api --config-file /etc/glance/glance-api.conf
+42415     468190  467567  0 May16 ?        00:00:00 /usr/bin/python3 /usr/bin/glance-api --config-file /etc/glance/glance-api.conf
+42415     468191  467567  0 May16 ?        00:00:52 /usr/bin/python3 /usr/bin/glance-api --config-file /etc/glance/glance-api.conf
+42415     468192  467567  0 May16 ?        00:00:57 /usr/bin/python3 /usr/bin/glance-api --config-file /etc/glance/glance-api.conf
+42415     468193  467567  0 May16 ?        00:00:00 /usr/bin/python3 /usr/bin/glance-api --config-file /etc/glance/glance-api.conf
+root      479160   92656  0 May16 ?        00:00:12 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+42420     479189  479160  0 May16 ?        00:06:32 (wsgi:horizon)    -DFOREGROUND -DNO_DETACH
+42420     479190  479160  0 May16 ?        00:06:29 (wsgi:horizon)    -DFOREGROUND -DNO_DETACH
+42420     479191  479160  0 May16 ?        00:06:32 (wsgi:horizon)    -DFOREGROUND -DNO_DETACH
+42420     479192  479160  0 May16 ?        00:06:21 (wsgi:horizon)    -DFOREGROUND -DNO_DETACH
+www-data  479193  479160  0 May16 ?        00:00:20 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+www-data  479194  479160  0 May16 ?        00:00:26 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+root      482829   92664  0 May16 ?        00:00:12 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+42436     482860  482829  0 May16 ?        00:01:02 (wsgi:nova-api)   -DFOREGROUND -DNO_DETACH
+42436     482861  482829  0 May16 ?        00:01:02 (wsgi:nova-api)   -DFOREGROUND -DNO_DETACH
+42436     482867  482829  0 May16 ?        00:01:04 (wsgi:nova-api)   -DFOREGROUND -DNO_DETACH
+42436     482869  482829  0 May16 ?        00:01:03 (wsgi:nova-api)   -DFOREGROUND -DNO_DETACH
+42436     482874  482829  0 May16 ?        00:00:15 (wsgi:nova-metada -DFOREGROUND -DNO_DETACH
+42436     482875  482829  0 May16 ?        00:00:15 (wsgi:nova-metada -DFOREGROUND -DNO_DETACH
+42436     482876  482829  0 May16 ?        00:00:15 (wsgi:nova-metada -DFOREGROUND -DNO_DETACH
+42436     482877  482829  0 May16 ?        00:00:15 (wsgi:nova-metada -DFOREGROUND -DNO_DETACH
+www-data  482878  482829  0 May16 ?        00:00:29 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+www-data  482879  482829  0 May16 ?        00:00:22 /usr/sbin/apache2 -DFOREGROUND -DNO_DETACH
+42436     483136   93605  1 May16 ?        01:02:45 /usr/bin/python3 /usr/bin/nova-scheduler
+42436     483483   93034  1 May16 ?        01:02:43 /usr/bin/python3 /usr/bin/nova-conductor
+42436     483761  113922  0 May16 ?        00:01:22 /usr/bin/python3 /usr/bin/nova-spicehtml5proxy --use-syslog
+42436     484941  483136  0 May16 ?        00:12:10 /usr/bin/python3 /usr/bin/nova-scheduler
+42436     484952  483136  0 May16 ?        00:12:07 /usr/bin/python3 /usr/bin/nova-scheduler
+42436     484962  483136  0 May16 ?        00:12:10 /usr/bin/python3 /usr/bin/nova-scheduler
+42436     484973  483136  0 May16 ?        00:12:20 /usr/bin/python3 /usr/bin/nova-scheduler
+42436     486711  483483  0 May16 ?        00:10:39 /usr/bin/python3 /usr/bin/nova-conductor
+42436     486717  483483  0 May16 ?        00:10:40 /usr/bin/python3 /usr/bin/nova-conductor
+42436     486728  483483  0 May16 ?        00:10:53 /usr/bin/python3 /usr/bin/nova-conductor
+42436     486758  483483  0 May16 ?        00:10:41 /usr/bin/python3 /usr/bin/nova-conductor
+42435     498042   83820  0 May16 ?        00:06:56 /usr/bin/python3 /usr/bin/neutron-server
+42435     501129  498042  0 May16 ?        00:06:44 neutron-server: api worker (/usr/bin/python3 /usr/bin/neutron-server)
+42435     501130  498042  0 May16 ?        00:10:47 neutron-server: api worker (/usr/bin/python3 /usr/bin/neutron-server)
+42435     501131  498042  0 May16 ?        00:06:45 neutron-server: api worker (/usr/bin/python3 /usr/bin/neutron-server)
+42435     501132  498042  0 May16 ?        00:06:24 neutron-server: api worker (/usr/bin/python3 /usr/bin/neutron-server)
+42435     501139  498042  0 May16 ?        00:01:10 neutron-server: RpcWorker (/usr/bin/python3 /usr/bin/neutron-server)
+42435     501141  498042  0 May16 ?        00:01:09 neutron-server: RpcWorker (/usr/bin/python3 /usr/bin/neutron-server)
+42435     501143  498042  0 May16 ?        00:01:12 neutron-server: RpcWorker (/usr/bin/python3 /usr/bin/neutron-server)
+42435     501144  498042  0 May16 ?        00:01:09 neutron-server: RpcWorker (/usr/bin/python3 /usr/bin/neutron-server)
+42435     501154  498042  0 May16 ?        00:00:15 neutron-server: RpcReportsWorker (/usr/bin/python3 /usr/bin/neutron-server)
+42435     501161  498042  0 May16 ?        00:00:50 neutron-server: MaintenanceWorker (/usr/bin/python3 /usr/bin/neutron-server)
+42435     501173  498042  0 May16 ?        00:06:32 neutron-server: RpcWorker (/usr/bin/python3 /usr/bin/neutron-server)
+root      917633       1  0 00:00 ?        00:00:00 /usr/sbin/cupsd -l
+cups-br+  917634       1  0 00:00 ?        00:00:00 /usr/sbin/cups-browsed
+root      974924   68136  0 May17 ?        00:00:02 /var/lib/juju/agents/unit-horizon-mysql-router-0/charm/venv/bin/python /var/lib/juju/agents/unit-horizon-mysql-router-0/charm/src/charm.py
+root     2102636       2  0 06:54 ?        00:00:00 [psimon]
+root     2462500       2  0 08:59 ?        00:00:09 [kworker/3:1-events]
+root     3027680       2  0 12:19 ?        00:00:06 [kworker/1:0-events]
+root     3055096       1  0 May19 ?        00:00:03 /usr/libexec/bluetooth/bluetoothd
+root     3271153       2  0 13:45 ?        00:00:04 [kworker/0:0-events]
+root     3413514       1  0 May19 ?        00:00:00 python3 /snap/openstack-hypervisor/244/usr/bin/privsep-helper --config-file /var/snap/openstack-hypervisor/common/etc/nova/nova.conf --config-dir /var/snap/openstack-hypervisor/common/etc/nova/nova.conf.d --privsep_context nova.privsep.sys_admin_pctxt --privsep_sock_path /tmp/tmposoisv23/privsep.sock
+root     3413913       1  0 May19 ?        00:00:01 python3 /snap/openstack-hypervisor/244/usr/bin/privsep-helper --config-file /var/snap/openstack-hypervisor/common/etc/nova/nova.conf --config-dir /var/snap/openstack-hypervisor/common/etc/nova/nova.conf.d --privsep_context vif_plug_ovs.privsep.vif_plug --privsep_sock_path /tmp/tmpjstz13x7/privsep.sock
+root     3414068       1  4 May19 ?        01:08:06 /snap/openstack-hypervisor/current/usr/bin/qemu-system-x86_64 -name guest=instance-00000001,debug-threads=on -S -object {"qom-type":"secret","id":"masterKey0","format":"raw","file":"/var/snap/openstack-hypervisor/common/lib/libvirt/qemu/domain-1-instance-00000001/master-key.aes"} -blockdev {"driver":"file","filename":"/usr/share/OVMF/OVMF_CODE_4M.fd","node-name":"libvirt-pflash0-storage","auto-read-only":true,"discard":"unmap"} -blockdev {"node-name":"libvirt-pflash0-format","read-only":true,"driver":"raw","file":"libvirt-pflash0-storage"} -blockdev {"driver":"file","filename":"/var/snap/openstack-hypervisor/common/lib/libvirt/qemu/nvram/instance-00000001_VARS.fd","node-name":"libvirt-pflash1-storage","auto-read-only":true,"discard":"unmap"} -blockdev {"node-name":"libvirt-pflash1-format","read-only":false,"driver":"raw","file":"libvirt-pflash1-storage"} -machine pc-i440fx-8.2,usb=off,dump-guest-core=off,memory-backend=pc.ram,pflash0=libvirt-pflash0-format,pflash1=libvirt-pflash1-format,hpet=off,acpi=on -accel kvm -cpu SandyBridge-IBRS,vme=on,ss=on,vmx=on,pdcm=on,pcid=on,hypervisor=on,arat=on,tsc-adjust=on,umip=on,md-clear=on,stibp=on,flush-l1d=on,arch-capabilities=on,ssbd=on,xsaveopt=on,pdpe1gb=on,ibpb=on,ibrs=on,amd-stibp=on,amd-ssbd=on,skip-l1dfl-vmentry=on,pschange-mc-no=on,gds-no=on,vmx-ins-outs=on,vmx-true-ctls=on,vmx-store-lma=on,vmx-activity-hlt=on,vmx-activity-wait-sipi=on,vmx-vmwrite-vmexit-fields=on,vmx-apicv-xapic=on,vmx-ept=on,vmx-desc-exit=on,vmx-rdtscp-exit=on,vmx-apicv-x2apic=on,vmx-vpid=on,vmx-wbinvd-exit=on,vmx-unrestricted-guest=on,vmx-shadow-vmcs=on,vmx-invvpid=on,vmx-invvpid-single-addr=on,vmx-invvpid-all-context=on,vmx-ept-execonly=on,vmx-page-walk-4=on,vmx-ept-2mb=on,vmx-ept-1gb=on,vmx-invept=on,vmx-invept-single-context=on,vmx-invept-all-context=on,vmx-intr-exit=on,vmx-nmi-exit=on,vmx-vnmi=on,vmx-preemption-timer=on,vmx-vintr-pending=on,vmx-tsc-offset=on,vmx-hlt-exit=on,vmx-invlpg-exit=on,vmx-mwait-exit=on,vmx-rdpmc-exit=on,vmx-rdtsc-exit=on,vmx-cr3-load-noexit=on,vmx-cr3-store-noexit=on,vmx-cr8-load-exit=on,vmx-cr8-store-exit=on,vmx-flexpriority=on,vmx-vnmi-pending=on,vmx-movdr-exit=on,vmx-io-exit=on,vmx-io-bitmap=on,vmx-mtf=on,vmx-msr-bitmap=on,vmx-monitor-exit=on,vmx-pause-exit=on,vmx-secondary-ctls=on,vmx-exit-nosave-debugctl=on,vmx-exit-load-perf-global-ctrl=on,vmx-exit-ack-intr=on,vmx-exit-save-pat=on,vmx-exit-load-pat=on,vmx-exit-save-efer=on,vmx-exit-load-efer=on,vmx-exit-save-preemption-timer=on,vmx-entry-noload-debugctl=on,vmx-entry-ia32e-mode=on,vmx-entry-load-perf-global-ctrl=on,vmx-entry-load-pat=on,vmx-entry-load-efer=on -m size=524288k -object {"qom-type":"memory-backend-ram","id":"pc.ram","size":536870912} -overcommit mem-lock=off -smp 1,sockets=1,dies=1,cores=1,threads=1 -uuid 0ee852d5-270e-4bc2-aa9d-e56000e130e7 -smbios type=1,manufacturer=OpenStack Foundation,product=OpenStack Nova,version=29.2.0,serial=0ee852d5-270e-4bc2-aa9d-e56000e130e7,uuid=0ee852d5-270e-4bc2-aa9d-e56000e130e7,family=Virtual Machine -no-user-config -nodefaults -chardev socket,id=charmonitor,fd=34,server=on,wait=off -mon chardev=charmonitor,id=monitor,mode=control -rtc base=utc,driftfix=slew -global kvm-pit.lost_tick_policy=delay -no-shutdown -boot strict=on -device {"driver":"virtio-serial-pci","id":"virtio-serial0","bus":"pci.0","addr":"0x4"} -blockdev {"driver":"file","filename":"/var/snap/openstack-hypervisor/common/lib/nova/instances/_base/407071f41e54365084283ed34a9074d0617cbc5d","node-name":"libvirt-2-storage","auto-read-only":true,"discard":"unmap","cache":{"direct":true,"no-flush":false}} -blockdev {"node-name":"libvirt-2-format","read-only":true,"cache":{"direct":true,"no-flush":false},"driver":"raw","file":"libvirt-2-storage"} -blockdev {"driver":"file","filename":"/var/snap/openstack-hypervisor/common/lib/nova/instances/0ee852d5-270e-4bc2-aa9d-e56000e130e7/disk","node-name":"libvirt-1-storage","auto-read-only":true,"discard":"unmap","cache":{"direct":true,"no-flush":false}} -blockdev {"node-name":"libvirt-1-format","read-only":false,"cache":{"direct":true,"no-flush":false},"driver":"qcow2","file":"libvirt-1-storage","backing":"libvirt-2-format"} -device {"driver":"virtio-blk-pci","bus":"pci.0","addr":"0x5","drive":"libvirt-1-format","id":"virtio-disk0","bootindex":1,"write-cache":"on"} -netdev {"type":"tap","fd":"36","vhost":true,"vhostfd":"38","id":"hostnet0"} -device {"driver":"virtio-net-pci","host_mtu":1442,"netdev":"hostnet0","id":"net0","mac":"fa:16:3e:05:da:a8","bus":"pci.0","addr":"0x3"} -add-fd set=0,fd=35,opaque=serial0-log -chardev pty,id=charserial0,logfile=/dev/fdset/0,logappend=on -device {"driver":"isa-serial","chardev":"charserial0","id":"serial0","index":0} -chardev spicevmc,id=charchannel0,name=vdagent -device {"driver":"virtserialport","bus":"virtio-serial0.0","nr":1,"chardev":"charchannel0","id":"channel0","name":"com.redhat.spice.0"} -audiodev {"id":"audio1","driver":"spice"} -spice port=5900,addr=172.24.188.57,disable-ticketing=on,seamless-migration=on -device {"driver":"qxl-vga","id":"video0","max_outputs":1,"ram_size":67108864,"vram_size":67108864,"vram64_size_mb":0,"vgamem_mb":16,"bus":"pci.0","addr":"0x2"} -device {"driver":"virtio-balloon-pci","id":"balloon0","bus":"pci.0","addr":"0x6"} -object {"qom-type":"rng-random","id":"objrng0","filename":"/dev/urandom"} -device {"driver":"virtio-rng-pci","rng":"objrng0","id":"rng0","bus":"pci.0","addr":"0x7"} -device {"driver":"vmcoreinfo"} -msg timestamp=on
+root     3414087       2  0 May19 ?        00:00:15 [kvm-pit/3414068]
+root     3414326       1  0 May19 ?        00:00:09 python3 /snap/openstack-hypervisor/244/usr/bin/privsep-helper --config-file /var/snap/openstack-hypervisor/common/etc/neutron/neutron.conf --config-file /var/snap/openstack-hypervisor/common/etc/neutron/neutron_ovn_metadata_agent.ini --config-dir /var/snap/openstack-hypervisor/common/etc/neutron/neutron.conf.d --privsep_context neutron.privileged.default --privsep_sock_path /tmp/tmpqvc191pl/privsep.sock
+root     3415346       1  0 May19 ?        00:00:08 python3 /snap/openstack-hypervisor/244/usr/bin/privsep-helper --config-file /var/snap/openstack-hypervisor/common/etc/neutron/neutron.conf --config-file /var/snap/openstack-hypervisor/common/etc/neutron/neutron_ovn_metadata_agent.ini --config-dir /var/snap/openstack-hypervisor/common/etc/neutron/neutron.conf.d --privsep_context neutron.privileged.link_cmd --privsep_sock_path /tmp/tmp5swrtccv/privsep.sock
+root     3415486       2  0 14:36 ?        00:00:03 [kworker/2:3-dio/sda2]
+root     3416088       1  0 May19 ?        00:00:00 haproxy -f /var/snap/openstack-hypervisor/common/lib/ovn-metadata-proxy/8602d55e-c495-4c99-9673-3090451e9fc0.conf
+root     3458233   57799  0 May19 ?        00:00:01 /usr/bin/python3 scripts/log_rotate_dispatcher.py mysql/0 /var/lib/juju/agents/unit-mysql-0/charm
+root     3499200       2  0 May17 ?        00:00:00 [kworker/1:0H-kblockd]
+root     3517621       2  0 May19 ?        00:01:54 [kworker/2:0H-radeon-crtc]
+root     3534819       2  0 May19 ?        00:00:00 [kworker/2:2H-kblockd]
+brent    3549067    2918  0 15:22 ?        00:00:01 gjs /usr/share/gnome-shell/extensions/ding@rastersoft.com/app/ding.js -E -P /usr/share/gnome-shell/extensions/ding@rastersoft.com/app
+brent    3549579    2918  1 15:22 ?        00:01:13 /usr/share/code/code
+brent    3549596 3549579  0 15:22 ?        00:00:00 /usr/share/code/code --type=zygote --no-zygote-sandbox
+brent    3549597 3549579  0 15:22 ?        00:00:00 /usr/share/code/code --type=zygote
+brent    3549624 3549597  0 15:22 ?        00:00:00 /usr/share/code/code --type=zygote
+brent    3549696    2684  0 15:22 ?        00:00:00 /usr/share/code/chrome_crashpad_handler --monitor-self-annotation=ptype=crashpad-handler --no-rate-limit --database=/home/brent/.config/Code/Crashpad --url=appcenter://code?aid=fba07a4d-84bd-4fc8-a125-9640fc8ce171&uid=81227314-561b-4211-b069-6af885ad73fb&iid=81227314-561b-4211-b069-6af885ad73fb&sid=81227314-561b-4211-b069-6af885ad73fb --annotation=_companyName=Microsoft --annotation=_productName=VSCode --annotation=_version=1.100.2 --annotation=lsb-release=Ubuntu 24.04.2 LTS --annotation=plat=Linux --annotation=prod=Electron --annotation=ver=34.5.1 --initial-client-fd=40 --shared-client-connection
+brent    3549718 3549596  3 15:22 ?        00:03:07 /usr/share/code/code --type=gpu-process --crashpad-handler-pid=3549696 --enable-crash-reporter=05a4a6a9-f6de-4965-919e-ad6eac755ba2,no_channel --user-data-dir=/home/brent/.config/Code --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --shared-files --field-trial-handle=3,i,950546128526221376,897797623548723408,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+brent    3549722 3549579  0 15:22 ?        00:00:04 /usr/share/code/code --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=3549696 --enable-crash-reporter=05a4a6a9-f6de-4965-919e-ad6eac755ba2,no_channel --user-data-dir=/home/brent/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,950546128526221376,897797623548723408,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+brent    3549746 3549624 13 15:22 ?        00:12:57 /usr/share/code/code --type=renderer --crashpad-handler-pid=3549696 --enable-crash-reporter=05a4a6a9-f6de-4965-919e-ad6eac755ba2,no_channel --user-data-dir=/home/brent/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --app-path=/usr/share/code/resources/app --enable-sandbox --enable-blink-features=HighlightAPI --js-flags=--nodecommit_pooled_pages --disable-blink-features=FontMatchingCTMigration,StandardizedBrowserZoom, --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=4 --time-ticks-at-unix-epoch=-1747435987754451 --launch-time-ticks=332973756845 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,950546128526221376,897797623548723408,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version --vscode-window-config=vscode:5ff414f0-6c57-4ee7-a56e-7ae3cf4d49bb
+brent    3550671 3549579  0 15:22 ?        00:00:17 /usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=3549696 --enable-crash-reporter=05a4a6a9-f6de-4965-919e-ad6eac755ba2,no_channel --user-data-dir=/home/brent/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,950546128526221376,897797623548723408,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+brent    3550681 3549579  1 15:22 ?        00:01:05 /usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=3549696 --enable-crash-reporter=05a4a6a9-f6de-4965-919e-ad6eac755ba2,no_channel --user-data-dir=/home/brent/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,950546128526221376,897797623548723408,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+brent    3550682 3549579  0 15:22 ?        00:00:11 /usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=3549696 --enable-crash-reporter=05a4a6a9-f6de-4965-919e-ad6eac755ba2,no_channel --user-data-dir=/home/brent/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,950546128526221376,897797623548723408,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+brent    3550739 3549579  3 15:22 ?        00:03:47 /usr/share/code/code --type=utility --utility-sub-type=node.mojom.NodeService --lang=en-US --service-sandbox-type=none --dns-result-order=ipv4first --inspect-port=0 --crashpad-handler-pid=3549696 --enable-crash-reporter=05a4a6a9-f6de-4965-919e-ad6eac755ba2,no_channel --user-data-dir=/home/brent/.config/Code --standard-schemes=vscode-webview,vscode-file --enable-sandbox --secure-schemes=vscode-webview,vscode-file --cors-schemes=vscode-webview,vscode-file --fetch-schemes=vscode-webview,vscode-file --service-worker-schemes=vscode-webview --code-cache-schemes=vscode-webview,vscode-file --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,950546128526221376,897797623548723408,262144 --enable-features=DocumentPolicyIncludeJSCallStacksInCrashReports,EarlyEstablishGpuChannel,EstablishGpuChannelAsync --disable-features=CalculateNativeWinOcclusion,SpareRendererForSitePerProcess --variations-seed-version
+brent    3551436 3550671  0 15:22 pts/1    00:00:04 /bin/zsh -i
+brent    3552845 3550739  0 15:23 ?        00:00:17 /usr/share/code/code /usr/share/code/resources/app/extensions/markdown-language-features/dist/serverWorkerMain --node-ipc --clientProcessId=3550739
+brent    3553277 3550739  0 15:23 ?        00:00:01 /usr/share/code/code /home/brent/.vscode/extensions/dbaeumer.vscode-eslint-3.0.10/server/out/eslintServer.js --node-ipc --clientProcessId=3550739
+brent    3553760 3550739  0 15:23 ?        00:00:00 /usr/share/code/code /usr/share/code/resources/app/extensions/json-language-features/server/dist/node/jsonServerMain --node-ipc --clientProcessId=3550739
+brent    3556737    2918  3 15:24 ?        00:03:37 /opt/google/chrome/chrome
+brent    3556743 3556737  0 15:24 ?        00:00:00 cat
+brent    3556744 3556737  0 15:24 ?        00:00:00 cat
+brent    3556746    2684  0 15:24 ?        00:00:00 /opt/google/chrome/chrome_crashpad_handler --monitor-self --monitor-self-annotation=ptype=crashpad-handler --database=/home/brent/.config/google-chrome/Crash Reports --metrics-dir=/home/brent/.config/google-chrome --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=lsb-release=Ubuntu 24.04.2 LTS --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=136.0.7103.113 --initial-client-fd=5 --shared-client-connection
+brent    3556749    2684  0 15:24 ?        00:00:00 /opt/google/chrome/chrome_crashpad_handler --no-periodic-tasks --monitor-self-annotation=ptype=crashpad-handler --database=/home/brent/.config/google-chrome/Crash Reports --url=https://clients2.google.com/cr/report --annotation=channel= --annotation=lsb-release=Ubuntu 24.04.2 LTS --annotation=plat=Linux --annotation=prod=Chrome_Linux --annotation=ver=136.0.7103.113 --initial-client-fd=4 --shared-client-connection
+brent    3556755 3556737  0 15:24 ?        00:00:00 /opt/google/chrome/chrome --type=zygote --no-zygote-sandbox --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --change-stack-guard-on-fork=enable
+brent    3556756 3556737  0 15:24 ?        00:00:00 /opt/google/chrome/chrome --type=zygote --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --change-stack-guard-on-fork=enable
+brent    3556783 3556756  0 15:24 ?        00:00:00 /opt/google/chrome/chrome --type=zygote --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --change-stack-guard-on-fork=enable
+brent    3556831 3556755  2 15:24 ?        00:02:09 /opt/google/chrome/chrome --type=gpu-process --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --change-stack-guard-on-fork=enable --gpu-preferences=UAAAAAAAAAAgAAAEAAAAAAAAAAAAAAAAAABgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAABAAAAAAAAAAEAAAAAAAAAAIAAAAAAAAAAgAAAAAAAAA --shared-files --field-trial-handle=3,i,1373260333568558956,12522343465562627577,262144 --disable-features=EyeDropper --variations-seed-version=20250518-180045.046000
+brent    3556833 3556737  0 15:24 ?        00:00:16 /opt/google/chrome/chrome --type=utility --utility-sub-type=network.mojom.NetworkService --lang=en-US --service-sandbox-type=none --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1373260333568558956,12522343465562627577,262144 --disable-features=EyeDropper --variations-seed-version=20250518-180045.046000
+brent    3556850 3556783  0 15:24 ?        00:00:00 /opt/google/chrome/chrome --type=utility --utility-sub-type=storage.mojom.StorageService --lang=en-US --service-sandbox-type=utility --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --change-stack-guard-on-fork=enable --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1373260333568558956,12522343465562627577,262144 --disable-features=EyeDropper --variations-seed-version=20250518-180045.046000
+brent    3556876 3556783  0 15:24 ?        00:00:02 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --extension-process --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=6 --time-ticks-at-unix-epoch=-1747435987754451 --launch-time-ticks=333094524905 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1373260333568558956,12522343465562627577,262144 --disable-features=EyeDropper --variations-seed-version=20250518-180045.046000
+brent    3556900 3556783  0 15:24 ?        00:00:34 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=9 --time-ticks-at-unix-epoch=-1747435987754451 --launch-time-ticks=333095091976 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1373260333568558956,12522343465562627577,262144 --disable-features=EyeDropper --variations-seed-version=20250518-180045.046000
+brent    3557040 3556783  0 15:24 ?        00:00:14 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=13 --time-ticks-at-unix-epoch=-1747435987754451 --launch-time-ticks=333097680078 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1373260333568558956,12522343465562627577,262144 --disable-features=EyeDropper --variations-seed-version=20250518-180045.046000
+brent    3557494 3556783  0 15:24 ?        00:00:10 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=14 --time-ticks-at-unix-epoch=-1747435987754451 --launch-time-ticks=333110033151 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1373260333568558956,12522343465562627577,262144 --disable-features=EyeDropper --variations-seed-version=20250518-180045.046000
+root     3559903       2  0 15:26 ?        00:00:07 [kworker/u16:2-flush-8:0]
+brent    3568631    2870  0 May17 ?        00:00:00 /usr/libexec/gvfsd-http --spawner :1.20 /org/gtk/gvfs/exec_spaw/8
+root     3679119       2  0 16:06 ?        00:00:00 [kworker/0:2H-kblockd]
+root     3682642       2  0 16:07 ?        00:00:04 [kworker/u16:6-loop23]
+root     3720108       2  0 16:20 ?        00:00:00 [kworker/u17:5-ttm]
+brent    3731511 3556783  4 16:24 ?        00:01:47 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=182 --time-ticks-at-unix-epoch=-1747435987754451 --launch-time-ticks=336662366356 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1373260333568558956,12522343465562627577,262144 --disable-features=EyeDropper --variations-seed-version=20250518-180045.046000
+root     3744757       2  0 16:28 ?        00:00:02 [kworker/u16:0-writeback]
+root     3752197       2  0 16:31 ?        00:00:00 [kworker/0:0H-kblockd]
+root     3764029       2  0 16:34 ?        00:00:00 [kworker/u17:4-ttm]
+root     3765034       2  0 16:35 ?        00:00:02 [kworker/u16:3-events_unbound]
+root     3765258       2  0 May17 ?        00:00:00 [kworker/R-ib-comp-wq]
+root     3765259       2  0 May17 ?        00:00:00 [kworker/R-ib-comp-unb-wq]
+root     3765260       2  0 May17 ?        00:00:00 [kworker/R-ib_mcast]
+root     3765261       2  0 May17 ?        00:00:00 [kworker/R-ib_nl_sa_wq]
+root     3779430       2  0 16:40 ?        00:00:00 [kworker/1:2-cgroup_destroy]
+root     3779850       2  0 16:40 ?        00:00:00 [z_vdev_file]
+root     3783506   57327  0 16:41 ?        00:00:00 sleep 1800
+root     3784567       2  0 16:41 ?        00:00:00 [kworker/3:2H-radeon-crtc]
+root     3792546       2  0 16:44 ?        00:00:01 [kworker/u16:7-events_power_efficient]
+brent    3800170 3556783  7 16:47 ?        00:01:08 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=245 --time-ticks-at-unix-epoch=-1747435987754451 --launch-time-ticks=338035816207 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1373260333568558956,12522343465562627577,262144 --disable-features=EyeDropper --variations-seed-version=20250518-180045.046000
+brent    3801007 3556783  0 16:47 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=246 --time-ticks-at-unix-epoch=-1747435987754451 --launch-time-ticks=338054203689 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1373260333568558956,12522343465562627577,262144 --disable-features=EyeDropper --variations-seed-version=20250518-180045.046000
+root     3809954       2  0 16:49 ?        00:00:00 [kworker/2:2-events]
+root     3810070       2  0 16:50 ?        00:00:00 [kworker/0:1]
+brent    3810564 3556783  0 16:50 ?        00:00:02 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --extension-process --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=252 --time-ticks-at-unix-epoch=-1747435987754451 --launch-time-ticks=338237033406 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1373260333568558956,12522343465562627577,262144 --disable-features=EyeDropper --variations-seed-version=20250518-180045.046000
+root     3810929       2  0 16:50 ?        00:00:00 [kworker/3:2-cgroup_destroy]
+root     3811171       2  0 16:50 ?        00:00:00 [z_vdev_file]
+root     3817818       2  0 16:52 ?        00:00:00 [kworker/3:0H-kblockd]
+root     3826608       2  0 16:55 ?        00:00:00 [z_wr_iss]
+root     3826609       2  0 16:55 ?        00:00:00 [z_wr_int]
+root     3826930       2  0 16:55 ?        00:00:00 [kworker/2:1-dio/sda2]
+root     3837076       2  0 16:58 ?        00:00:00 [kworker/3:1H]
+root     3837928       2  0 16:59 ?        00:00:00 [kworker/u17:0-ttm]
+root     3839885       2  0 17:00 ?        00:00:00 [kworker/1:1-cgroup_destroy]
+root     3841028       2  0 17:00 ?        00:00:00 [kworker/u17:1-ttm]
+root     3841029       2  0 17:00 ?        00:00:00 [kworker/u17:2-ttm]
+root     3841030       2  0 17:00 ?        00:00:00 [kworker/u17:3-ttm]
+root     3841031       2  0 17:00 ?        00:00:00 [kworker/u17:6]
+root     3841210       2  0 17:00 ?        00:00:00 [z_wr_int]
+root     3841211       2  0 17:00 ?        00:00:00 [z_wr_iss]
+root     3841212       2  0 17:00 ?        00:00:00 [z_metaslab]
+root     3844245       2  0 17:01 ?        00:00:00 [kworker/2:0]
+brent    3845274 3556783  0 17:01 ?        00:00:00 /opt/google/chrome/chrome --type=renderer --crashpad-handler-pid=3556746 --enable-crash-reporter=b56ca31f-ee8b-4e95-8356-3cbf34fa29ed, --extension-process --change-stack-guard-on-fork=enable --lang=en-US --num-raster-threads=2 --enable-main-frame-before-activation --renderer-client-id=281 --time-ticks-at-unix-epoch=-1747435987754451 --launch-time-ticks=338909080361 --shared-files=v8_context_snapshot_data:100 --field-trial-handle=3,i,1373260333568558956,12522343465562627577,262144 --disable-features=EyeDropper --variations-seed-version=20250518-180045.046000
+root     3845412 3551436  0 17:01 pts/1    00:00:00 sudo k8s inspect
+root     3845413 3845412  0 17:01 pts/2    00:00:00 sudo k8s inspect
+root     3845414 3845413  0 17:01 pts/2    00:00:00 /bin/bash -e /snap/k8s/2500/k8s/wrappers/commands/k8s inspect
+root     3845449 3845414  0 17:01 pts/2    00:00:00 bash /snap/k8s/2500/k8s/scripts/inspect.sh
+root     3846151 3845449  0 17:01 pts/2    00:00:00 ps -ef
+brent    4074500    2870  0 May17 ?        00:00:00 /usr/libexec/gvfsd-recent --spawner :1.20 /org/gtk/gvfs/exec_spaw/9

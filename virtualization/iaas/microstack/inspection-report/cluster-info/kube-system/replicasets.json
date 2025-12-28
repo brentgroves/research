@@ -1,0 +1,731 @@
+{
+    "kind": "ReplicaSetList",
+    "apiVersion": "apps/v1",
+    "metadata": {
+        "resourceVersion": "776121"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "cilium-operator-6978488575",
+                "namespace": "kube-system",
+                "uid": "fb21d10c-f9dd-48ae-b47c-9c5171f1c6c8",
+                "resourceVersion": "791",
+                "generation": 2,
+                "creationTimestamp": "2025-05-16T23:33:31Z",
+                "labels": {
+                    "app.kubernetes.io/name": "cilium-operator",
+                    "app.kubernetes.io/part-of": "cilium",
+                    "io.cilium/app": "operator",
+                    "name": "cilium-operator",
+                    "pod-template-hash": "6978488575"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "1",
+                    "deployment.kubernetes.io/max-replicas": "2",
+                    "deployment.kubernetes.io/revision": "1",
+                    "meta.helm.sh/release-name": "ck-network",
+                    "meta.helm.sh/release-namespace": "kube-system"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "Deployment",
+                        "name": "cilium-operator",
+                        "uid": "ae9bcae4-70d6-4f01-adc1-e63d140e1952",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 0,
+                "selector": {
+                    "matchLabels": {
+                        "io.cilium/app": "operator",
+                        "name": "cilium-operator",
+                        "pod-template-hash": "6978488575"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app.kubernetes.io/name": "cilium-operator",
+                            "app.kubernetes.io/part-of": "cilium",
+                            "io.cilium/app": "operator",
+                            "name": "cilium-operator",
+                            "pod-template-hash": "6978488575"
+                        },
+                        "annotations": {
+                            "prometheus.io/port": "9963",
+                            "prometheus.io/scrape": "true"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "cilium-config-path",
+                                "configMap": {
+                                    "name": "cilium-config",
+                                    "defaultMode": 420
+                                }
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "cilium-operator",
+                                "image": "ghcr.io/canonical/cilium-operator-generic:1.16.3-ck0",
+                                "command": [
+                                    "cilium-operator-generic"
+                                ],
+                                "args": [
+                                    "--config-dir=/tmp/cilium/config-map",
+                                    "--debug=$(CILIUM_DEBUG)"
+                                ],
+                                "ports": [
+                                    {
+                                        "name": "prometheus",
+                                        "hostPort": 9963,
+                                        "containerPort": 9963,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "env": [
+                                    {
+                                        "name": "K8S_NODE_NAME",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "spec.nodeName"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "CILIUM_K8S_NAMESPACE",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "metadata.namespace"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "CILIUM_DEBUG",
+                                        "valueFrom": {
+                                            "configMapKeyRef": {
+                                                "name": "cilium-config",
+                                                "key": "debug",
+                                                "optional": true
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "KUBERNETES_SERVICE_HOST",
+                                        "value": "127.0.0.1"
+                                    },
+                                    {
+                                        "name": "KUBERNETES_SERVICE_PORT",
+                                        "value": "6443"
+                                    }
+                                ],
+                                "resources": {},
+                                "volumeMounts": [
+                                    {
+                                        "name": "cilium-config-path",
+                                        "readOnly": true,
+                                        "mountPath": "/tmp/cilium/config-map"
+                                    }
+                                ],
+                                "livenessProbe": {
+                                    "httpGet": {
+                                        "path": "/healthz",
+                                        "port": 9234,
+                                        "host": "127.0.0.1",
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 60,
+                                    "timeoutSeconds": 3,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "readinessProbe": {
+                                    "httpGet": {
+                                        "path": "/healthz",
+                                        "port": 9234,
+                                        "host": "127.0.0.1",
+                                        "scheme": "HTTP"
+                                    },
+                                    "timeoutSeconds": 3,
+                                    "periodSeconds": 5,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 5
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "FallbackToLogsOnError",
+                                "imagePullPolicy": "IfNotPresent"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "nodeSelector": {
+                            "kubernetes.io/os": "linux"
+                        },
+                        "serviceAccountName": "cilium-operator",
+                        "serviceAccount": "cilium-operator",
+                        "automountServiceAccountToken": true,
+                        "hostNetwork": true,
+                        "securityContext": {},
+                        "affinity": {
+                            "podAntiAffinity": {
+                                "requiredDuringSchedulingIgnoredDuringExecution": [
+                                    {
+                                        "labelSelector": {
+                                            "matchLabels": {
+                                                "io.cilium/app": "operator"
+                                            }
+                                        },
+                                        "topologyKey": "kubernetes.io/hostname"
+                                    }
+                                ]
+                            }
+                        },
+                        "schedulerName": "default-scheduler",
+                        "tolerations": [
+                            {
+                                "operator": "Exists"
+                            }
+                        ],
+                        "priorityClassName": "system-cluster-critical"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 0,
+                "observedGeneration": 2
+            }
+        },
+        {
+            "metadata": {
+                "name": "cilium-operator-6f799b7b4",
+                "namespace": "kube-system",
+                "uid": "c6ea35e0-fcf8-4968-b79a-834b16edecb9",
+                "resourceVersion": "823",
+                "generation": 1,
+                "creationTimestamp": "2025-05-16T23:34:28Z",
+                "labels": {
+                    "app.kubernetes.io/name": "cilium-operator",
+                    "app.kubernetes.io/part-of": "cilium",
+                    "io.cilium/app": "operator",
+                    "name": "cilium-operator",
+                    "pod-template-hash": "6f799b7b4"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "1",
+                    "deployment.kubernetes.io/max-replicas": "2",
+                    "deployment.kubernetes.io/revision": "2",
+                    "meta.helm.sh/release-name": "ck-network",
+                    "meta.helm.sh/release-namespace": "kube-system"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "Deployment",
+                        "name": "cilium-operator",
+                        "uid": "ae9bcae4-70d6-4f01-adc1-e63d140e1952",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "io.cilium/app": "operator",
+                        "name": "cilium-operator",
+                        "pod-template-hash": "6f799b7b4"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app.kubernetes.io/name": "cilium-operator",
+                            "app.kubernetes.io/part-of": "cilium",
+                            "io.cilium/app": "operator",
+                            "name": "cilium-operator",
+                            "pod-template-hash": "6f799b7b4"
+                        },
+                        "annotations": {
+                            "kubectl.kubernetes.io/restartedAt": "2025-05-16T19:34:28-04:00",
+                            "prometheus.io/port": "9963",
+                            "prometheus.io/scrape": "true"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "cilium-config-path",
+                                "configMap": {
+                                    "name": "cilium-config",
+                                    "defaultMode": 420
+                                }
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "cilium-operator",
+                                "image": "ghcr.io/canonical/cilium-operator-generic:1.16.3-ck0",
+                                "command": [
+                                    "cilium-operator-generic"
+                                ],
+                                "args": [
+                                    "--config-dir=/tmp/cilium/config-map",
+                                    "--debug=$(CILIUM_DEBUG)"
+                                ],
+                                "ports": [
+                                    {
+                                        "name": "prometheus",
+                                        "hostPort": 9963,
+                                        "containerPort": 9963,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "env": [
+                                    {
+                                        "name": "K8S_NODE_NAME",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "spec.nodeName"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "CILIUM_K8S_NAMESPACE",
+                                        "valueFrom": {
+                                            "fieldRef": {
+                                                "apiVersion": "v1",
+                                                "fieldPath": "metadata.namespace"
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "CILIUM_DEBUG",
+                                        "valueFrom": {
+                                            "configMapKeyRef": {
+                                                "name": "cilium-config",
+                                                "key": "debug",
+                                                "optional": true
+                                            }
+                                        }
+                                    },
+                                    {
+                                        "name": "KUBERNETES_SERVICE_HOST",
+                                        "value": "127.0.0.1"
+                                    },
+                                    {
+                                        "name": "KUBERNETES_SERVICE_PORT",
+                                        "value": "6443"
+                                    }
+                                ],
+                                "resources": {},
+                                "volumeMounts": [
+                                    {
+                                        "name": "cilium-config-path",
+                                        "readOnly": true,
+                                        "mountPath": "/tmp/cilium/config-map"
+                                    }
+                                ],
+                                "livenessProbe": {
+                                    "httpGet": {
+                                        "path": "/healthz",
+                                        "port": 9234,
+                                        "host": "127.0.0.1",
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 60,
+                                    "timeoutSeconds": 3,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "readinessProbe": {
+                                    "httpGet": {
+                                        "path": "/healthz",
+                                        "port": 9234,
+                                        "host": "127.0.0.1",
+                                        "scheme": "HTTP"
+                                    },
+                                    "timeoutSeconds": 3,
+                                    "periodSeconds": 5,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 5
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "FallbackToLogsOnError",
+                                "imagePullPolicy": "IfNotPresent"
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "nodeSelector": {
+                            "kubernetes.io/os": "linux"
+                        },
+                        "serviceAccountName": "cilium-operator",
+                        "serviceAccount": "cilium-operator",
+                        "automountServiceAccountToken": true,
+                        "hostNetwork": true,
+                        "securityContext": {},
+                        "affinity": {
+                            "podAntiAffinity": {
+                                "requiredDuringSchedulingIgnoredDuringExecution": [
+                                    {
+                                        "labelSelector": {
+                                            "matchLabels": {
+                                                "io.cilium/app": "operator"
+                                            }
+                                        },
+                                        "topologyKey": "kubernetes.io/hostname"
+                                    }
+                                ]
+                            }
+                        },
+                        "schedulerName": "default-scheduler",
+                        "tolerations": [
+                            {
+                                "operator": "Exists"
+                            }
+                        ],
+                        "priorityClassName": "system-cluster-critical"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 1,
+                "fullyLabeledReplicas": 1,
+                "readyReplicas": 1,
+                "availableReplicas": 1,
+                "observedGeneration": 1
+            }
+        },
+        {
+            "metadata": {
+                "name": "coredns-56d5ddcf86",
+                "namespace": "kube-system",
+                "uid": "c1b2d3b7-fa3a-44bc-8afa-3625fe4c0942",
+                "resourceVersion": "1353",
+                "generation": 1,
+                "creationTimestamp": "2025-05-16T23:33:31Z",
+                "labels": {
+                    "app.kubernetes.io/instance": "ck-dns",
+                    "app.kubernetes.io/name": "coredns",
+                    "k8s-app": "coredns",
+                    "pod-template-hash": "56d5ddcf86"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "1",
+                    "deployment.kubernetes.io/max-replicas": "2",
+                    "deployment.kubernetes.io/revision": "1",
+                    "meta.helm.sh/release-name": "ck-dns",
+                    "meta.helm.sh/release-namespace": "kube-system"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "Deployment",
+                        "name": "coredns",
+                        "uid": "5f816f7a-e2e4-416f-84f0-87e797e13940",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "app.kubernetes.io/instance": "ck-dns",
+                        "app.kubernetes.io/name": "coredns",
+                        "k8s-app": "coredns",
+                        "pod-template-hash": "56d5ddcf86"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app.kubernetes.io/instance": "ck-dns",
+                            "app.kubernetes.io/name": "coredns",
+                            "k8s-app": "coredns",
+                            "pod-template-hash": "56d5ddcf86"
+                        },
+                        "annotations": {
+                            "checksum/config": "5b6571f6f536505af93efc9f7a8b7a6aaec448061a535feaec0293e1588c19ba",
+                            "scheduler.alpha.kubernetes.io/tolerations": "[{\"key\":\"CriticalAddonsOnly\", \"operator\":\"Exists\"}]"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "config-volume",
+                                "configMap": {
+                                    "name": "ck-dns-coredns",
+                                    "items": [
+                                        {
+                                            "key": "Corefile",
+                                            "path": "Corefile"
+                                        }
+                                    ],
+                                    "defaultMode": 420
+                                }
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "coredns",
+                                "image": "ghcr.io/canonical/coredns:1.11.3-ck0",
+                                "args": [
+                                    "-conf",
+                                    "/etc/coredns/Corefile"
+                                ],
+                                "ports": [
+                                    {
+                                        "name": "udp-53",
+                                        "containerPort": 53,
+                                        "protocol": "UDP"
+                                    },
+                                    {
+                                        "name": "tcp-53",
+                                        "containerPort": 53,
+                                        "protocol": "TCP"
+                                    },
+                                    {
+                                        "name": "tcp-9153",
+                                        "containerPort": 9153,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {
+                                    "limits": {
+                                        "cpu": "100m",
+                                        "memory": "128Mi"
+                                    },
+                                    "requests": {
+                                        "cpu": "100m",
+                                        "memory": "128Mi"
+                                    }
+                                },
+                                "volumeMounts": [
+                                    {
+                                        "name": "config-volume",
+                                        "mountPath": "/etc/coredns"
+                                    }
+                                ],
+                                "livenessProbe": {
+                                    "httpGet": {
+                                        "path": "/health",
+                                        "port": 8080,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 60,
+                                    "timeoutSeconds": 5,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 5
+                                },
+                                "readinessProbe": {
+                                    "httpGet": {
+                                        "path": "/ready",
+                                        "port": 8181,
+                                        "scheme": "HTTP"
+                                    },
+                                    "initialDelaySeconds": 30,
+                                    "timeoutSeconds": 5,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 5
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "capabilities": {
+                                        "add": [
+                                            "NET_BIND_SERVICE"
+                                        ]
+                                    }
+                                }
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "Default",
+                        "serviceAccountName": "default",
+                        "serviceAccount": "default",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 1,
+                "fullyLabeledReplicas": 1,
+                "readyReplicas": 1,
+                "availableReplicas": 1,
+                "observedGeneration": 1
+            }
+        },
+        {
+            "metadata": {
+                "name": "metrics-server-8694c96fb7",
+                "namespace": "kube-system",
+                "uid": "8334a96b-410e-4c2b-8c6b-2dc685c34317",
+                "resourceVersion": "1313",
+                "generation": 1,
+                "creationTimestamp": "2025-05-16T23:33:31Z",
+                "labels": {
+                    "app.kubernetes.io/instance": "metrics-server",
+                    "app.kubernetes.io/name": "metrics-server",
+                    "pod-template-hash": "8694c96fb7"
+                },
+                "annotations": {
+                    "deployment.kubernetes.io/desired-replicas": "1",
+                    "deployment.kubernetes.io/max-replicas": "2",
+                    "deployment.kubernetes.io/revision": "1",
+                    "meta.helm.sh/release-name": "metrics-server",
+                    "meta.helm.sh/release-namespace": "kube-system"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "Deployment",
+                        "name": "metrics-server",
+                        "uid": "9b37de35-8e34-4a8c-800b-293cc3833e47",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "replicas": 1,
+                "selector": {
+                    "matchLabels": {
+                        "app.kubernetes.io/instance": "metrics-server",
+                        "app.kubernetes.io/name": "metrics-server",
+                        "pod-template-hash": "8694c96fb7"
+                    }
+                },
+                "template": {
+                    "metadata": {
+                        "creationTimestamp": null,
+                        "labels": {
+                            "app.kubernetes.io/instance": "metrics-server",
+                            "app.kubernetes.io/name": "metrics-server",
+                            "pod-template-hash": "8694c96fb7"
+                        }
+                    },
+                    "spec": {
+                        "volumes": [
+                            {
+                                "name": "tmp",
+                                "emptyDir": {}
+                            }
+                        ],
+                        "containers": [
+                            {
+                                "name": "metrics-server",
+                                "image": "ghcr.io/canonical/metrics-server:0.7.2-ck0",
+                                "args": [
+                                    "--secure-port=10250",
+                                    "--cert-dir=/tmp",
+                                    "--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname",
+                                    "--kubelet-use-node-status-port",
+                                    "--metric-resolution=15s"
+                                ],
+                                "ports": [
+                                    {
+                                        "name": "https",
+                                        "containerPort": 10250,
+                                        "protocol": "TCP"
+                                    }
+                                ],
+                                "resources": {
+                                    "requests": {
+                                        "cpu": "100m",
+                                        "memory": "200Mi"
+                                    }
+                                },
+                                "volumeMounts": [
+                                    {
+                                        "name": "tmp",
+                                        "mountPath": "/tmp"
+                                    }
+                                ],
+                                "livenessProbe": {
+                                    "httpGet": {
+                                        "path": "/livez",
+                                        "port": "https",
+                                        "scheme": "HTTPS"
+                                    },
+                                    "timeoutSeconds": 1,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "readinessProbe": {
+                                    "httpGet": {
+                                        "path": "/readyz",
+                                        "port": "https",
+                                        "scheme": "HTTPS"
+                                    },
+                                    "initialDelaySeconds": 20,
+                                    "timeoutSeconds": 1,
+                                    "periodSeconds": 10,
+                                    "successThreshold": 1,
+                                    "failureThreshold": 3
+                                },
+                                "terminationMessagePath": "/dev/termination-log",
+                                "terminationMessagePolicy": "File",
+                                "imagePullPolicy": "IfNotPresent",
+                                "securityContext": {
+                                    "capabilities": {
+                                        "drop": [
+                                            "ALL"
+                                        ]
+                                    },
+                                    "runAsUser": 1000,
+                                    "runAsNonRoot": true,
+                                    "readOnlyRootFilesystem": false,
+                                    "allowPrivilegeEscalation": false,
+                                    "seccompProfile": {
+                                        "type": "RuntimeDefault"
+                                    }
+                                }
+                            }
+                        ],
+                        "restartPolicy": "Always",
+                        "terminationGracePeriodSeconds": 30,
+                        "dnsPolicy": "ClusterFirst",
+                        "serviceAccountName": "metrics-server",
+                        "serviceAccount": "metrics-server",
+                        "securityContext": {},
+                        "schedulerName": "default-scheduler",
+                        "priorityClassName": "system-cluster-critical"
+                    }
+                }
+            },
+            "status": {
+                "replicas": 1,
+                "fullyLabeledReplicas": 1,
+                "readyReplicas": 1,
+                "availableReplicas": 1,
+                "observedGeneration": 1
+            }
+        }
+    ]
+}

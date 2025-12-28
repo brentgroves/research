@@ -1,0 +1,66 @@
+{
+  "k8s": {
+    "version": "release-1.32",
+    "revision": "a446c2af5d4835b6166ed52d6b6fa12388d008d7"
+  },
+  "tools": {
+    "go": [
+      "go version go1.23.6 linux/amd64"
+    ],
+    "gcc": [
+      "gcc (Ubuntu 9.4.0-1ubuntu1~20.04.2) 9.4.0",
+      "Copyright (C) 2019 Free Software Foundation, Inc.",
+      "This is free software; see the source for copying conditions.  There is NO",
+      "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."
+    ]
+  },
+  "components": {
+    "cni": {
+      "repository": "https://github.com/containernetworking/plugins",
+      "version": "v1.6.0",
+      "revision": "fec2d62676cbe4f2fd587b4840c7fc021bead3f9",
+      "patches": [
+        "build-scripts/components/cni/patches/default/0001-single-entrypoint-for-cni-plugins.patch"
+      ]
+    },
+    "containerd": {
+      "repository": "https://github.com/containerd/containerd",
+      "version": "v1.6.36",
+      "revision": "88c3d9bc5b5a193f40b7c14fa996d23532d6f956",
+      "patches": [
+        "build-scripts/components/containerd/patches/default/0001-side-load-images-plugin.patch"
+      ]
+    },
+    "helm": {
+      "repository": "https://github.com/helm/helm",
+      "version": "v3.14.4",
+      "revision": "81c902a123462fd4052bc5e9aa9c513c4c8fc142",
+      "patches": []
+    },
+    "k8s-dqlite": {
+      "repository": "https://github.com/canonical/k8s-dqlite",
+      "version": "v1.3.1",
+      "revision": "b2f70f18e96bae93d427fc0a557bc9c6fcdf1806",
+      "patches": []
+    },
+    "kubernetes": {
+      "repository": "https://github.com/kubernetes/kubernetes",
+      "version": "v1.32.2",
+      "revision": "67a30c0adcf52bd3f56ff0893ce19966be12991f",
+      "patches": [
+        "build-scripts/components/kubernetes/patches/v1.32.0/0001-single-kubernetes-binary.patch",
+        "build-scripts/components/kubernetes/patches/v1.32.0/0001-allow-all-nodes-to-get-k8sd-config.patch",
+        "build-scripts/components/kubernetes/patches/v1.32.0/0001-use-resolv.conf-file-with-non-loopback-nameservers.patch",
+        "build-scripts/components/kubernetes/patches/v1.32.0/0002-Allow-node-role-labels-on-kubelet-registration.patch"
+      ]
+    },
+    "runc": {
+      "repository": "https://github.com/opencontainers/runc",
+      "version": "v1.1.14",
+      "revision": "2c9f5602f0ba3d9da1c2596322dfc4e156844890",
+      "patches": [
+        "build-scripts/components/runc/patches/v1.1.12/0001-Disable-static-PIE-on-arm64.patch"
+      ]
+    }
+  }
+}

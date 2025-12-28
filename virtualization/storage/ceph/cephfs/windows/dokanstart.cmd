@@ -1,0 +1,1 @@
+START /min ceph-dokan.exe -c C:\Users\bgroves.LINAMAR\ceph\ceph.conf -l t --client_fs indFs

@@ -1,0 +1,7 @@
+# **[]()
+
+## AI: how to launch desktop image from lxd headless server
+
+To launch a desktop image from an LXD headless server, you need to create a virtual machine (VM) instance with a desktop image, configure it to use a graphical console, and then connect to it using a remote viewer. This process involves launching the VM, configuring the console, and then using a client like **[Remote Viewer](https://www.google.com/search?cs=0&sca_esv=dcf3457e0fc12c6a&sxsrf=AE3TifMwP3gg7k7VPSi6T2N8vZ-LTv_bqQ%3A1753129179505&q=Remote+Viewer&sa=X&ved=2ahUKEwjptsWP486OAxWKFmIAHcBxCykQxccNegQIBRAB&mstk=AUtExfDNlf1Dc8g-BgFFGvXtMkd9oxgaAMVGB2iNepuTdcx_sAZmMQ6z7zKtqtkdERmS0C0LcCoBGkFuzy3nGZzStDR5innDCjzKVM_wlEd3b_CvQI121pUxv_jYHEW26hmdH7yiZgRY7C3g3WfA64t2grz0hRaPac17zF71WvVC3FRdUEECSo3NdtIwGuIxF4KNhF6TszKasIf6hY2THho5da40RhCFu-WdNF_w7HRv57qU4LCnq6TBJHoIWCztyYDvTlhJAqqO_nGXQ05t3xWegbHg&csui=3)** or **[Virt-viewer](https://www.google.com/search?cs=0&sca_esv=dcf3457e0fc12c6a&sxsrf=AE3TifMwP3gg7k7VPSi6T2N8vZ-LTv_bqQ%3A1753129179505&q=Virt-viewer&sa=X&ved=2ahUKEwjptsWP486OAxWKFmIAHcBxCykQxccNegQIBRAC&mstk=AUtExfDNlf1Dc8g-BgFFGvXtMkd9oxgaAMVGB2iNepuTdcx_sAZmMQ6z7zKtqtkdERmS0C0LcCoBGkFuzy3nGZzStDR5innDCjzKVM_wlEd3b_CvQI121pUxv_jYHEW26hmdH7yiZgRY7C3g3WfA64t2grz0hRaPac17zF71WvVC3FRdUEECSo3NdtIwGuIxF4KNhF6TszKasIf6hY2THho5da40RhCFu-WdNF_w7HRv57qU4LCnq6TBJHoIWCztyYDvTlhJAqqO_nGXQ05t3xWegbHg&csui=3)** to access the graphical desktop.
+
+**[](https://m.youtube.com/watch?v=dfh_9aGQ9rE)**

@@ -1,0 +1,12 @@
+# VLANs
+
+```yaml
+servers: 50
+OT: 220
+OT Albion: 1220
+Kobe: 10.187.70.0
+Honda: 10.188.73 
+vlan: vender
+    id: 568
+    subnet: 172.24.188.71/23
+```

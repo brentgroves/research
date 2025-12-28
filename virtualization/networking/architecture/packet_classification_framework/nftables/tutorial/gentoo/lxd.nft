@@ -1,0 +1,36 @@
+flush ruleset
+table inet lxd {
+	chain pstrt.mpbr0 {
+		type nat hook postrouting priority srcnat; policy accept;
+		ip saddr 10.161.38.0/24 ip daddr != 10.161.38.0/24 masquerade
+		ip6 saddr fd42:b403:217:3a62::/64 ip6 daddr != fd42:b403:217:3a62::/64 masquerade
+	}
+
+	chain fwd.mpbr0 {
+		type filter hook forward priority filter; policy accept;
+		ip version 4 oifname "mpbr0" accept
+		ip version 4 iifname "mpbr0" accept
+		ip6 version 6 oifname "mpbr0" accept
+		ip6 version 6 iifname "mpbr0" accept
+	}
+
+	chain in.mpbr0 {
+		type filter hook input priority filter; policy accept;
+		iifname "mpbr0" tcp dport 53 accept
+		iifname "mpbr0" udp dport 53 accept
+		iifname "mpbr0" icmp type { destination-unreachable, time-exceeded, parameter-problem } accept
+		iifname "mpbr0" udp dport 67 accept
+		iifname "mpbr0" icmpv6 type { destination-unreachable, packet-too-big, time-exceeded, parameter-problem, nd-router-solicit, nd-neighbor-solicit, nd-neighbor-advert, mld2-listener-report } accept
+		iifname "mpbr0" udp dport 547 accept
+	}
+
+	chain out.mpbr0 {
+		type filter hook output priority filter; policy accept;
+		oifname "mpbr0" tcp sport 53 accept
+		oifname "mpbr0" udp sport 53 accept
+		oifname "mpbr0" icmp type { destination-unreachable, time-exceeded, parameter-problem } accept
+		oifname "mpbr0" udp sport 67 accept
+		oifname "mpbr0" icmpv6 type { destination-unreachable, packet-too-big, time-exceeded, parameter-problem, echo-request, nd-router-advert, nd-neighbor-solicit, nd-neighbor-advert, mld2-listener-report } accept
+		oifname "mpbr0" udp sport 547 accept
+	}
+}

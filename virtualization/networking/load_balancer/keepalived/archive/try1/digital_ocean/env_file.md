@@ -1,0 +1,11 @@
+# env file
+
+```bash
+cat /etc/default/keepalived
+
+# Options to pass to keepalived
+
+# DAEMON_ARGS are appended to the keepalived command-line
+
+DAEMON_ARGS=""
+```

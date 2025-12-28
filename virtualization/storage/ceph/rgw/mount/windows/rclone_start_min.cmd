@@ -1,0 +1,1 @@
+START /min C:\bin\rclone\rclone.exe mount mybucket:mybucket/ S: --links --vfs-cache-mode full

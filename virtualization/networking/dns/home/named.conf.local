@@ -1,0 +1,11 @@
+zone "lab.com" {
+    type master;
+    file "/etc/bind/zones/forward.lab.com.db";
+    allow-update { none; };
+};
+
+zone "2.168.192.in-addr.arpa" {
+    type master;
+    file "/etc/bind/zones/reverse.192.168.2.db";
+    allow-update { none; };
+};

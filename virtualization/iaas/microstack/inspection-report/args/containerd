@@ -1,0 +1,4 @@
+--address=/run/containerd/containerd.sock
+--config=/etc/containerd/config.toml
+--root=/var/lib/containerd
+--state=/run/containerd

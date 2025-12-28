@@ -1,0 +1,62 @@
+network:
+  version: 2
+  ethernets:
+    default:
+      match:
+        macaddress: "52:54:00:4a:f4:2e"
+      dhcp-identifier: "mac"
+      dhcp4: true
+    extra0:
+      match:
+        macaddress: "52:54:00:34:6f:ca"
+      optional: true
+      dhcp4: false
+      dhcp6: false
+      addresses:
+      - 10.188.50.214/24
+      nameservers:
+         addresses:
+         - 10.225.50.203
+         - 10.224.50.203
+      routes:
+      - to: 10.188.40.0/24
+        via: 10.188.50.254
+      - to: 10.188.42.0/24
+        via: 10.188.50.254
+      - to: 10.184.40.0/24
+        via: 10.188.50.0/24  
+      - to: 10.184.42.0/24
+        via: 10.188.50.0/24  
+      - to: 10.181.40.0/24
+        via: 10.188.50.0/24  
+      - to: 10.181.42.0/24
+        via: 10.188.50.0/24  
+      - to: 10.185.40.0/24
+        via: 10.188.50.0/24  
+      - to: 10.185.42.0/24
+        via: 10.188.50.0/24  
+      - to: 10.187.40.0/24
+        via: 10.188.50.0/24  
+      - to: 10.187.42.0/24
+        via: 10.188.50.0/24  
+      - to: 10.189.40.0/24
+        via: 10.188.50.0/24  
+      - to: 10.189.42.0/24
+        via: 10.188.50.0/24  
+      - to: 172.20.88.0/24
+        via: 10.188.50.254
+    extra1:
+      match:
+        macaddress: "52:54:00:46:3b:fd"
+      optional: true
+      dhcp4: false
+      dhcp6: false
+      addresses:
+      - 10.188.220.214/24
+      nameservers:
+         addresses:
+         - 10.225.50.203
+         - 10.224.50.203
+      routes:
+      - to: 10.188.73.0/24
+        via: 10.188.220.254

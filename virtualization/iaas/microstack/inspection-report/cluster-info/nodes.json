@@ -1,0 +1,320 @@
+{
+    "kind": "NodeList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "776121"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "research21",
+                "uid": "9d983676-cffe-40da-87f1-6964d4851e2e",
+                "resourceVersion": "775749",
+                "creationTimestamp": "2025-05-16T23:33:22Z",
+                "labels": {
+                    "beta.kubernetes.io/arch": "amd64",
+                    "beta.kubernetes.io/os": "linux",
+                    "hostname": "research21",
+                    "juju-application": "k8s",
+                    "juju-charm": "k8s",
+                    "k8sd.io/role": "control-plane",
+                    "kubernetes.io/arch": "amd64",
+                    "kubernetes.io/hostname": "research21",
+                    "kubernetes.io/os": "linux",
+                    "node-role.kubernetes.io/control-plane": "",
+                    "node-role.kubernetes.io/worker": "",
+                    "sunbeam/deployment": "moral-bobcat",
+                    "sunbeam/hostname": "research21"
+                },
+                "annotations": {
+                    "csi.volume.kubernetes.io/nodeid": "{\"rawfile.csi.openebs.io\":\"research21\"}",
+                    "node.alpha.kubernetes.io/ttl": "0",
+                    "volumes.kubernetes.io/controller-managed-attach-detach": "true"
+                }
+            },
+            "spec": {},
+            "status": {
+                "capacity": {
+                    "cpu": "4",
+                    "ephemeral-storage": "478512880Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "32824280Ki",
+                    "pods": "110"
+                },
+                "allocatable": {
+                    "cpu": "4",
+                    "ephemeral-storage": "477464304Ki",
+                    "hugepages-1Gi": "0",
+                    "hugepages-2Mi": "0",
+                    "memory": "32721880Ki",
+                    "pods": "110"
+                },
+                "conditions": [
+                    {
+                        "type": "NetworkUnavailable",
+                        "status": "False",
+                        "lastHeartbeatTime": "2025-05-16T23:35:10Z",
+                        "lastTransitionTime": "2025-05-16T23:35:10Z",
+                        "reason": "CiliumIsUp",
+                        "message": "Cilium is running on this node"
+                    },
+                    {
+                        "type": "MemoryPressure",
+                        "status": "False",
+                        "lastHeartbeatTime": "2025-05-20T20:59:10Z",
+                        "lastTransitionTime": "2025-05-16T23:33:22Z",
+                        "reason": "KubeletHasSufficientMemory",
+                        "message": "kubelet has sufficient memory available"
+                    },
+                    {
+                        "type": "DiskPressure",
+                        "status": "False",
+                        "lastHeartbeatTime": "2025-05-20T20:59:10Z",
+                        "lastTransitionTime": "2025-05-16T23:33:22Z",
+                        "reason": "KubeletHasNoDiskPressure",
+                        "message": "kubelet has no disk pressure"
+                    },
+                    {
+                        "type": "PIDPressure",
+                        "status": "False",
+                        "lastHeartbeatTime": "2025-05-20T20:59:10Z",
+                        "lastTransitionTime": "2025-05-16T23:33:22Z",
+                        "reason": "KubeletHasSufficientPID",
+                        "message": "kubelet has sufficient PID available"
+                    },
+                    {
+                        "type": "Ready",
+                        "status": "True",
+                        "lastHeartbeatTime": "2025-05-20T20:59:10Z",
+                        "lastTransitionTime": "2025-05-16T23:35:00Z",
+                        "reason": "KubeletReady",
+                        "message": "kubelet is posting ready status"
+                    }
+                ],
+                "addresses": [
+                    {
+                        "type": "InternalIP",
+                        "address": "172.24.188.57"
+                    },
+                    {
+                        "type": "Hostname",
+                        "address": "research21"
+                    }
+                ],
+                "daemonEndpoints": {
+                    "kubeletEndpoint": {
+                        "Port": 10250
+                    }
+                },
+                "nodeInfo": {
+                    "machineID": "1fb6bdc7cf42444aaeeedf7480f78907",
+                    "systemUUID": "4c4c4544-0053-5210-804e-c7c04f355631",
+                    "bootID": "c0d8c29f-aedd-475e-a28d-545a637e5acc",
+                    "kernelVersion": "6.11.0-25-generic",
+                    "osImage": "Ubuntu 24.04.2 LTS",
+                    "containerRuntimeVersion": "containerd://1.6.36",
+                    "kubeletVersion": "v1.32.2",
+                    "kubeProxyVersion": "v1.32.2",
+                    "operatingSystem": "linux",
+                    "architecture": "amd64"
+                },
+                "images": [
+                    {
+                        "names": [
+                            "registry.jujucharms.com/charm/7bcl96bshrf84qkak5j60i932a8se43skz3l1/glance-api-image@sha256:6d9fc517d5e904f24cb005a86ebb3a273c261cb39cffd1cc5b865c4944327e3d"
+                        ],
+                        "sizeBytes": 836974946
+                    },
+                    {
+                        "names": [
+                            "registry.jujucharms.com/charm/ebs3142hrttofbph7b3nwcdnxsnf9mj4cqefz/cinder-api-image@sha256:45e3776f1090a77572e0a72bcc4ac26043e6f79f4a7b578bec8577215d773264",
+                            "registry.jujucharms.com/charm/ebs3142hrttofbph7b3nwcdnxsnf9mj4cqefz/cinder-scheduler-image@sha256:45e3776f1090a77572e0a72bcc4ac26043e6f79f4a7b578bec8577215d773264"
+                        ],
+                        "sizeBytes": 790802422
+                    },
+                    {
+                        "names": [
+                            "registry.jujucharms.com/charm/cxpoxnvod1u9zuavqxnfmu8pseyhoa3d2np1q/nova-api-image@sha256:40106c0a0b2972c865cf453956a00b3a32422971601f69092158b93c068503f9",
+                            "registry.jujucharms.com/charm/cxpoxnvod1u9zuavqxnfmu8pseyhoa3d2np1q/nova-conductor-image@sha256:40106c0a0b2972c865cf453956a00b3a32422971601f69092158b93c068503f9",
+                            "registry.jujucharms.com/charm/cxpoxnvod1u9zuavqxnfmu8pseyhoa3d2np1q/nova-scheduler-image@sha256:40106c0a0b2972c865cf453956a00b3a32422971601f69092158b93c068503f9",
+                            "registry.jujucharms.com/charm/cxpoxnvod1u9zuavqxnfmu8pseyhoa3d2np1q/nova-spiceproxy-image@sha256:40106c0a0b2972c865cf453956a00b3a32422971601f69092158b93c068503f9"
+                        ],
+                        "sizeBytes": 722573293
+                    },
+                    {
+                        "names": [
+                            "registry.jujucharms.com/charm/ctws3sfxf7i2j12tvw9obbkcq9q0576tozepc/horizon-image@sha256:45a98212b968b641749c57ce3f1dc8340885b97a2db8cf64cbfd6c55c6bebf41"
+                        ],
+                        "sizeBytes": 651374931
+                    },
+                    {
+                        "names": [
+                            "registry.jujucharms.com/charm/hyn7tmdxrcl650kyzozombx0re0xtmqs378xi/neutron-server-image@sha256:e921bf3dc992f4ec21085eaa06a3e16fa33ddd86d0352f6b0e493b0769db2605"
+                        ],
+                        "sizeBytes": 520845687
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/canonical/cilium@sha256:68a45ebd077aa222eb2d9811e3d3fafb0dbd4a27f71ebc135afc16948a30889d",
+                            "ghcr.io/canonical/cilium:1.16.3-ck0"
+                        ],
+                        "sizeBytes": 496870967
+                    },
+                    {
+                        "names": [
+                            "registry.jujucharms.com/charm/68mxyvezznh1q7itiq4fg25lv5j5bod890rug/keystone-image@sha256:afcef76b44a294cd4626d14bba2766bfee697e5333bc15ce8d6c302372ad2f73"
+                        ],
+                        "sizeBytes": 466901337
+                    },
+                    {
+                        "names": [
+                            "registry.jujucharms.com/charm/6ee1n7u7d1hsnllu86zrjwud33wbyqdrp8cg5/placement-api-image@sha256:0f15a0a2f78deb59facafcebd5c6c2c7c1ad0f868764fcfb3c3a260cfdbadd8d"
+                        ],
+                        "sizeBytes": 422193520
+                    },
+                    {
+                        "names": [
+                            "registry.jujucharms.com/charm/3cs9bo6mym14ler2zuvzsnqcd8pvucf6cxvlw/traefik-image@sha256:af66fc2c3970bb9a7d1303df391a00b5b09876005343fb9963eaac03304c0a3e"
+                        ],
+                        "sizeBytes": 237897052
+                    },
+                    {
+                        "names": [
+                            "registry.jujucharms.com/charm/kvq0v0ar36fu9jx5c3x2f22ov9o27i7r85p9a/rabbitmq-image@sha256:ab0adb77003a3b523d8100e8be916725189ce877d49e8585b140831165472325"
+                        ],
+                        "sizeBytes": 219881817
+                    },
+                    {
+                        "names": [
+                            "registry.jujucharms.com/charm/62ptdfbrjpw3n9tcnswjpart30jauc6wc5wbi/mysql-image@sha256:089fc04dd2d6f1559161ddf4720c1e06559aeb731ecae57b050c9c816e9833e9",
+                            "registry.jujucharms.com/charm/g78qli3013qicvevb3oj4z8u0zhjod1agws2d/mysql-router-image@sha256:089fc04dd2d6f1559161ddf4720c1e06559aeb731ecae57b050c9c816e9833e9"
+                        ],
+                        "sizeBytes": 198677703
+                    },
+                    {
+                        "names": [
+                            "docker.io/jujusolutions/juju-db@sha256:e74e1d8162e3733b7fd44f27f1d07a40f5f77293d8801e68e1e975f9df95ac45",
+                            "docker.io/jujusolutions/juju-db:4.4"
+                        ],
+                        "sizeBytes": 171637975
+                    },
+                    {
+                        "names": [
+                            "docker.io/jujusolutions/jujud-operator@sha256:a00b1371c2380e3b1631455d6d7ec3a43d41c077d8443493759683e6f483820e",
+                            "docker.io/jujusolutions/jujud-operator:3.6.5"
+                        ],
+                        "sizeBytes": 163898591
+                    },
+                    {
+                        "names": [
+                            "registry.jujucharms.com/charm/6a0rnzywlucfo4rvn7y2aylcc19uaarnwsrge/ovn-nb-db-server-image@sha256:745e40f55364c53b870bd72ff9ed8d55cdf070738332260c0b917c66cff5a631",
+                            "registry.jujucharms.com/charm/6a0rnzywlucfo4rvn7y2aylcc19uaarnwsrge/ovn-northd-image@sha256:745e40f55364c53b870bd72ff9ed8d55cdf070738332260c0b917c66cff5a631",
+                            "registry.jujucharms.com/charm/6a0rnzywlucfo4rvn7y2aylcc19uaarnwsrge/ovn-sb-db-server-image@sha256:745e40f55364c53b870bd72ff9ed8d55cdf070738332260c0b917c66cff5a631",
+                            "registry.jujucharms.com/charm/l0cz4xi5v0335kaxbsyzeg48uiorm1qfybohq/ovn-sb-db-server-image@sha256:745e40f55364c53b870bd72ff9ed8d55cdf070738332260c0b917c66cff5a631"
+                        ],
+                        "sizeBytes": 162865124
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/canonical/cilium-operator-generic@sha256:57d62b57f5bb67376e36865d0390acbdc635ee7b5b133bd23d18ba157e1497c3",
+                            "ghcr.io/canonical/cilium-operator-generic:1.16.3-ck0"
+                        ],
+                        "sizeBytes": 92955999
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/canonical/rawfile-localpv@sha256:1c71b15fc1d592a31ffb79d4f3a52ec728a9a1c8bc56d66948d542263ed3b98e",
+                            "ghcr.io/canonical/rawfile-localpv:0.8.0-ck4"
+                        ],
+                        "sizeBytes": 81965868
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/canonical/metallb-speaker@sha256:708862968e35e7599b2e3a63eea59f4a220f03ae3583d7280bcb20c6df5aa1ad",
+                            "ghcr.io/canonical/metallb-speaker:v0.14.8-ck0"
+                        ],
+                        "sizeBytes": 78690575
+                    },
+                    {
+                        "names": [
+                            "docker.io/jujusolutions/charm-base@sha256:5ff8ce2dd5000378cdcc12998cf5b8b6b10d7193e47acb2945f61ae1ebd1a448",
+                            "docker.io/jujusolutions/charm-base:ubuntu-22.04"
+                        ],
+                        "sizeBytes": 74540354
+                    },
+                    {
+                        "names": [
+                            "docker.io/jujusolutions/charm-base@sha256:e8a3eb8909d3c86d5ca5944fba8438f3a55ad4302f0bcc1a1b98aa434c98f0da",
+                            "docker.io/jujusolutions/charm-base:ubuntu-20.04"
+                        ],
+                        "sizeBytes": 71456592
+                    },
+                    {
+                        "names": [
+                            "docker.io/jujusolutions/charm-base@sha256:9682e1784acf563164562b2b4327b70aee54f61e563cf5cee68af2cd1a9f5706",
+                            "docker.io/jujusolutions/charm-base:ubuntu-24.04"
+                        ],
+                        "sizeBytes": 57283317
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/canonical/metallb-controller@sha256:2ab3fb5477d7966d95f1084f60c856c633d518c12958dc5c0eee389ed098c3e2",
+                            "ghcr.io/canonical/metallb-controller:v0.14.8-ck0"
+                        ],
+                        "sizeBytes": 47554562
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/canonical/k8s-snap/sig-storage/csi-provisioner@sha256:405a14e1aa702f7ea133cea459e8395fe40a6125c088c55569e696d48e1bd385",
+                            "ghcr.io/canonical/k8s-snap/sig-storage/csi-provisioner:v5.0.1"
+                        ],
+                        "sizeBytes": 30334083
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/canonical/k8s-snap/sig-storage/csi-resizer@sha256:a541e6cc2d8b011bb21b1d4ffec6b090e85270cce6276ee302d86153eec0af43",
+                            "ghcr.io/canonical/k8s-snap/sig-storage/csi-resizer:v1.11.1"
+                        ],
+                        "sizeBytes": 29161532
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/canonical/k8s-snap/sig-storage/csi-snapshotter@sha256:2e04046334baf9be425bb0fa1d04c2d1720d770825eedbdbcdb10d430da4ad8c",
+                            "ghcr.io/canonical/k8s-snap/sig-storage/csi-snapshotter:v8.0.1"
+                        ],
+                        "sizeBytes": 28522689
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/canonical/metrics-server@sha256:2b94444cf67479f2fe77e353f64d04aab98a222c057cd40b2000aff9a2fb1682",
+                            "ghcr.io/canonical/metrics-server:0.7.2-ck0"
+                        ],
+                        "sizeBytes": 23350355
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/canonical/coredns@sha256:3dd921a2bb6496885c30155afc31185c490cd4fbb63dcf8b478f91ce92dc3fe9",
+                            "ghcr.io/canonical/coredns:1.11.3-ck0"
+                        ],
+                        "sizeBytes": 22241013
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/canonical/k8s-snap/sig-storage/csi-node-driver-registrar@sha256:f25af73ee708ff9c82595ae99493cdef9295bd96953366cddf36305f82555dac",
+                            "ghcr.io/canonical/k8s-snap/sig-storage/csi-node-driver-registrar:v2.10.1"
+                        ],
+                        "sizeBytes": 10984895
+                    },
+                    {
+                        "names": [
+                            "ghcr.io/canonical/k8s-snap/pause@sha256:ee6521f290b2168b6e0935a181d4cff9be1ac3f505666ef0e3c98fae8199917a",
+                            "ghcr.io/canonical/k8s-snap/pause:3.10"
+                        ],
+                        "sizeBytes": 320368
+                    }
+                ]
+            }
+        }
+    ]
+}

@@ -1,0 +1,39 @@
+# **[what is big data](https://www.geeksforgeeks.org/world-big-data/)**
+
+“No power on earth can stop an idea whose time has come.” – Victor Hugo Big data is one such remarkable idea. In today’s socially active world, data is growing at a tremendous pace of 2.5 quintillion bytes a day roughly that is only set to increase over the coming years. Business giants like Facebook, Google, LinkedIn, Twitter etc. have been amongst the first few associations to have their working revolve around the world of big data. It wouldn’t be wrong to say that, on the whole, the whole is a large ‘Big Data’ problem.
+
+## What is Big Data?
+
+Big Data is nothing but lots of data consisting of varieties of data. It is the concept of gathering useful insights from such voluminous amounts of structured, semi-structured and unstructured data that can be used for effective decision making in the business environment. This data is collected from various sources over a course of time and is cumbersome to be managed by traditional database tools.
+
+![i1](https://media.geeksforgeeks.org/wp-content/uploads/bigdata.png)
+
+## Why is it necessary to process Big Data?
+
+We can have data without information but we cannot have information without data. With such voluminous data comes the complexity of managing it well with techniques that are not only effective and human-friendly but also deliver the desired results in a timely manner. The significance of Big Data does not only revolve around how much information an organization has but also how an organization uses the gathered information. Each organization utilizes information as per their needs; the more proficiently an organization utilizes the information, the more promising are the chances of its prosperity. Big Data has been a godsend for businesses and industries particularly in the field of marketing whose prerequisite is to be updated about the changing trends and prospects in an economy every now and then. Nowadays, frameworks like HADOOP, Multiview Clustering, Outlier Detection and Classification Analysis are being considered over the traditional techniques of computing Big Data. Big Data has played a pivotal role in the business environment today. We can understand this by looking at the aspects enlisted below,
+
+Cost Savings: Some tools of Big Data like Hadoop and Cloud-Based Analytics convey cost favorable circumstances to businesses when a lot of information is to be put away and these tools additionally help in distinguishing more proficient methods for working together.
+Time Reduction: The speedy nature of tools like Hadoop and in-memory analytics can undoubtedly recognize new sources of data which helps organizations in breaking down information instantly and identifying the most suitable decision.
+Comprehend the economic situations: Dissecting Big Data gives a clearer picture of the current economic scenario. For instance, by breaking down clients' buying practices, an organization can discover the items that are sold the most and deliver items as per this pattern. By this, it can stretch out beyond its rivals.
+
+It is pretty easy to fancy the idea of having access to the colossal amount of data at the click of a button. Consistent analysis of that data is the best approach to genuinely make it profitable to organizations. However, with every emerging trend and technology, there comes a responsibility to weigh their pros and cons. We can conveniently put forward the fact that Big Data is in the same league. Advantages:
+Errors inside the business are known immediately.
+Higher conversion rate and additional income.
+The plan of action of your opposition is seen promptly.
+Extortion can be recognized the minute it happens and legitimate measures can be taken to restrict the harm.
+The principal points of interest of Big Data include the increased speed, capacity, and scalability of storage and having the measures and tools to deal with the data all the more proficiently.
+
+With the pros, the cons are certainly to follow. Privacy is the basic concern of an end user. Therefore, protecting the credentials of the end user is of the utmost importance. Users need to feel secure and assured that the information they access isn’t being leaked to some other party. Timeliness yet again is another challenge that Big Data faces in the real world. Larger the data sets, longer would be the processing time which would eventually lead to a delay in the decision making process. Disadvantages:
+Data is collected from every source possible over a certain course of time. The data collected is raw, inconsistent and therefore subjected to more noise.
+Security is one of the key issues that Big Data is still struggling with, especially on the social media front.
+Most of the data a user is looking for analysis and interpretation purposes is hidden behind firewalls and private cloud that can only be accessed by having the technical knowledge and expertise to turn the raw data into relevant information.
+
+Despite having rigorous knowledge of the benefits and pitfalls of Big Data, there are various firms and enterprises keen on taking the challenge of creating meaningful data from this nerve wracking amount of data. However, knowledge and expertise on upcoming tools and technologies don’t seem enough to cater to the needs of the end user to give data some meaning. Here are a few reasons as to why the Big Data projects fail on such a large scale.
+Why most of the Big Data Projects fail?
+
+The way Big Data is perceived by the masses: Big Data gets treated as if it has a fixed starting point with a fixed ending point whereas it is an excursion leading through consistent analysis and examination of data. It can be used to infer patterns for tomorrow’s business achievements. However to find the solution you can take the process as a primary concern and not expect a characterized deliverable out of it. Big Data is a steady research to increase useful insights as opposed to the view of getting to conclusions sooner than ever. The essence of this data is found when it is placed in business setting else it's only a tremendous measure of data.
+Lack of skilled data scientists: Absence of appropriate research in Big Data ventures is mainly because of the inaccessibility of professional and skilled data analysts. Great amount of experience, expertise, greater adaptability and extended timeframes are required to increase the productivity out of Big Data.
+Cost cutting and lack of budget: Emerging technologies can be harnessed only with the help of proper tools and when the systems are well equipped. Sometimes businesses aren't willing to invest a lot in ventures that ensure promising ROIs but in a long term. The greed of making zillions in a short span of time limits the use of proper tools and technologies. This leads to a failure of these Big Data projects.
+No clarity of thought and poor strategy: The first and foremost step of problem solving should include the end user to question himself of the kind of outcome he is focusing on and the reason behind it. The outcome of a problem can be vague offering a wide range of possibilities and might confuse the user and distract him from his ultimate objective. Therefore, it is important to compile a detailed problem statement in order to gain maximum benefit out of Big Data.
+
+There are 800 million websites on Internet giving data about Big Data. Big Data is the next huge thing after Cloud. Big Data accompanies a ton of chances to bargain in health, education, earth, and enterprises yet to manage the information having huge volume utilizing traditional models turns out to be extremely troublesome. Now is the Data Revolution time: ‘Data is a precious thing and will last longer than the systems themselves’. This quote perfectly captures the true essence of Big Data and how it is the new raw material for various businesses and firms.

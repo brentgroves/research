@@ -1,0 +1,28 @@
+network:
+  version: 2
+  ethernets:
+    default:
+      match:
+        macaddress: "52:54:00:3c:6d:95"
+      dhcp-identifier: "mac"
+      dhcp4: true
+    extra0:
+      addresses:
+      - 10.188.50.213/24
+      nameservers:
+         addresses:
+         - 10.225.50.203
+         - 10.224.50.203
+      routes:
+      - to: 10.188.40.0/24
+        via: 10.188.50.254
+      - to: 10.188.42.0/24
+        via: 10.188.50.254
+      - to: 172.20.88.10.188.40.0/24
+        via: 10.188.50.254
+      - to: 10.188.73.0/24
+        via: 10.188.220.254
+
+      match:
+        macaddress: "52:54:00:27:91:55"
+      optional: true

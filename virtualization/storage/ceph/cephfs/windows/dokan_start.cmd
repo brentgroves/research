@@ -1,0 +1,1 @@
+ceph-dokan.exe -c C:\bin\ceph\ceph.conf -l t --client_fs indFs

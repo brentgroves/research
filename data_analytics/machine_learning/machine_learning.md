@@ -1,0 +1,3 @@
+# **[Machine Learning](https://en.wikipedia.org/wiki/Machine_learning#:~:text=A%20machine%20learning%20model%20is,minimise%20errors%20in%20its%20predictions.)**
+
+Machine learning (ML) is a field of study in artificial intelligence concerned with the development and study of statistical algorithms that can learn from data and generalise to unseen data, and thus perform tasks without explicit instructions.[1] Within a subdiscipline in machine learning, advances in the field of **[deep learning](https://en.wikipedia.org/wiki/Deep_learning)** have allowed **[neural networks](https://en.wikipedia.org/wiki/Neural_network_(machine_learning))**, a class of statistical algorithms, to surpass many previous machine learning approaches in performance.[2]

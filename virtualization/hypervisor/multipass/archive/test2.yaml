@@ -1,0 +1,82 @@
+cat << EOF > /etc/netplan/10-custom.yaml
+network:
+  version: 2
+  ethernets:
+    extra0:
+      dhcp4: no
+      match:
+        macaddress: "d5:eb:35:ee:b4:14"
+      addresses: [10.13.31.14/24]
+EOF
+
+sudo bash -c 'cat << EOF > /etc/netplan/10-custom.yaml
+network:
+    ethernets:
+        enp6s0:
+            dhcp4: no
+            match:
+                macaddress: "3f:40:f5:5d:17:65"
+            addresses: [10.13.31.15/24]    
+            set-name: enp6s0
+    version: 2
+EOF'
+
+sudo bash -c 'cat << EOF > /etc/netplan/10-custom.yaml
+network:
+    ethernets:
+        extra0:
+            dhcp4: no
+            match:
+                macaddress: "3f:40:f5:5d:17:65"
+            addresses: [10.15.31.15/24]    
+    version: 2
+EOF'
+
+sudo bash -c 'cat << EOF > /etc/netplan/10-custom.yaml
+network:
+    version: 2
+    ethernets:
+        extra0:
+            dhcp4: no
+            match:
+                macaddress: "7f:71:f0:b2:55:dd"
+            addresses: [10.15.31.16/24]
+EOF'
+
+sudo bash -c 'cat << EOF > /etc/netplan/10-custom.yaml
+network:
+    version: 2
+    ethernets:
+        extra0:
+            dhcp4: no
+            match:
+                macaddress: "52:54:00:3a:34:23"
+            addresses: [10.15.31.16/24]
+EOF'
+
+52:54:00:3a:34:23
+
+sudo bash -c 'cat << EOF > /etc/netplan/10-custom.yaml
+network:
+    version: 2
+    ethernets:
+        extra0:
+            dhcp4: no
+            match:
+                macaddress: "52:54:00:36:69:4b"
+            addresses: [10.15.31.17/24]
+EOF'
+
+52:54:00:36:69:4b
+
+network:
+    version: 2
+    ethernets:
+        enp7s0:
+            dhcp4: no
+            match:
+                macaddress: "52:54:00:0a:19:62"
+            addresses: [10.15.31.18/24]
+EOF'
+52:54:00:0a:19:62
+52:54:00:0a:19:62

@@ -1,0 +1,2897 @@
+{
+    "kind": "PodList",
+    "apiVersion": "v1",
+    "metadata": {
+        "resourceVersion": "776121"
+    },
+    "items": [
+        {
+            "metadata": {
+                "name": "cilium-operator-6f799b7b4-b4v8x",
+                "generateName": "cilium-operator-6f799b7b4-",
+                "namespace": "kube-system",
+                "uid": "cb44cab7-bf54-41e1-b09e-943f2fa4a677",
+                "resourceVersion": "822",
+                "creationTimestamp": "2025-05-16T23:34:28Z",
+                "labels": {
+                    "app.kubernetes.io/name": "cilium-operator",
+                    "app.kubernetes.io/part-of": "cilium",
+                    "io.cilium/app": "operator",
+                    "name": "cilium-operator",
+                    "pod-template-hash": "6f799b7b4"
+                },
+                "annotations": {
+                    "kubectl.kubernetes.io/restartedAt": "2025-05-16T19:34:28-04:00",
+                    "prometheus.io/port": "9963",
+                    "prometheus.io/scrape": "true"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "ReplicaSet",
+                        "name": "cilium-operator-6f799b7b4",
+                        "uid": "c6ea35e0-fcf8-4968-b79a-834b16edecb9",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "cilium-config-path",
+                        "configMap": {
+                            "name": "cilium-config",
+                            "defaultMode": 420
+                        }
+                    },
+                    {
+                        "name": "kube-api-access-s54kc",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "cilium-operator",
+                        "image": "ghcr.io/canonical/cilium-operator-generic:1.16.3-ck0",
+                        "command": [
+                            "cilium-operator-generic"
+                        ],
+                        "args": [
+                            "--config-dir=/tmp/cilium/config-map",
+                            "--debug=$(CILIUM_DEBUG)"
+                        ],
+                        "ports": [
+                            {
+                                "name": "prometheus",
+                                "hostPort": 9963,
+                                "containerPort": 9963,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "env": [
+                            {
+                                "name": "K8S_NODE_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "CILIUM_K8S_NAMESPACE",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.namespace"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "CILIUM_DEBUG",
+                                "valueFrom": {
+                                    "configMapKeyRef": {
+                                        "name": "cilium-config",
+                                        "key": "debug",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "KUBERNETES_SERVICE_HOST",
+                                "value": "127.0.0.1"
+                            },
+                            {
+                                "name": "KUBERNETES_SERVICE_PORT",
+                                "value": "6443"
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "cilium-config-path",
+                                "readOnly": true,
+                                "mountPath": "/tmp/cilium/config-map"
+                            },
+                            {
+                                "name": "kube-api-access-s54kc",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "livenessProbe": {
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": 9234,
+                                "host": "127.0.0.1",
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 60,
+                            "timeoutSeconds": 3,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 3
+                        },
+                        "readinessProbe": {
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": 9234,
+                                "host": "127.0.0.1",
+                                "scheme": "HTTP"
+                            },
+                            "timeoutSeconds": 3,
+                            "periodSeconds": 5,
+                            "successThreshold": 1,
+                            "failureThreshold": 5
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "FallbackToLogsOnError",
+                        "imagePullPolicy": "IfNotPresent"
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "ClusterFirst",
+                "nodeSelector": {
+                    "kubernetes.io/os": "linux"
+                },
+                "serviceAccountName": "cilium-operator",
+                "serviceAccount": "cilium-operator",
+                "automountServiceAccountToken": true,
+                "nodeName": "research21",
+                "hostNetwork": true,
+                "securityContext": {},
+                "affinity": {
+                    "podAntiAffinity": {
+                        "requiredDuringSchedulingIgnoredDuringExecution": [
+                            {
+                                "labelSelector": {
+                                    "matchLabels": {
+                                        "io.cilium/app": "operator"
+                                    }
+                                },
+                                "topologyKey": "kubernetes.io/hostname"
+                            }
+                        ]
+                    }
+                },
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "operator": "Exists"
+                    }
+                ],
+                "priorityClassName": "system-cluster-critical",
+                "priority": 2000000000,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Running",
+                "conditions": [
+                    {
+                        "type": "PodReadyToStartContainers",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:34:32Z"
+                    },
+                    {
+                        "type": "Initialized",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:34:31Z"
+                    },
+                    {
+                        "type": "Ready",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:34:33Z"
+                    },
+                    {
+                        "type": "ContainersReady",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:34:33Z"
+                    },
+                    {
+                        "type": "PodScheduled",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:34:31Z"
+                    }
+                ],
+                "hostIP": "172.24.188.57",
+                "hostIPs": [
+                    {
+                        "ip": "172.24.188.57"
+                    }
+                ],
+                "podIP": "172.24.188.57",
+                "podIPs": [
+                    {
+                        "ip": "172.24.188.57"
+                    }
+                ],
+                "startTime": "2025-05-16T23:34:31Z",
+                "containerStatuses": [
+                    {
+                        "name": "cilium-operator",
+                        "state": {
+                            "running": {
+                                "startedAt": "2025-05-16T23:34:32Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/cilium-operator-generic:1.16.3-ck0",
+                        "imageID": "ghcr.io/canonical/cilium-operator-generic@sha256:57d62b57f5bb67376e36865d0390acbdc635ee7b5b133bd23d18ba157e1497c3",
+                        "containerID": "containerd://d396d08f9ff00d8e73735dcf7e58d95209b74b22e70b3e10b11440347c299735",
+                        "started": true,
+                        "volumeMounts": [
+                            {
+                                "name": "cilium-config-path",
+                                "mountPath": "/tmp/cilium/config-map",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            },
+                            {
+                                "name": "kube-api-access-s54kc",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    }
+                ],
+                "qosClass": "BestEffort"
+            }
+        },
+        {
+            "metadata": {
+                "name": "cilium-vzx55",
+                "generateName": "cilium-",
+                "namespace": "kube-system",
+                "uid": "d3fe5374-0783-41b1-b28e-513ad99edfb5",
+                "resourceVersion": "1025",
+                "creationTimestamp": "2025-05-16T23:34:42Z",
+                "labels": {
+                    "app.kubernetes.io/name": "cilium-agent",
+                    "app.kubernetes.io/part-of": "cilium",
+                    "controller-revision-hash": "bbcdc5bc8",
+                    "k8s-app": "cilium",
+                    "pod-template-generation": "3"
+                },
+                "annotations": {
+                    "container.apparmor.security.beta.kubernetes.io/apply-sysctl-overwrites": "unconfined",
+                    "container.apparmor.security.beta.kubernetes.io/cilium-agent": "unconfined",
+                    "container.apparmor.security.beta.kubernetes.io/clean-cilium-state": "unconfined",
+                    "container.apparmor.security.beta.kubernetes.io/config": "unconfined",
+                    "container.apparmor.security.beta.kubernetes.io/install-cni-binaries": "unconfined",
+                    "container.apparmor.security.beta.kubernetes.io/mount-bpf-fs": "unconfined",
+                    "container.apparmor.security.beta.kubernetes.io/mount-cgroup": "unconfined"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "DaemonSet",
+                        "name": "cilium",
+                        "uid": "b3258bad-98a6-4f35-b098-dc81449287d9",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "tmp",
+                        "emptyDir": {}
+                    },
+                    {
+                        "name": "cilium-run",
+                        "hostPath": {
+                            "path": "/var/run/cilium",
+                            "type": "DirectoryOrCreate"
+                        }
+                    },
+                    {
+                        "name": "cilium-netns",
+                        "hostPath": {
+                            "path": "/var/run/netns",
+                            "type": "DirectoryOrCreate"
+                        }
+                    },
+                    {
+                        "name": "bpf-maps",
+                        "hostPath": {
+                            "path": "/sys/fs/bpf",
+                            "type": "DirectoryOrCreate"
+                        }
+                    },
+                    {
+                        "name": "hostproc",
+                        "hostPath": {
+                            "path": "/proc",
+                            "type": "Directory"
+                        }
+                    },
+                    {
+                        "name": "cilium-cgroup",
+                        "hostPath": {
+                            "path": "/run/cilium/cgroupv2",
+                            "type": "DirectoryOrCreate"
+                        }
+                    },
+                    {
+                        "name": "cni-path",
+                        "hostPath": {
+                            "path": "/opt/cni/bin",
+                            "type": "DirectoryOrCreate"
+                        }
+                    },
+                    {
+                        "name": "etc-cni-netd",
+                        "hostPath": {
+                            "path": "/etc/cni/net.d",
+                            "type": "DirectoryOrCreate"
+                        }
+                    },
+                    {
+                        "name": "lib-modules",
+                        "hostPath": {
+                            "path": "/lib/modules",
+                            "type": ""
+                        }
+                    },
+                    {
+                        "name": "xtables-lock",
+                        "hostPath": {
+                            "path": "/run/xtables.lock",
+                            "type": "FileOrCreate"
+                        }
+                    },
+                    {
+                        "name": "clustermesh-secrets",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "secret": {
+                                        "name": "cilium-clustermesh",
+                                        "optional": true
+                                    }
+                                },
+                                {
+                                    "secret": {
+                                        "name": "clustermesh-apiserver-remote-cert",
+                                        "items": [
+                                            {
+                                                "key": "tls.key",
+                                                "path": "common-etcd-client.key"
+                                            },
+                                            {
+                                                "key": "tls.crt",
+                                                "path": "common-etcd-client.crt"
+                                            },
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "common-etcd-client-ca.crt"
+                                            }
+                                        ],
+                                        "optional": true
+                                    }
+                                },
+                                {
+                                    "secret": {
+                                        "name": "clustermesh-apiserver-local-cert",
+                                        "items": [
+                                            {
+                                                "key": "tls.key",
+                                                "path": "local-etcd-client.key"
+                                            },
+                                            {
+                                                "key": "tls.crt",
+                                                "path": "local-etcd-client.crt"
+                                            },
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "local-etcd-client-ca.crt"
+                                            }
+                                        ],
+                                        "optional": true
+                                    }
+                                }
+                            ],
+                            "defaultMode": 256
+                        }
+                    },
+                    {
+                        "name": "host-proc-sys-net",
+                        "hostPath": {
+                            "path": "/proc/sys/net",
+                            "type": "Directory"
+                        }
+                    },
+                    {
+                        "name": "host-proc-sys-kernel",
+                        "hostPath": {
+                            "path": "/proc/sys/kernel",
+                            "type": "Directory"
+                        }
+                    },
+                    {
+                        "name": "hubble-tls",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "secret": {
+                                        "name": "hubble-server-certs",
+                                        "items": [
+                                            {
+                                                "key": "tls.crt",
+                                                "path": "server.crt"
+                                            },
+                                            {
+                                                "key": "tls.key",
+                                                "path": "server.key"
+                                            },
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "client-ca.crt"
+                                            }
+                                        ],
+                                        "optional": true
+                                    }
+                                }
+                            ],
+                            "defaultMode": 256
+                        }
+                    },
+                    {
+                        "name": "kube-api-access-bwc4s",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "initContainers": [
+                    {
+                        "name": "config",
+                        "image": "ghcr.io/canonical/cilium:1.16.3-ck0",
+                        "command": [
+                            "cilium-dbg",
+                            "build-config"
+                        ],
+                        "env": [
+                            {
+                                "name": "K8S_NODE_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "CILIUM_K8S_NAMESPACE",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.namespace"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "KUBERNETES_SERVICE_HOST",
+                                "value": "127.0.0.1"
+                            },
+                            {
+                                "name": "KUBERNETES_SERVICE_PORT",
+                                "value": "6443"
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "tmp",
+                                "mountPath": "/tmp"
+                            },
+                            {
+                                "name": "kube-api-access-bwc4s",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "FallbackToLogsOnError",
+                        "imagePullPolicy": "IfNotPresent"
+                    },
+                    {
+                        "name": "mount-cgroup",
+                        "image": "ghcr.io/canonical/cilium:1.16.3-ck0",
+                        "command": [
+                            "sh",
+                            "-ec",
+                            "cp /usr/bin/cilium-mount /hostbin/cilium-mount;\nnsenter --cgroup=/hostproc/1/ns/cgroup --mount=/hostproc/1/ns/mnt \"${BIN_PATH}/cilium-mount\" $CGROUP_ROOT;\nrm /hostbin/cilium-mount\n"
+                        ],
+                        "env": [
+                            {
+                                "name": "CGROUP_ROOT",
+                                "value": "/run/cilium/cgroupv2"
+                            },
+                            {
+                                "name": "BIN_PATH",
+                                "value": "/opt/cni/bin"
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "hostproc",
+                                "mountPath": "/hostproc"
+                            },
+                            {
+                                "name": "cni-path",
+                                "mountPath": "/hostbin"
+                            },
+                            {
+                                "name": "kube-api-access-bwc4s",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "FallbackToLogsOnError",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "capabilities": {
+                                "add": [
+                                    "SYS_ADMIN",
+                                    "SYS_CHROOT",
+                                    "SYS_PTRACE"
+                                ],
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "seLinuxOptions": {
+                                "type": "spc_t",
+                                "level": "s0"
+                            }
+                        }
+                    },
+                    {
+                        "name": "apply-sysctl-overwrites",
+                        "image": "ghcr.io/canonical/cilium:1.16.3-ck0",
+                        "command": [
+                            "sh",
+                            "-ec",
+                            "cp /usr/bin/cilium-sysctlfix /hostbin/cilium-sysctlfix;\nnsenter --mount=/hostproc/1/ns/mnt \"${BIN_PATH}/cilium-sysctlfix\";\nrm /hostbin/cilium-sysctlfix\n"
+                        ],
+                        "env": [
+                            {
+                                "name": "BIN_PATH",
+                                "value": "/opt/cni/bin"
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "hostproc",
+                                "mountPath": "/hostproc"
+                            },
+                            {
+                                "name": "cni-path",
+                                "mountPath": "/hostbin"
+                            },
+                            {
+                                "name": "kube-api-access-bwc4s",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "FallbackToLogsOnError",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "capabilities": {
+                                "add": [
+                                    "SYS_ADMIN",
+                                    "SYS_CHROOT",
+                                    "SYS_PTRACE"
+                                ],
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "seLinuxOptions": {
+                                "type": "spc_t",
+                                "level": "s0"
+                            }
+                        }
+                    },
+                    {
+                        "name": "mount-bpf-fs",
+                        "image": "ghcr.io/canonical/cilium:1.16.3-ck0",
+                        "command": [
+                            "/bin/bash",
+                            "-c",
+                            "--"
+                        ],
+                        "args": [
+                            "mount | grep \"/sys/fs/bpf type bpf\" || mount -t bpf bpf /sys/fs/bpf"
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "bpf-maps",
+                                "mountPath": "/sys/fs/bpf",
+                                "mountPropagation": "Bidirectional"
+                            },
+                            {
+                                "name": "kube-api-access-bwc4s",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "FallbackToLogsOnError",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "privileged": true
+                        }
+                    },
+                    {
+                        "name": "clean-cilium-state",
+                        "image": "ghcr.io/canonical/cilium:1.16.3-ck0",
+                        "command": [
+                            "/init-container.sh"
+                        ],
+                        "env": [
+                            {
+                                "name": "CILIUM_ALL_STATE",
+                                "valueFrom": {
+                                    "configMapKeyRef": {
+                                        "name": "cilium-config",
+                                        "key": "clean-cilium-state",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "CILIUM_BPF_STATE",
+                                "valueFrom": {
+                                    "configMapKeyRef": {
+                                        "name": "cilium-config",
+                                        "key": "clean-cilium-bpf-state",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "WRITE_CNI_CONF_WHEN_READY",
+                                "valueFrom": {
+                                    "configMapKeyRef": {
+                                        "name": "cilium-config",
+                                        "key": "write-cni-conf-when-ready",
+                                        "optional": true
+                                    }
+                                }
+                            },
+                            {
+                                "name": "KUBERNETES_SERVICE_HOST",
+                                "value": "127.0.0.1"
+                            },
+                            {
+                                "name": "KUBERNETES_SERVICE_PORT",
+                                "value": "6443"
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "bpf-maps",
+                                "mountPath": "/sys/fs/bpf"
+                            },
+                            {
+                                "name": "cilium-cgroup",
+                                "mountPath": "/run/cilium/cgroupv2",
+                                "mountPropagation": "HostToContainer"
+                            },
+                            {
+                                "name": "cilium-run",
+                                "mountPath": "/var/run/cilium"
+                            },
+                            {
+                                "name": "kube-api-access-bwc4s",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "FallbackToLogsOnError",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "capabilities": {
+                                "add": [
+                                    "NET_ADMIN",
+                                    "SYS_MODULE",
+                                    "SYS_ADMIN",
+                                    "SYS_RESOURCE"
+                                ],
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "seLinuxOptions": {
+                                "type": "spc_t",
+                                "level": "s0"
+                            }
+                        }
+                    },
+                    {
+                        "name": "install-cni-binaries",
+                        "image": "ghcr.io/canonical/cilium:1.16.3-ck0",
+                        "command": [
+                            "/install-plugin.sh"
+                        ],
+                        "resources": {
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "10Mi"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "name": "cni-path",
+                                "mountPath": "/host/opt/cni/bin"
+                            },
+                            {
+                                "name": "kube-api-access-bwc4s",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "FallbackToLogsOnError",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "seLinuxOptions": {
+                                "type": "spc_t",
+                                "level": "s0"
+                            }
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "cilium-agent",
+                        "image": "ghcr.io/canonical/cilium:1.16.3-ck0",
+                        "command": [
+                            "cilium-agent"
+                        ],
+                        "args": [
+                            "--config-dir=/tmp/cilium/config-map"
+                        ],
+                        "env": [
+                            {
+                                "name": "K8S_NODE_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "CILIUM_K8S_NAMESPACE",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.namespace"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "CILIUM_CLUSTERMESH_CONFIG",
+                                "value": "/var/lib/cilium/clustermesh/"
+                            },
+                            {
+                                "name": "GOMEMLIMIT",
+                                "valueFrom": {
+                                    "resourceFieldRef": {
+                                        "resource": "limits.memory",
+                                        "divisor": "1"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "KUBERNETES_SERVICE_HOST",
+                                "value": "127.0.0.1"
+                            },
+                            {
+                                "name": "KUBERNETES_SERVICE_PORT",
+                                "value": "6443"
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "host-proc-sys-net",
+                                "mountPath": "/host/proc/sys/net"
+                            },
+                            {
+                                "name": "host-proc-sys-kernel",
+                                "mountPath": "/host/proc/sys/kernel"
+                            },
+                            {
+                                "name": "bpf-maps",
+                                "mountPath": "/sys/fs/bpf",
+                                "mountPropagation": "HostToContainer"
+                            },
+                            {
+                                "name": "cilium-run",
+                                "mountPath": "/var/run/cilium"
+                            },
+                            {
+                                "name": "cilium-netns",
+                                "mountPath": "/var/run/cilium/netns",
+                                "mountPropagation": "HostToContainer"
+                            },
+                            {
+                                "name": "etc-cni-netd",
+                                "mountPath": "/host/etc/cni/net.d"
+                            },
+                            {
+                                "name": "clustermesh-secrets",
+                                "readOnly": true,
+                                "mountPath": "/var/lib/cilium/clustermesh"
+                            },
+                            {
+                                "name": "lib-modules",
+                                "readOnly": true,
+                                "mountPath": "/lib/modules"
+                            },
+                            {
+                                "name": "xtables-lock",
+                                "mountPath": "/run/xtables.lock"
+                            },
+                            {
+                                "name": "hubble-tls",
+                                "readOnly": true,
+                                "mountPath": "/var/lib/cilium/tls/hubble"
+                            },
+                            {
+                                "name": "tmp",
+                                "mountPath": "/tmp"
+                            },
+                            {
+                                "name": "kube-api-access-bwc4s",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "livenessProbe": {
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": 9879,
+                                "host": "127.0.0.1",
+                                "scheme": "HTTP",
+                                "httpHeaders": [
+                                    {
+                                        "name": "brief",
+                                        "value": "true"
+                                    }
+                                ]
+                            },
+                            "timeoutSeconds": 5,
+                            "periodSeconds": 30,
+                            "successThreshold": 1,
+                            "failureThreshold": 10
+                        },
+                        "readinessProbe": {
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": 9879,
+                                "host": "127.0.0.1",
+                                "scheme": "HTTP",
+                                "httpHeaders": [
+                                    {
+                                        "name": "brief",
+                                        "value": "true"
+                                    }
+                                ]
+                            },
+                            "timeoutSeconds": 5,
+                            "periodSeconds": 30,
+                            "successThreshold": 1,
+                            "failureThreshold": 3
+                        },
+                        "startupProbe": {
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": 9879,
+                                "host": "127.0.0.1",
+                                "scheme": "HTTP",
+                                "httpHeaders": [
+                                    {
+                                        "name": "brief",
+                                        "value": "true"
+                                    }
+                                ]
+                            },
+                            "initialDelaySeconds": 5,
+                            "timeoutSeconds": 1,
+                            "periodSeconds": 2,
+                            "successThreshold": 1,
+                            "failureThreshold": 105
+                        },
+                        "lifecycle": {
+                            "postStart": {
+                                "exec": {
+                                    "command": [
+                                        "bash",
+                                        "-c",
+                                        "set -o errexit\nset -o pipefail\nset -o nounset\n\n# When running in AWS ENI mode, it's likely that 'aws-node' has\n# had a chance to install SNAT iptables rules. These can result\n# in dropped traffic, so we should attempt to remove them.\n# We do it using a 'postStart' hook since this may need to run\n# for nodes which might have already been init'ed but may still\n# have dangling rules. This is safe because there are no\n# dependencies on anything that is part of the startup script\n# itself, and can be safely run multiple times per node (e.g. in\n# case of a restart).\nif [[ \"$(iptables-save | grep -E -c 'AWS-SNAT-CHAIN|AWS-CONNMARK-CHAIN')\" != \"0\" ]];\nthen\n    echo 'Deleting iptables rules created by the AWS CNI VPC plugin'\n    iptables-save | grep -E -v 'AWS-SNAT-CHAIN|AWS-CONNMARK-CHAIN' | iptables-restore\nfi\necho 'Done!'\n"
+                                    ]
+                                }
+                            },
+                            "preStop": {
+                                "exec": {
+                                    "command": [
+                                        "/cni-uninstall.sh"
+                                    ]
+                                }
+                            }
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "FallbackToLogsOnError",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "capabilities": {
+                                "add": [
+                                    "CHOWN",
+                                    "KILL",
+                                    "NET_ADMIN",
+                                    "NET_RAW",
+                                    "IPC_LOCK",
+                                    "SYS_MODULE",
+                                    "SYS_ADMIN",
+                                    "SYS_RESOURCE",
+                                    "DAC_OVERRIDE",
+                                    "FOWNER",
+                                    "SETGID",
+                                    "SETUID"
+                                ],
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "seLinuxOptions": {
+                                "type": "spc_t",
+                                "level": "s0"
+                            }
+                        }
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 1,
+                "dnsPolicy": "ClusterFirst",
+                "nodeSelector": {
+                    "kubernetes.io/os": "linux"
+                },
+                "serviceAccountName": "cilium",
+                "serviceAccount": "cilium",
+                "automountServiceAccountToken": true,
+                "nodeName": "research21",
+                "hostNetwork": true,
+                "securityContext": {
+                    "appArmorProfile": {
+                        "type": "Unconfined"
+                    }
+                },
+                "affinity": {
+                    "nodeAffinity": {
+                        "requiredDuringSchedulingIgnoredDuringExecution": {
+                            "nodeSelectorTerms": [
+                                {
+                                    "matchFields": [
+                                        {
+                                            "key": "metadata.name",
+                                            "operator": "In",
+                                            "values": [
+                                                "research21"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    },
+                    "podAntiAffinity": {
+                        "requiredDuringSchedulingIgnoredDuringExecution": [
+                            {
+                                "labelSelector": {
+                                    "matchLabels": {
+                                        "k8s-app": "cilium"
+                                    }
+                                },
+                                "topologyKey": "kubernetes.io/hostname"
+                            }
+                        ]
+                    }
+                },
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "operator": "Exists"
+                    },
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute"
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute"
+                    },
+                    {
+                        "key": "node.kubernetes.io/disk-pressure",
+                        "operator": "Exists",
+                        "effect": "NoSchedule"
+                    },
+                    {
+                        "key": "node.kubernetes.io/memory-pressure",
+                        "operator": "Exists",
+                        "effect": "NoSchedule"
+                    },
+                    {
+                        "key": "node.kubernetes.io/pid-pressure",
+                        "operator": "Exists",
+                        "effect": "NoSchedule"
+                    },
+                    {
+                        "key": "node.kubernetes.io/unschedulable",
+                        "operator": "Exists",
+                        "effect": "NoSchedule"
+                    },
+                    {
+                        "key": "node.kubernetes.io/network-unavailable",
+                        "operator": "Exists",
+                        "effect": "NoSchedule"
+                    }
+                ],
+                "priorityClassName": "system-node-critical",
+                "priority": 2000001000,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Running",
+                "conditions": [
+                    {
+                        "type": "PodReadyToStartContainers",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:34:45Z"
+                    },
+                    {
+                        "type": "Initialized",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:34:50Z"
+                    },
+                    {
+                        "type": "Ready",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:10Z"
+                    },
+                    {
+                        "type": "ContainersReady",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:10Z"
+                    },
+                    {
+                        "type": "PodScheduled",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:34:42Z"
+                    }
+                ],
+                "hostIP": "172.24.188.57",
+                "hostIPs": [
+                    {
+                        "ip": "172.24.188.57"
+                    }
+                ],
+                "podIP": "172.24.188.57",
+                "podIPs": [
+                    {
+                        "ip": "172.24.188.57"
+                    }
+                ],
+                "startTime": "2025-05-16T23:34:42Z",
+                "initContainerStatuses": [
+                    {
+                        "name": "config",
+                        "state": {
+                            "terminated": {
+                                "exitCode": 0,
+                                "reason": "Completed",
+                                "startedAt": "2025-05-16T23:34:45Z",
+                                "finishedAt": "2025-05-16T23:34:45Z",
+                                "containerID": "containerd://649433b656d57c8851f8732f6da4d1842791ec5a715c7f310084cfe9f2be60d8"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/cilium:1.16.3-ck0",
+                        "imageID": "ghcr.io/canonical/cilium@sha256:68a45ebd077aa222eb2d9811e3d3fafb0dbd4a27f71ebc135afc16948a30889d",
+                        "containerID": "containerd://649433b656d57c8851f8732f6da4d1842791ec5a715c7f310084cfe9f2be60d8",
+                        "started": false,
+                        "volumeMounts": [
+                            {
+                                "name": "tmp",
+                                "mountPath": "/tmp"
+                            },
+                            {
+                                "name": "kube-api-access-bwc4s",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "mount-cgroup",
+                        "state": {
+                            "terminated": {
+                                "exitCode": 0,
+                                "reason": "Completed",
+                                "startedAt": "2025-05-16T23:34:46Z",
+                                "finishedAt": "2025-05-16T23:34:46Z",
+                                "containerID": "containerd://30915727f4c9b67a325c8515dd5e3afa8eceb35862df939050760db81f6af341"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/cilium:1.16.3-ck0",
+                        "imageID": "ghcr.io/canonical/cilium@sha256:68a45ebd077aa222eb2d9811e3d3fafb0dbd4a27f71ebc135afc16948a30889d",
+                        "containerID": "containerd://30915727f4c9b67a325c8515dd5e3afa8eceb35862df939050760db81f6af341",
+                        "started": false,
+                        "volumeMounts": [
+                            {
+                                "name": "hostproc",
+                                "mountPath": "/hostproc"
+                            },
+                            {
+                                "name": "cni-path",
+                                "mountPath": "/hostbin"
+                            },
+                            {
+                                "name": "kube-api-access-bwc4s",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "apply-sysctl-overwrites",
+                        "state": {
+                            "terminated": {
+                                "exitCode": 0,
+                                "reason": "Completed",
+                                "startedAt": "2025-05-16T23:34:47Z",
+                                "finishedAt": "2025-05-16T23:34:47Z",
+                                "containerID": "containerd://e1dfaf5755b537c1f74c36bb7410f75b3475ca21702547422540819ee3f445be"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/cilium:1.16.3-ck0",
+                        "imageID": "ghcr.io/canonical/cilium@sha256:68a45ebd077aa222eb2d9811e3d3fafb0dbd4a27f71ebc135afc16948a30889d",
+                        "containerID": "containerd://e1dfaf5755b537c1f74c36bb7410f75b3475ca21702547422540819ee3f445be",
+                        "started": false,
+                        "volumeMounts": [
+                            {
+                                "name": "hostproc",
+                                "mountPath": "/hostproc"
+                            },
+                            {
+                                "name": "cni-path",
+                                "mountPath": "/hostbin"
+                            },
+                            {
+                                "name": "kube-api-access-bwc4s",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "mount-bpf-fs",
+                        "state": {
+                            "terminated": {
+                                "exitCode": 0,
+                                "reason": "Completed",
+                                "startedAt": "2025-05-16T23:34:48Z",
+                                "finishedAt": "2025-05-16T23:34:48Z",
+                                "containerID": "containerd://43a771eba2b1fbdc5d2c987f491941a51498dfe5cbb191be29a76c6d64bc3796"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/cilium:1.16.3-ck0",
+                        "imageID": "ghcr.io/canonical/cilium@sha256:68a45ebd077aa222eb2d9811e3d3fafb0dbd4a27f71ebc135afc16948a30889d",
+                        "containerID": "containerd://43a771eba2b1fbdc5d2c987f491941a51498dfe5cbb191be29a76c6d64bc3796",
+                        "started": false,
+                        "volumeMounts": [
+                            {
+                                "name": "bpf-maps",
+                                "mountPath": "/sys/fs/bpf"
+                            },
+                            {
+                                "name": "kube-api-access-bwc4s",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "clean-cilium-state",
+                        "state": {
+                            "terminated": {
+                                "exitCode": 0,
+                                "reason": "Completed",
+                                "startedAt": "2025-05-16T23:34:49Z",
+                                "finishedAt": "2025-05-16T23:34:49Z",
+                                "containerID": "containerd://3b2a4be00f5eb1b8d95c6c7ae70ffbfcba4f84a263e6a1c4541df05494f0b18d"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/cilium:1.16.3-ck0",
+                        "imageID": "ghcr.io/canonical/cilium@sha256:68a45ebd077aa222eb2d9811e3d3fafb0dbd4a27f71ebc135afc16948a30889d",
+                        "containerID": "containerd://3b2a4be00f5eb1b8d95c6c7ae70ffbfcba4f84a263e6a1c4541df05494f0b18d",
+                        "started": false,
+                        "volumeMounts": [
+                            {
+                                "name": "bpf-maps",
+                                "mountPath": "/sys/fs/bpf"
+                            },
+                            {
+                                "name": "cilium-cgroup",
+                                "mountPath": "/run/cilium/cgroupv2"
+                            },
+                            {
+                                "name": "cilium-run",
+                                "mountPath": "/var/run/cilium"
+                            },
+                            {
+                                "name": "kube-api-access-bwc4s",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "install-cni-binaries",
+                        "state": {
+                            "terminated": {
+                                "exitCode": 0,
+                                "reason": "Completed",
+                                "startedAt": "2025-05-16T23:34:50Z",
+                                "finishedAt": "2025-05-16T23:34:50Z",
+                                "containerID": "containerd://361ce94943f7ca0e0c6da95d32791d4bc2a2613c60e518b7e7499dff62053c9f"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/cilium:1.16.3-ck0",
+                        "imageID": "ghcr.io/canonical/cilium@sha256:68a45ebd077aa222eb2d9811e3d3fafb0dbd4a27f71ebc135afc16948a30889d",
+                        "containerID": "containerd://361ce94943f7ca0e0c6da95d32791d4bc2a2613c60e518b7e7499dff62053c9f",
+                        "started": false,
+                        "volumeMounts": [
+                            {
+                                "name": "cni-path",
+                                "mountPath": "/host/opt/cni/bin"
+                            },
+                            {
+                                "name": "kube-api-access-bwc4s",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    }
+                ],
+                "containerStatuses": [
+                    {
+                        "name": "cilium-agent",
+                        "state": {
+                            "running": {
+                                "startedAt": "2025-05-16T23:34:51Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/cilium:1.16.3-ck0",
+                        "imageID": "ghcr.io/canonical/cilium@sha256:68a45ebd077aa222eb2d9811e3d3fafb0dbd4a27f71ebc135afc16948a30889d",
+                        "containerID": "containerd://339076dd941685778b81d5ebfd46d72c19fe2bcde8218b151adcb76aa9a331fc",
+                        "started": true,
+                        "volumeMounts": [
+                            {
+                                "name": "host-proc-sys-net",
+                                "mountPath": "/host/proc/sys/net"
+                            },
+                            {
+                                "name": "host-proc-sys-kernel",
+                                "mountPath": "/host/proc/sys/kernel"
+                            },
+                            {
+                                "name": "bpf-maps",
+                                "mountPath": "/sys/fs/bpf"
+                            },
+                            {
+                                "name": "cilium-run",
+                                "mountPath": "/var/run/cilium"
+                            },
+                            {
+                                "name": "cilium-netns",
+                                "mountPath": "/var/run/cilium/netns"
+                            },
+                            {
+                                "name": "etc-cni-netd",
+                                "mountPath": "/host/etc/cni/net.d"
+                            },
+                            {
+                                "name": "clustermesh-secrets",
+                                "mountPath": "/var/lib/cilium/clustermesh",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            },
+                            {
+                                "name": "lib-modules",
+                                "mountPath": "/lib/modules",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            },
+                            {
+                                "name": "xtables-lock",
+                                "mountPath": "/run/xtables.lock"
+                            },
+                            {
+                                "name": "hubble-tls",
+                                "mountPath": "/var/lib/cilium/tls/hubble",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            },
+                            {
+                                "name": "tmp",
+                                "mountPath": "/tmp"
+                            },
+                            {
+                                "name": "kube-api-access-bwc4s",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    }
+                ],
+                "qosClass": "Burstable"
+            }
+        },
+        {
+            "metadata": {
+                "name": "ck-storage-rawfile-csi-controller-0",
+                "generateName": "ck-storage-rawfile-csi-controller-",
+                "namespace": "kube-system",
+                "uid": "d4f4f71b-54e6-4625-9650-d34f0be00e4a",
+                "resourceVersion": "1211",
+                "creationTimestamp": "2025-05-16T23:33:32Z",
+                "labels": {
+                    "app.kubernetes.io/instance": "ck-storage",
+                    "app.kubernetes.io/name": "rawfile-csi",
+                    "apps.kubernetes.io/pod-index": "0",
+                    "component": "controller",
+                    "controller-revision-hash": "ck-storage-rawfile-csi-controller-5d4cb56668",
+                    "statefulset.kubernetes.io/pod-name": "ck-storage-rawfile-csi-controller-0"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "StatefulSet",
+                        "name": "ck-storage-rawfile-csi-controller",
+                        "uid": "44831729-5816-430d-9d6e-209104b858d3",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "socket-dir",
+                        "emptyDir": {}
+                    },
+                    {
+                        "name": "kube-api-access-r4v9k",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "csi-driver",
+                        "image": "ghcr.io/canonical/rawfile-localpv:0.8.0-ck4",
+                        "args": [
+                            "--args",
+                            "rawfile",
+                            "csi-driver",
+                            "--disable-metrics"
+                        ],
+                        "ports": [
+                            {
+                                "name": "csi-probe",
+                                "containerPort": 9808,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "env": [
+                            {
+                                "name": "PROVISIONER_NAME",
+                                "value": "rawfile.csi.openebs.io"
+                            },
+                            {
+                                "name": "CSI_ENDPOINT",
+                                "value": "unix:///csi/csi.sock"
+                            },
+                            {
+                                "name": "IMAGE_REPOSITORY",
+                                "value": "ghcr.io/canonical/rawfile-localpv"
+                            }
+                        ],
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "100Mi"
+                            },
+                            "requests": {
+                                "cpu": "10m",
+                                "memory": "100Mi"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "name": "socket-dir",
+                                "mountPath": "/csi"
+                            },
+                            {
+                                "name": "kube-api-access-r4v9k",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "Always"
+                    },
+                    {
+                        "name": "external-resizer",
+                        "image": "ghcr.io/canonical/k8s-snap/sig-storage/csi-resizer:v1.11.1",
+                        "args": [
+                            "--csi-address=$(ADDRESS)",
+                            "--handle-volume-inuse-error=false"
+                        ],
+                        "env": [
+                            {
+                                "name": "ADDRESS",
+                                "value": "/csi/csi.sock"
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "socket-dir",
+                                "mountPath": "/csi"
+                            },
+                            {
+                                "name": "kube-api-access-r4v9k",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent"
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "ClusterFirst",
+                "serviceAccountName": "ck-storage-rawfile-csi-driver",
+                "serviceAccount": "ck-storage-rawfile-csi-driver",
+                "nodeName": "research21",
+                "securityContext": {},
+                "hostname": "ck-storage-rawfile-csi-controller-0",
+                "subdomain": "ck-storage-rawfile-csi",
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "key": "node-role.kubernetes.io/master",
+                        "operator": "Equal",
+                        "value": "true",
+                        "effect": "NoSchedule"
+                    },
+                    {
+                        "key": "node-role.kubernetes.io/control-plane",
+                        "operator": "Equal",
+                        "value": "true",
+                        "effect": "NoSchedule"
+                    },
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "priorityClassName": "system-cluster-critical",
+                "priority": 2000000000,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Running",
+                "conditions": [
+                    {
+                        "type": "PodReadyToStartContainers",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:46Z"
+                    },
+                    {
+                        "type": "Initialized",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:11Z"
+                    },
+                    {
+                        "type": "Ready",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:46Z"
+                    },
+                    {
+                        "type": "ContainersReady",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:46Z"
+                    },
+                    {
+                        "type": "PodScheduled",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:10Z"
+                    }
+                ],
+                "hostIP": "172.24.188.57",
+                "hostIPs": [
+                    {
+                        "ip": "172.24.188.57"
+                    }
+                ],
+                "podIP": "10.1.0.135",
+                "podIPs": [
+                    {
+                        "ip": "10.1.0.135"
+                    }
+                ],
+                "startTime": "2025-05-16T23:35:11Z",
+                "containerStatuses": [
+                    {
+                        "name": "csi-driver",
+                        "state": {
+                            "running": {
+                                "startedAt": "2025-05-16T23:35:35Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/rawfile-localpv:0.8.0-ck4",
+                        "imageID": "ghcr.io/canonical/rawfile-localpv@sha256:1c71b15fc1d592a31ffb79d4f3a52ec728a9a1c8bc56d66948d542263ed3b98e",
+                        "containerID": "containerd://57b27bfae46475fe5b4a407e2b0fc92cb530db4ac838e9da340ddbbe8a3cf5a0",
+                        "started": true,
+                        "volumeMounts": [
+                            {
+                                "name": "socket-dir",
+                                "mountPath": "/csi"
+                            },
+                            {
+                                "name": "kube-api-access-r4v9k",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "external-resizer",
+                        "state": {
+                            "running": {
+                                "startedAt": "2025-05-16T23:35:45Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/k8s-snap/sig-storage/csi-resizer:v1.11.1",
+                        "imageID": "ghcr.io/canonical/k8s-snap/sig-storage/csi-resizer@sha256:a541e6cc2d8b011bb21b1d4ffec6b090e85270cce6276ee302d86153eec0af43",
+                        "containerID": "containerd://bf0645f30d18cdbcc19c29daaffa14f168531be74827b59c12d9edd1739e9ad1",
+                        "started": true,
+                        "volumeMounts": [
+                            {
+                                "name": "socket-dir",
+                                "mountPath": "/csi"
+                            },
+                            {
+                                "name": "kube-api-access-r4v9k",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    }
+                ],
+                "qosClass": "Burstable"
+            }
+        },
+        {
+            "metadata": {
+                "name": "ck-storage-rawfile-csi-node-z9lvt",
+                "generateName": "ck-storage-rawfile-csi-node-",
+                "namespace": "kube-system",
+                "uid": "478e2f54-5815-4945-accc-2453884e1a31",
+                "resourceVersion": "1239",
+                "creationTimestamp": "2025-05-16T23:33:31Z",
+                "labels": {
+                    "app.kubernetes.io/instance": "ck-storage",
+                    "app.kubernetes.io/name": "rawfile-csi",
+                    "component": "node",
+                    "controller-revision-hash": "857bc45b95",
+                    "pod-template-generation": "1"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "DaemonSet",
+                        "name": "ck-storage-rawfile-csi-node",
+                        "uid": "2ce47c84-c0cd-439e-a8ac-e1f922cdb061",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "registration-dir",
+                        "hostPath": {
+                            "path": "/var/lib/kubelet/plugins_registry",
+                            "type": "Directory"
+                        }
+                    },
+                    {
+                        "name": "socket-dir",
+                        "hostPath": {
+                            "path": "/var/lib/kubelet/plugins/rawfile-csi",
+                            "type": "DirectoryOrCreate"
+                        }
+                    },
+                    {
+                        "name": "mountpoint-dir",
+                        "hostPath": {
+                            "path": "/var/lib/kubelet",
+                            "type": "DirectoryOrCreate"
+                        }
+                    },
+                    {
+                        "name": "data-dir",
+                        "hostPath": {
+                            "path": "/var/snap/k8s/common/rawfile-storage",
+                            "type": "DirectoryOrCreate"
+                        }
+                    },
+                    {
+                        "name": "kube-api-access-6xcpl",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "csi-driver",
+                        "image": "ghcr.io/canonical/rawfile-localpv:0.8.0-ck4",
+                        "ports": [
+                            {
+                                "name": "metrics",
+                                "containerPort": 9100,
+                                "protocol": "TCP"
+                            },
+                            {
+                                "name": "csi-probe",
+                                "containerPort": 9808,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "env": [
+                            {
+                                "name": "PROVISIONER_NAME",
+                                "value": "rawfile.csi.openebs.io"
+                            },
+                            {
+                                "name": "CSI_ENDPOINT",
+                                "value": "unix:///csi/csi.sock"
+                            },
+                            {
+                                "name": "IMAGE_REPOSITORY",
+                                "value": "ghcr.io/canonical/rawfile-localpv"
+                            },
+                            {
+                                "name": "NODE_ID",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            }
+                        ],
+                        "resources": {
+                            "limits": {
+                                "cpu": "1",
+                                "memory": "100Mi"
+                            },
+                            "requests": {
+                                "cpu": "10m",
+                                "memory": "100Mi"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "name": "socket-dir",
+                                "mountPath": "/csi"
+                            },
+                            {
+                                "name": "mountpoint-dir",
+                                "mountPath": "/var/lib/kubelet",
+                                "mountPropagation": "Bidirectional"
+                            },
+                            {
+                                "name": "data-dir",
+                                "mountPath": "/data"
+                            },
+                            {
+                                "name": "kube-api-access-6xcpl",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "Always",
+                        "securityContext": {
+                            "privileged": true
+                        }
+                    },
+                    {
+                        "name": "node-driver-registrar",
+                        "image": "ghcr.io/canonical/k8s-snap/sig-storage/csi-node-driver-registrar:v2.10.1",
+                        "args": [
+                            "--csi-address=$(ADDRESS)",
+                            "--kubelet-registration-path=$(DRIVER_REG_SOCK_PATH)",
+                            "--health-port=9809"
+                        ],
+                        "ports": [
+                            {
+                                "name": "healthz",
+                                "containerPort": 9809,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "env": [
+                            {
+                                "name": "ADDRESS",
+                                "value": "/csi/csi.sock"
+                            },
+                            {
+                                "name": "DRIVER_REG_SOCK_PATH",
+                                "value": "/var/lib/kubelet/plugins/rawfile-csi/csi.sock"
+                            }
+                        ],
+                        "resources": {
+                            "limits": {
+                                "cpu": "500m",
+                                "memory": "100Mi"
+                            },
+                            "requests": {
+                                "cpu": "10m",
+                                "memory": "100Mi"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "name": "socket-dir",
+                                "mountPath": "/csi"
+                            },
+                            {
+                                "name": "registration-dir",
+                                "mountPath": "/registration"
+                            },
+                            {
+                                "name": "kube-api-access-6xcpl",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "livenessProbe": {
+                            "httpGet": {
+                                "path": "/healthz",
+                                "port": "healthz",
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 5,
+                            "timeoutSeconds": 5,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 3
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent"
+                    },
+                    {
+                        "name": "external-provisioner",
+                        "image": "ghcr.io/canonical/k8s-snap/sig-storage/csi-provisioner:v5.0.1",
+                        "args": [
+                            "--csi-address=$(ADDRESS)",
+                            "--feature-gates=Topology=true",
+                            "--strict-topology",
+                            "--immediate-topology=false",
+                            "--timeout=120s",
+                            "--enable-capacity=true",
+                            "--capacity-ownerref-level=1",
+                            "--node-deployment=true"
+                        ],
+                        "env": [
+                            {
+                                "name": "ADDRESS",
+                                "value": "/csi/csi.sock"
+                            },
+                            {
+                                "name": "NODE_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "NAMESPACE",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.namespace"
+                                    }
+                                }
+                            },
+                            {
+                                "name": "POD_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "metadata.name"
+                                    }
+                                }
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "socket-dir",
+                                "mountPath": "/csi"
+                            },
+                            {
+                                "name": "kube-api-access-6xcpl",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent"
+                    },
+                    {
+                        "name": "external-snapshotter",
+                        "image": "ghcr.io/canonical/k8s-snap/sig-storage/csi-snapshotter:v8.0.1",
+                        "args": [
+                            "--csi-address=$(ADDRESS)",
+                            "--node-deployment=true",
+                            "--extra-create-metadata=true"
+                        ],
+                        "env": [
+                            {
+                                "name": "ADDRESS",
+                                "value": "/csi/csi.sock"
+                            },
+                            {
+                                "name": "NODE_NAME",
+                                "valueFrom": {
+                                    "fieldRef": {
+                                        "apiVersion": "v1",
+                                        "fieldPath": "spec.nodeName"
+                                    }
+                                }
+                            }
+                        ],
+                        "resources": {},
+                        "volumeMounts": [
+                            {
+                                "name": "socket-dir",
+                                "mountPath": "/csi"
+                            },
+                            {
+                                "name": "kube-api-access-6xcpl",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent"
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "ClusterFirst",
+                "serviceAccountName": "ck-storage-rawfile-csi-driver",
+                "serviceAccount": "ck-storage-rawfile-csi-driver",
+                "nodeName": "research21",
+                "securityContext": {},
+                "affinity": {
+                    "nodeAffinity": {
+                        "requiredDuringSchedulingIgnoredDuringExecution": {
+                            "nodeSelectorTerms": [
+                                {
+                                    "matchFields": [
+                                        {
+                                            "key": "metadata.name",
+                                            "operator": "In",
+                                            "values": [
+                                                "research21"
+                                            ]
+                                        }
+                                    ]
+                                }
+                            ]
+                        }
+                    }
+                },
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "operator": "Exists"
+                    },
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute"
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute"
+                    },
+                    {
+                        "key": "node.kubernetes.io/disk-pressure",
+                        "operator": "Exists",
+                        "effect": "NoSchedule"
+                    },
+                    {
+                        "key": "node.kubernetes.io/memory-pressure",
+                        "operator": "Exists",
+                        "effect": "NoSchedule"
+                    },
+                    {
+                        "key": "node.kubernetes.io/pid-pressure",
+                        "operator": "Exists",
+                        "effect": "NoSchedule"
+                    },
+                    {
+                        "key": "node.kubernetes.io/unschedulable",
+                        "operator": "Exists",
+                        "effect": "NoSchedule"
+                    }
+                ],
+                "priorityClassName": "system-node-critical",
+                "priority": 2000001000,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Running",
+                "conditions": [
+                    {
+                        "type": "PodReadyToStartContainers",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:50Z"
+                    },
+                    {
+                        "type": "Initialized",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:33:31Z"
+                    },
+                    {
+                        "type": "Ready",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:50Z"
+                    },
+                    {
+                        "type": "ContainersReady",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:50Z"
+                    },
+                    {
+                        "type": "PodScheduled",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:33:31Z"
+                    }
+                ],
+                "hostIP": "172.24.188.57",
+                "hostIPs": [
+                    {
+                        "ip": "172.24.188.57"
+                    }
+                ],
+                "podIP": "10.1.0.183",
+                "podIPs": [
+                    {
+                        "ip": "10.1.0.183"
+                    }
+                ],
+                "startTime": "2025-05-16T23:33:31Z",
+                "containerStatuses": [
+                    {
+                        "name": "csi-driver",
+                        "state": {
+                            "running": {
+                                "startedAt": "2025-05-16T23:35:30Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/rawfile-localpv:0.8.0-ck4",
+                        "imageID": "ghcr.io/canonical/rawfile-localpv@sha256:1c71b15fc1d592a31ffb79d4f3a52ec728a9a1c8bc56d66948d542263ed3b98e",
+                        "containerID": "containerd://e00b29b9ca63ffaba6a20b67dcbb899ec692f6c8d7b3398d385feb25ce07153e",
+                        "started": true,
+                        "volumeMounts": [
+                            {
+                                "name": "socket-dir",
+                                "mountPath": "/csi"
+                            },
+                            {
+                                "name": "mountpoint-dir",
+                                "mountPath": "/var/lib/kubelet"
+                            },
+                            {
+                                "name": "data-dir",
+                                "mountPath": "/data"
+                            },
+                            {
+                                "name": "kube-api-access-6xcpl",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "external-provisioner",
+                        "state": {
+                            "running": {
+                                "startedAt": "2025-05-16T23:35:44Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/k8s-snap/sig-storage/csi-provisioner:v5.0.1",
+                        "imageID": "ghcr.io/canonical/k8s-snap/sig-storage/csi-provisioner@sha256:405a14e1aa702f7ea133cea459e8395fe40a6125c088c55569e696d48e1bd385",
+                        "containerID": "containerd://cbaf94e481896932ced45e72b503defc47e47abaf0ae101bf28779b78a171a0a",
+                        "started": true,
+                        "volumeMounts": [
+                            {
+                                "name": "socket-dir",
+                                "mountPath": "/csi"
+                            },
+                            {
+                                "name": "kube-api-access-6xcpl",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "external-snapshotter",
+                        "state": {
+                            "running": {
+                                "startedAt": "2025-05-16T23:35:50Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/k8s-snap/sig-storage/csi-snapshotter:v8.0.1",
+                        "imageID": "ghcr.io/canonical/k8s-snap/sig-storage/csi-snapshotter@sha256:2e04046334baf9be425bb0fa1d04c2d1720d770825eedbdbcdb10d430da4ad8c",
+                        "containerID": "containerd://f03c6cb84d6458ce297d53d27ad424f38bf81ab953feb1cef13809cf69d4246b",
+                        "started": true,
+                        "volumeMounts": [
+                            {
+                                "name": "socket-dir",
+                                "mountPath": "/csi"
+                            },
+                            {
+                                "name": "kube-api-access-6xcpl",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    },
+                    {
+                        "name": "node-driver-registrar",
+                        "state": {
+                            "running": {
+                                "startedAt": "2025-05-16T23:35:33Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/k8s-snap/sig-storage/csi-node-driver-registrar:v2.10.1",
+                        "imageID": "ghcr.io/canonical/k8s-snap/sig-storage/csi-node-driver-registrar@sha256:f25af73ee708ff9c82595ae99493cdef9295bd96953366cddf36305f82555dac",
+                        "containerID": "containerd://24c62f9e839fe4fe36f0ba6984d6e39ecb7b3fd7c5274e6d1eb333b792730523",
+                        "started": true,
+                        "volumeMounts": [
+                            {
+                                "name": "socket-dir",
+                                "mountPath": "/csi"
+                            },
+                            {
+                                "name": "registration-dir",
+                                "mountPath": "/registration"
+                            },
+                            {
+                                "name": "kube-api-access-6xcpl",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    }
+                ],
+                "qosClass": "Burstable"
+            }
+        },
+        {
+            "metadata": {
+                "name": "coredns-56d5ddcf86-lwtgx",
+                "generateName": "coredns-56d5ddcf86-",
+                "namespace": "kube-system",
+                "uid": "d09748e0-ba21-4533-aff7-a6a92c617c59",
+                "resourceVersion": "1350",
+                "creationTimestamp": "2025-05-16T23:33:31Z",
+                "labels": {
+                    "app.kubernetes.io/instance": "ck-dns",
+                    "app.kubernetes.io/name": "coredns",
+                    "k8s-app": "coredns",
+                    "pod-template-hash": "56d5ddcf86"
+                },
+                "annotations": {
+                    "checksum/config": "5b6571f6f536505af93efc9f7a8b7a6aaec448061a535feaec0293e1588c19ba",
+                    "scheduler.alpha.kubernetes.io/tolerations": "[{\"key\":\"CriticalAddonsOnly\", \"operator\":\"Exists\"}]"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "ReplicaSet",
+                        "name": "coredns-56d5ddcf86",
+                        "uid": "c1b2d3b7-fa3a-44bc-8afa-3625fe4c0942",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "config-volume",
+                        "configMap": {
+                            "name": "ck-dns-coredns",
+                            "items": [
+                                {
+                                    "key": "Corefile",
+                                    "path": "Corefile"
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    },
+                    {
+                        "name": "kube-api-access-f5dgf",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "coredns",
+                        "image": "ghcr.io/canonical/coredns:1.11.3-ck0",
+                        "args": [
+                            "-conf",
+                            "/etc/coredns/Corefile"
+                        ],
+                        "ports": [
+                            {
+                                "name": "udp-53",
+                                "containerPort": 53,
+                                "protocol": "UDP"
+                            },
+                            {
+                                "name": "tcp-53",
+                                "containerPort": 53,
+                                "protocol": "TCP"
+                            },
+                            {
+                                "name": "tcp-9153",
+                                "containerPort": 9153,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {
+                            "limits": {
+                                "cpu": "100m",
+                                "memory": "128Mi"
+                            },
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "128Mi"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "name": "config-volume",
+                                "mountPath": "/etc/coredns"
+                            },
+                            {
+                                "name": "kube-api-access-f5dgf",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "livenessProbe": {
+                            "httpGet": {
+                                "path": "/health",
+                                "port": 8080,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 60,
+                            "timeoutSeconds": 5,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 5
+                        },
+                        "readinessProbe": {
+                            "httpGet": {
+                                "path": "/ready",
+                                "port": 8181,
+                                "scheme": "HTTP"
+                            },
+                            "initialDelaySeconds": 30,
+                            "timeoutSeconds": 5,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 5
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "capabilities": {
+                                "add": [
+                                    "NET_BIND_SERVICE"
+                                ]
+                            }
+                        }
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "Default",
+                "serviceAccountName": "default",
+                "serviceAccount": "default",
+                "nodeName": "research21",
+                "securityContext": {},
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "priority": 0,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Running",
+                "conditions": [
+                    {
+                        "type": "PodReadyToStartContainers",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:45Z"
+                    },
+                    {
+                        "type": "Initialized",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:11Z"
+                    },
+                    {
+                        "type": "Ready",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:36:17Z"
+                    },
+                    {
+                        "type": "ContainersReady",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:36:17Z"
+                    },
+                    {
+                        "type": "PodScheduled",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:10Z"
+                    }
+                ],
+                "hostIP": "172.24.188.57",
+                "hostIPs": [
+                    {
+                        "ip": "172.24.188.57"
+                    }
+                ],
+                "podIP": "10.1.0.110",
+                "podIPs": [
+                    {
+                        "ip": "10.1.0.110"
+                    }
+                ],
+                "startTime": "2025-05-16T23:35:11Z",
+                "containerStatuses": [
+                    {
+                        "name": "coredns",
+                        "state": {
+                            "running": {
+                                "startedAt": "2025-05-16T23:35:45Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/coredns:1.11.3-ck0",
+                        "imageID": "ghcr.io/canonical/coredns@sha256:3dd921a2bb6496885c30155afc31185c490cd4fbb63dcf8b478f91ce92dc3fe9",
+                        "containerID": "containerd://5f1bbd1493a59f8b154fb6a8d162506e4ab2b7f4e393f3735e38d98bef643d94",
+                        "started": true,
+                        "volumeMounts": [
+                            {
+                                "name": "config-volume",
+                                "mountPath": "/etc/coredns"
+                            },
+                            {
+                                "name": "kube-api-access-f5dgf",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    }
+                ],
+                "qosClass": "Guaranteed"
+            }
+        },
+        {
+            "metadata": {
+                "name": "metrics-server-8694c96fb7-csxm7",
+                "generateName": "metrics-server-8694c96fb7-",
+                "namespace": "kube-system",
+                "uid": "7cf93103-78ba-4736-9d96-1bf79fe69175",
+                "resourceVersion": "1311",
+                "creationTimestamp": "2025-05-16T23:33:31Z",
+                "labels": {
+                    "app.kubernetes.io/instance": "metrics-server",
+                    "app.kubernetes.io/name": "metrics-server",
+                    "pod-template-hash": "8694c96fb7"
+                },
+                "ownerReferences": [
+                    {
+                        "apiVersion": "apps/v1",
+                        "kind": "ReplicaSet",
+                        "name": "metrics-server-8694c96fb7",
+                        "uid": "8334a96b-410e-4c2b-8c6b-2dc685c34317",
+                        "controller": true,
+                        "blockOwnerDeletion": true
+                    }
+                ]
+            },
+            "spec": {
+                "volumes": [
+                    {
+                        "name": "tmp",
+                        "emptyDir": {}
+                    },
+                    {
+                        "name": "kube-api-access-56s48",
+                        "projected": {
+                            "sources": [
+                                {
+                                    "serviceAccountToken": {
+                                        "expirationSeconds": 3607,
+                                        "path": "token"
+                                    }
+                                },
+                                {
+                                    "configMap": {
+                                        "name": "kube-root-ca.crt",
+                                        "items": [
+                                            {
+                                                "key": "ca.crt",
+                                                "path": "ca.crt"
+                                            }
+                                        ]
+                                    }
+                                },
+                                {
+                                    "downwardAPI": {
+                                        "items": [
+                                            {
+                                                "path": "namespace",
+                                                "fieldRef": {
+                                                    "apiVersion": "v1",
+                                                    "fieldPath": "metadata.namespace"
+                                                }
+                                            }
+                                        ]
+                                    }
+                                }
+                            ],
+                            "defaultMode": 420
+                        }
+                    }
+                ],
+                "containers": [
+                    {
+                        "name": "metrics-server",
+                        "image": "ghcr.io/canonical/metrics-server:0.7.2-ck0",
+                        "args": [
+                            "--secure-port=10250",
+                            "--cert-dir=/tmp",
+                            "--kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname",
+                            "--kubelet-use-node-status-port",
+                            "--metric-resolution=15s"
+                        ],
+                        "ports": [
+                            {
+                                "name": "https",
+                                "containerPort": 10250,
+                                "protocol": "TCP"
+                            }
+                        ],
+                        "resources": {
+                            "requests": {
+                                "cpu": "100m",
+                                "memory": "200Mi"
+                            }
+                        },
+                        "volumeMounts": [
+                            {
+                                "name": "tmp",
+                                "mountPath": "/tmp"
+                            },
+                            {
+                                "name": "kube-api-access-56s48",
+                                "readOnly": true,
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount"
+                            }
+                        ],
+                        "livenessProbe": {
+                            "httpGet": {
+                                "path": "/livez",
+                                "port": "https",
+                                "scheme": "HTTPS"
+                            },
+                            "timeoutSeconds": 1,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 3
+                        },
+                        "readinessProbe": {
+                            "httpGet": {
+                                "path": "/readyz",
+                                "port": "https",
+                                "scheme": "HTTPS"
+                            },
+                            "initialDelaySeconds": 20,
+                            "timeoutSeconds": 1,
+                            "periodSeconds": 10,
+                            "successThreshold": 1,
+                            "failureThreshold": 3
+                        },
+                        "terminationMessagePath": "/dev/termination-log",
+                        "terminationMessagePolicy": "File",
+                        "imagePullPolicy": "IfNotPresent",
+                        "securityContext": {
+                            "capabilities": {
+                                "drop": [
+                                    "ALL"
+                                ]
+                            },
+                            "runAsUser": 1000,
+                            "runAsNonRoot": true,
+                            "readOnlyRootFilesystem": false,
+                            "allowPrivilegeEscalation": false,
+                            "seccompProfile": {
+                                "type": "RuntimeDefault"
+                            }
+                        }
+                    }
+                ],
+                "restartPolicy": "Always",
+                "terminationGracePeriodSeconds": 30,
+                "dnsPolicy": "ClusterFirst",
+                "serviceAccountName": "metrics-server",
+                "serviceAccount": "metrics-server",
+                "nodeName": "research21",
+                "securityContext": {},
+                "schedulerName": "default-scheduler",
+                "tolerations": [
+                    {
+                        "key": "node.kubernetes.io/not-ready",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    },
+                    {
+                        "key": "node.kubernetes.io/unreachable",
+                        "operator": "Exists",
+                        "effect": "NoExecute",
+                        "tolerationSeconds": 300
+                    }
+                ],
+                "priorityClassName": "system-cluster-critical",
+                "priority": 2000000000,
+                "enableServiceLinks": true,
+                "preemptionPolicy": "PreemptLowerPriority"
+            },
+            "status": {
+                "phase": "Running",
+                "conditions": [
+                    {
+                        "type": "PodReadyToStartContainers",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:45Z"
+                    },
+                    {
+                        "type": "Initialized",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:11Z"
+                    },
+                    {
+                        "type": "Ready",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:36:06Z"
+                    },
+                    {
+                        "type": "ContainersReady",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:36:06Z"
+                    },
+                    {
+                        "type": "PodScheduled",
+                        "status": "True",
+                        "lastProbeTime": null,
+                        "lastTransitionTime": "2025-05-16T23:35:10Z"
+                    }
+                ],
+                "hostIP": "172.24.188.57",
+                "hostIPs": [
+                    {
+                        "ip": "172.24.188.57"
+                    }
+                ],
+                "podIP": "10.1.0.4",
+                "podIPs": [
+                    {
+                        "ip": "10.1.0.4"
+                    }
+                ],
+                "startTime": "2025-05-16T23:35:11Z",
+                "containerStatuses": [
+                    {
+                        "name": "metrics-server",
+                        "state": {
+                            "running": {
+                                "startedAt": "2025-05-16T23:35:45Z"
+                            }
+                        },
+                        "lastState": {},
+                        "ready": true,
+                        "restartCount": 0,
+                        "image": "ghcr.io/canonical/metrics-server:0.7.2-ck0",
+                        "imageID": "ghcr.io/canonical/metrics-server@sha256:2b94444cf67479f2fe77e353f64d04aab98a222c057cd40b2000aff9a2fb1682",
+                        "containerID": "containerd://f261aecb1020dec6de63a0c6ee5d47ce93981b9642d00757735f695abd325d16",
+                        "started": true,
+                        "volumeMounts": [
+                            {
+                                "name": "tmp",
+                                "mountPath": "/tmp"
+                            },
+                            {
+                                "name": "kube-api-access-56s48",
+                                "mountPath": "/var/run/secrets/kubernetes.io/serviceaccount",
+                                "readOnly": true,
+                                "recursiveReadOnly": "Disabled"
+                            }
+                        ]
+                    }
+                ],
+                "qosClass": "Burstable"
+            }
+        }
+    ]
+}

@@ -1,0 +1,12 @@
+==== START logs for container csi-driver of pod kube-system/ck-storage-rawfile-csi-controller-0 ====
+2025-05-16T23:35:35.376Z [pebble] Started daemon.
+2025-05-16T23:35:35.397Z [pebble] POST /v1/services 12.74093ms 202
+2025-05-16T23:35:35.405Z [pebble] Service "rawfile" starting: python3 /app/rawfile.py [ csi-driver --disable-metrics ]
+2025-05-16T23:35:36.419Z [pebble] GET /v1/changes/1/wait 1.021239826s 200
+2025-05-16T23:35:36.422Z [pebble] Started default services with change 1.
+==== END logs for container csi-driver of pod kube-system/ck-storage-rawfile-csi-controller-0 ====
+==== START logs for container external-resizer of pod kube-system/ck-storage-rawfile-csi-controller-0 ====
+I0516 23:35:46.040707       1 main.go:108] "Version" version="v1.11.1"
+I0516 23:35:46.048978       1 common.go:143] "Probing CSI driver for readiness"
+I0516 23:35:46.131783       1 controller.go:244] "Starting external resizer" controller="rawfile.csi.openebs.io"
+==== END logs for container external-resizer of pod kube-system/ck-storage-rawfile-csi-controller-0 ====

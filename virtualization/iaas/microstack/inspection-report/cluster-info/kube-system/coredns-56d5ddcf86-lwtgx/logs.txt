@@ -1,0 +1,7 @@
+==== START logs for container coredns of pod kube-system/coredns-56d5ddcf86-lwtgx ====
+2025-05-16T23:35:45.219Z [pebble] Started daemon.
+2025-05-16T23:35:45.235Z [pebble] POST /v1/services 5.341645ms 202
+2025-05-16T23:35:45.305Z [pebble] Service "coredns" starting: /coredns [ -conf /etc/coredns/Corefile ]
+2025-05-16T23:35:46.323Z [pebble] GET /v1/changes/1/wait 1.087696222s 200
+2025-05-16T23:35:46.324Z [pebble] Started default services with change 1.
+==== END logs for container coredns of pod kube-system/coredns-56d5ddcf86-lwtgx ====

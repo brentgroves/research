@@ -1,0 +1,58 @@
+# This file is generated from information provided by the datasource.  Changes
+# to it will not persist across an instance reboot.  To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    ethernets:
+        eno1:
+            addresses:
+            - 10.1.0.130/22
+            nameservers:
+                addresses:
+                - 10.1.2.69
+                - 10.1.2.70
+                - 172.20.88.20
+                search:
+                - BUSCHE-CNC.COM
+            routes:
+            -   to: default
+                via: 10.1.1.205
+        eno2:
+            dhcp4: no
+        eno3:
+            dhcp4: no
+        eno4:
+            dhcp4: true
+        enp66s0f0:
+            dhcp4: true
+        enp66s0f1:
+            dhcp4: true
+        enp66s0f2:
+            dhcp4: true
+        enp66s0f3:
+            dhcp4: true
+    bridges:
+        br0:
+            dhcp4: no
+            addresses:
+            - 10.1.0.131/22
+            nameservers:
+                addresses:
+                - 10.1.2.69
+                - 10.1.2.70
+                - 172.20.0.39
+                search: [BUSCHE-CNC.COM]
+            interfaces: [eno2]
+        br1:
+            dhcp4: no
+            addresses:
+            - 10.1.0.132/22
+            nameservers:
+                addresses:
+                - 10.1.2.69
+                - 10.1.2.70
+                - 172.20.0.39
+                search: [BUSCHE-CNC.COM]
+            interfaces: [eno3]
+    version: 2

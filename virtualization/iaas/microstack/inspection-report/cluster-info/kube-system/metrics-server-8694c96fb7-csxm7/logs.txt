@@ -1,0 +1,7 @@
+==== START logs for container metrics-server of pod kube-system/metrics-server-8694c96fb7-csxm7 ====
+2025-05-16T23:35:45.549Z [pebble] Started daemon.
+2025-05-16T23:35:45.567Z [pebble] POST /v1/services 4.969916ms 202
+2025-05-16T23:35:45.573Z [pebble] Service "metrics-server" starting: /metrics-server [ --secure-port=10250 --cert-dir=/tmp --kubelet-preferred-address-types=InternalIP,ExternalIP,Hostname --kubelet-use-node-status-port --metric-resolution=15s ]
+2025-05-16T23:35:46.579Z [pebble] GET /v1/changes/1/wait 1.011270791s 200
+2025-05-16T23:35:46.580Z [pebble] Started default services with change 1.
+==== END logs for container metrics-server of pod kube-system/metrics-server-8694c96fb7-csxm7 ====

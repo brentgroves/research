@@ -1,0 +1,1 @@
+LUKS (Linux Unified Key Setup) is a disk encryption specification used to encrypt entire block devices, like hard drives or USB drives, on Linux systems. It provides a standard way to manage disk encryption keys, offering a secure way to protect data at rest. LUKS is often used in conjunction with dm-crypt, a kernel module that handles the encryption process.

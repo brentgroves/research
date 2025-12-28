@@ -1,0 +1,56 @@
+network:
+  version: 2
+  ethernets:
+    eno1: {}
+    eno2: {}
+    eno3: {}
+  vlans:
+    "eno150":
+      addresses:
+      - "10.188.50.201/24"
+      nameservers:
+        addresses:
+        - 10.225.50.203
+        - 10.224.50.203
+        search: []
+      routes:
+      - to: "default"
+        via: "10.188.50.254"
+      id: 50
+      link: "eno1"    
+    "eno250":
+      addresses:
+      - "10.188.50.221/24"
+      id: 50
+      link: "eno2"
+    "eno350":
+      addresses:
+      - "10.188.50.231/24"
+      id: 50
+      link: "eno3"
+    "eno1220":
+      addresses:
+      - "10.188.220.201/24"
+      nameservers:
+        addresses:
+        - 10.225.50.203
+        - 10.224.50.203
+        search: []
+      routes:
+      - to: 10.188.73.0/24
+        via: 10.188.220.254
+      id: 220
+      link: "eno1"
+    "eno11220":
+      addresses:
+      - "10.187.220.201/24"
+      nameservers:
+        addresses:
+        - 10.225.50.203
+        - 10.224.50.203
+        search: []
+      routes:
+      - to: 10.187.70.0/24
+        via: 10.187.220.254
+      id: 1220
+      link: "eno1"

@@ -1,0 +1,28 @@
+[Unit]
+Description=Iptables rules to make gw01 a gateway for 172.16.2.0/24. 
+After=network.target
+
+[Service]
+Type=oneshot
+Environment=PATH=/home/brent/.local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin
+WorkingDirectory=/etc/rules/gw01
+ExecStart=/etc/rules/gw01/gw01start.sh
+ExecStop=/etc/rules/gw01/gw01stop.sh
+# https://unix.stackexchange.com/questions/694357/how-to-invoke-iptables-from-systemd-unit-file
+CapabilityBoundingSet=CAP_SETGID CAP_SETUID CAP_SYS_RESOURCE CAP_NET_ADMIN CAP_NET_RAW
+# User=brent
+# Group=brent
+KillMode=control-group
+KillSignal=SIGTERM
+TimeoutStopSec=300
+RemainAfterExit=yes
+
+# Systemd Service Configuration:
+# Ensure your systemd service file is configured correctly. 
+# The default KillMode=control-group and KillSignal=SIGTERM 
+# are usually sufficient. You can adjust TimeoutStopSec if 
+# your cleanup process takes longer than the default 90 seconds.
+# Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
