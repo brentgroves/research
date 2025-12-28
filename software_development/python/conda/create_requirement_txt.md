@@ -1,0 +1,1 @@
+# **[conda create requirements.txt](https://www.educative.io/answers/how-to-create-and-install-conda-requirementstxt)**
