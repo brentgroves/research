@@ -11,6 +11,7 @@ You can add a submodule to a repository like this:
 cd ~/src/repsys
 git submodule add git@github.com:brentgroves/go_web_docker.git volumes/go/tutorials/docker/go_web_docker
 git submodule add git@bitbucket.org:linamar_structures/publishing_guide.git initives/inititive_50/publishing_guide
+git submodule add git@bitbucket.org:linamar_structures/iokr_guide.git inititives/inititive_60/iokr_guide
 # volumes/go/tutorials/docker/go_web_docker is going to be a file containing the repo info
 git status
 git add -A
